@@ -25,6 +25,10 @@ func dataSourceAwsEcsContainerDefinition() *schema.Resource {
 				Required: true,
 				ForceNew: true,
 			},
+			"missing_okay": {
+				Type:     schema.TypeBool,
+				Optional: true,
+			},
 			// Computed values.
 			"image": {
 				Type:     schema.TypeString,
@@ -74,6 +78,11 @@ func dataSourceAwsEcsContainerDefinitionRead(d *schema.ResourceData, meta interf
 	desc, err := conn.DescribeTaskDefinition(params)
 
 	if err != nil {
+		if d.Get("missing_okay").(bool) && strings.Contains(err.Error(), "Unable to describe task definition") {
+			d.SetId(fmt.Sprintf("missing-task-definition-%s/%s", d.Get("task_definition").(string), d.Get("container_name").(string)))
+			return nil
+		}
+
 		return err
 	}
 

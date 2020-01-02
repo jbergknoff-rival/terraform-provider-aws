@@ -33,6 +33,23 @@ func TestAccAWSEcsDataSource_ecsContainerDefinition(t *testing.T) {
 	})
 }
 
+func TestAccAWSEcsDataSource_ecsContainerDefinition_nonexistent(t *testing.T) {
+	rName := fmt.Sprintf("tf-acc-test-missing-%s", acctest.RandString(5))
+
+	resource.ParallelTest(t, resource.TestCase{
+		PreCheck:  func() { testAccPreCheck(t) },
+		Providers: testAccProviders,
+		Steps: []resource.TestStep{
+			{
+				Config: testAccCheckAwsEcsNonexistentContainerDefinitionDataSourceConfig(rName),
+				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckNoResourceAttr("data.aws_ecs_container_definition.nonexistent", "image"),
+				),
+			},
+		},
+	})
+}
+
 func testAccCheckAwsEcsContainerDefinitionDataSourceConfig(clusterName, tdName, svcName string) string {
 	return fmt.Sprintf(`
 resource "aws_ecs_cluster" "default" {
@@ -72,4 +89,14 @@ data "aws_ecs_container_definition" "mongo" {
   container_name  = "mongodb"
 }
 `, clusterName, tdName, svcName)
+}
+
+func testAccCheckAwsEcsNonexistentContainerDefinitionDataSourceConfig(tdName string) string {
+	return fmt.Sprintf(`
+data "aws_ecs_container_definition" "nonexistent" {
+  task_definition = "%s"
+  container_name  = "mongodb"
+  missing_okay = true
+}
+`, tdName)
 }
