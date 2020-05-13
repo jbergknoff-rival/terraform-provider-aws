@@ -110,6 +110,12 @@ func dataSourceAwsEcsContainerDefinitionRead(d *schema.ResourceData, meta interf
 	}
 
 	if d.Id() == "" {
+		// TODO: add test for this case
+		if d.Get("missing_okay").(bool) {
+			d.SetId(fmt.Sprintf("missing-task-definition-%s/%s", d.Get("task_definition").(string), d.Get("container_name").(string)))
+			return nil
+		}
+
 		return fmt.Errorf("container with name %q not found in task definition %q", d.Get("container_name").(string), d.Get("task_definition").(string))
 	}
 
