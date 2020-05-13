@@ -18,12 +18,10 @@ func dataSourceAwsEcsContainerDefinition() *schema.Resource {
 			"task_definition": {
 				Type:     schema.TypeString,
 				Required: true,
-				ForceNew: true,
 			},
 			"container_name": {
 				Type:     schema.TypeString,
 				Required: true,
-				ForceNew: true,
 			},
 			"missing_okay": {
 				Type:     schema.TypeBool,

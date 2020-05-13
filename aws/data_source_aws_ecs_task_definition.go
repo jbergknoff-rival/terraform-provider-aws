@@ -18,7 +18,6 @@ func dataSourceAwsEcsTaskDefinition() *schema.Resource {
 			"task_definition": {
 				Type:     schema.TypeString,
 				Required: true,
-				ForceNew: true,
 			},
 			"missing_okay": {
 				Type:     schema.TypeBool,
