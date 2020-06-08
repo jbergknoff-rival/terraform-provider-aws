@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/elbv2"
@@ -509,9 +510,29 @@ func resourceAwsLbTargetGroupDelete(d *schema.ResourceData, meta interface{}) er
 		}
 	}
 
-	_, err := elbconn.DeleteTargetGroup(&elbv2.DeleteTargetGroupInput{
+	input := &elbv2.DeleteTargetGroupInput{
 		TargetGroupArn: aws.String(d.Id()),
+	}
+
+	log.Printf("[DEBUG] Deleting Target Group (%s): %s", d.Id(), input)
+	err := resource.Retry(2*time.Minute, func() *resource.RetryError {
+		_, err := elbconn.DeleteTargetGroup(input)
+
+		if isAWSErr(err, "ResourceInUse", "is currently in use by a listener or a rule") {
+			return resource.RetryableError(err)
+		}
+
+		if err != nil {
+			return resource.NonRetryableError(err)
+		}
+
+		return nil
 	})
+
+	if isResourceTimeoutError(err) {
+		_, err = elbconn.DeleteTargetGroup(input)
+	}
+
 	if err != nil {
 		return fmt.Errorf("Error deleting Target Group: %s", err)
 	}
@@ -662,6 +683,7 @@ func lbTargetGroupSuffixFromARN(arn *string) string {
 // flattenAwsLbTargetGroupResource takes a *elbv2.TargetGroup and populates all respective resource fields.
 func flattenAwsLbTargetGroupResource(d *schema.ResourceData, meta interface{}, targetGroup *elbv2.TargetGroup) error {
 	elbconn := meta.(*AWSClient).elbv2conn
+	ignoreTagsConfig := meta.(*AWSClient).IgnoreTagsConfig
 
 	d.Set("arn", targetGroup.TargetGroupArn)
 	d.Set("arn_suffix", lbTargetGroupSuffixFromARN(targetGroup.TargetGroupArn))
@@ -751,7 +773,7 @@ func flattenAwsLbTargetGroupResource(d *schema.ResourceData, meta interface{}, t
 		return fmt.Errorf("error listing tags for LB Target Group (%s): %s", d.Id(), err)
 	}
 
-	if err := d.Set("tags", tags.IgnoreAws().Map()); err != nil {
+	if err := d.Set("tags", tags.IgnoreAws().IgnoreConfig(ignoreTagsConfig).Map()); err != nil {
 		return fmt.Errorf("error setting tags: %s", err)
 	}
 

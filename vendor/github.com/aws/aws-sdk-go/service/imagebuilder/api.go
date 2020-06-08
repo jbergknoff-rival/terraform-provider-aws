@@ -3888,7 +3888,12 @@ func (c *Imagebuilder) PutComponentPolicyRequest(input *PutComponentPolicyInput)
 
 // PutComponentPolicy API operation for EC2 Image Builder.
 //
-// Applies a policy to a component.
+// Applies a policy to a component. We recommend that you call the RAM API CreateResourceShare
+// (https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html)
+// to share resources. If you call the Image Builder API PutComponentPolicy,
+// you must also call the RAM API PromoteResourceShareCreatedFromPolicy (https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html)
+// in order for the resource to be visible to all principals with whom the resource
+// is shared.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -3990,7 +3995,12 @@ func (c *Imagebuilder) PutImagePolicyRequest(input *PutImagePolicyInput) (req *r
 
 // PutImagePolicy API operation for EC2 Image Builder.
 //
-// Applies a policy to an image.
+// Applies a policy to an image. We recommend that you call the RAM API CreateResourceShare
+// (https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html)
+// to share resources. If you call the Image Builder API PutImagePolicy, you
+// must also call the RAM API PromoteResourceShareCreatedFromPolicy (https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html)
+// in order for the resource to be visible to all principals with whom the resource
+// is shared.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -4092,7 +4102,12 @@ func (c *Imagebuilder) PutImageRecipePolicyRequest(input *PutImageRecipePolicyIn
 
 // PutImageRecipePolicy API operation for EC2 Image Builder.
 //
-// Applies a policy to an image recipe.
+// Applies a policy to an image recipe. We recommend that you call the RAM API
+// CreateResourceShare (https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html)
+// to share resources. If you call the Image Builder API PutImageRecipePolicy,
+// you must also call the RAM API PromoteResourceShareCreatedFromPolicy (https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html)
+// in order for the resource to be visible to all principals with whom the resource
+// is shared.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -5120,6 +5135,11 @@ type Component struct {
 	// The platform of the component.
 	Platform *string `locationName:"platform" type:"string" enum:"Platform"`
 
+	// The operating system (OS) version supported by the component. If the OS information
+	// is available, a prefix match is performed against the parent image OS version
+	// during image recipe creation.
+	SupportedOsVersions []*string `locationName:"supportedOsVersions" min:"1" type:"list"`
+
 	// The tags associated with the component.
 	Tags map[string]*string `locationName:"tags" min:"1" type:"map"`
 
@@ -5198,6 +5218,12 @@ func (s *Component) SetOwner(v string) *Component {
 // SetPlatform sets the Platform field's value.
 func (s *Component) SetPlatform(v string) *Component {
 	s.Platform = &v
+	return s
+}
+
+// SetSupportedOsVersions sets the SupportedOsVersions field's value.
+func (s *Component) SetSupportedOsVersions(v []*string) *Component {
+	s.SupportedOsVersions = v
 	return s
 }
 
@@ -5283,6 +5309,11 @@ type ComponentSummary struct {
 	// The platform of the component.
 	Platform *string `locationName:"platform" type:"string" enum:"Platform"`
 
+	// The operating system (OS) version supported by the component. If the OS information
+	// is available, a prefix match is performed against the parent image OS version
+	// during image recipe creation.
+	SupportedOsVersions []*string `locationName:"supportedOsVersions" min:"1" type:"list"`
+
 	// The tags associated with the component.
 	Tags map[string]*string `locationName:"tags" min:"1" type:"map"`
 
@@ -5346,6 +5377,12 @@ func (s *ComponentSummary) SetPlatform(v string) *ComponentSummary {
 	return s
 }
 
+// SetSupportedOsVersions sets the SupportedOsVersions field's value.
+func (s *ComponentSummary) SetSupportedOsVersions(v []*string) *ComponentSummary {
+	s.SupportedOsVersions = v
+	return s
+}
+
 // SetTags sets the Tags field's value.
 func (s *ComponentSummary) SetTags(v map[string]*string) *ComponentSummary {
 	s.Tags = v
@@ -5385,6 +5422,11 @@ type ComponentVersion struct {
 
 	// The platform of the component.
 	Platform *string `locationName:"platform" type:"string" enum:"Platform"`
+
+	// The operating system (OS) version supported by the component. If the OS information
+	// is available, a prefix match is performed against the parent image OS version
+	// during image recipe creation.
+	SupportedOsVersions []*string `locationName:"supportedOsVersions" min:"1" type:"list"`
 
 	// The type of the component denotes whether the component is used to build
 	// the image or only to test it.
@@ -5440,6 +5482,12 @@ func (s *ComponentVersion) SetPlatform(v string) *ComponentVersion {
 	return s
 }
 
+// SetSupportedOsVersions sets the SupportedOsVersions field's value.
+func (s *ComponentVersion) SetSupportedOsVersions(v []*string) *ComponentVersion {
+	s.SupportedOsVersions = v
+	return s
+}
+
 // SetType sets the Type field's value.
 func (s *ComponentVersion) SetType(v string) *ComponentVersion {
 	s.Type = &v
@@ -5490,6 +5538,11 @@ type CreateComponentInput struct {
 	// SemanticVersion is a required field
 	SemanticVersion *string `locationName:"semanticVersion" type:"string" required:"true"`
 
+	// The operating system (OS) version supported by the component. If the OS information
+	// is available, a prefix match is performed against the parent image OS version
+	// during image recipe creation.
+	SupportedOsVersions []*string `locationName:"supportedOsVersions" min:"1" type:"list"`
+
 	// The tags of the component.
 	Tags map[string]*string `locationName:"tags" min:"1" type:"map"`
 
@@ -5536,6 +5589,9 @@ func (s *CreateComponentInput) Validate() error {
 	}
 	if s.SemanticVersion == nil {
 		invalidParams.Add(request.NewErrParamRequired("SemanticVersion"))
+	}
+	if s.SupportedOsVersions != nil && len(s.SupportedOsVersions) < 1 {
+		invalidParams.Add(request.NewErrParamMinLen("SupportedOsVersions", 1))
 	}
 	if s.Tags != nil && len(s.Tags) < 1 {
 		invalidParams.Add(request.NewErrParamMinLen("Tags", 1))
@@ -5592,6 +5648,12 @@ func (s *CreateComponentInput) SetPlatform(v string) *CreateComponentInput {
 // SetSemanticVersion sets the SemanticVersion field's value.
 func (s *CreateComponentInput) SetSemanticVersion(v string) *CreateComponentInput {
 	s.SemanticVersion = &v
+	return s
+}
+
+// SetSupportedOsVersions sets the SupportedOsVersions field's value.
+func (s *CreateComponentInput) SetSupportedOsVersions(v []*string) *CreateComponentInput {
+	s.SupportedOsVersions = v
 	return s
 }
 
@@ -5799,6 +5861,12 @@ type CreateImageInput struct {
 	// and configures the outputs of your pipeline.
 	DistributionConfigurationArn *string `locationName:"distributionConfigurationArn" type:"string"`
 
+	// Collects additional information about the image being created, including
+	// the operating system (OS) version and package list. This information is used
+	// to enhance the overall experience of using EC2 Image Builder. Enabled by
+	// default.
+	EnhancedImageMetadataEnabled *bool `locationName:"enhancedImageMetadataEnabled" type:"boolean"`
+
 	// The Amazon Resource Name (ARN) of the image recipe that defines how images
 	// are configured, tested, and assessed.
 	//
@@ -5864,6 +5932,12 @@ func (s *CreateImageInput) SetClientToken(v string) *CreateImageInput {
 // SetDistributionConfigurationArn sets the DistributionConfigurationArn field's value.
 func (s *CreateImageInput) SetDistributionConfigurationArn(v string) *CreateImageInput {
 	s.DistributionConfigurationArn = &v
+	return s
+}
+
+// SetEnhancedImageMetadataEnabled sets the EnhancedImageMetadataEnabled field's value.
+func (s *CreateImageInput) SetEnhancedImageMetadataEnabled(v bool) *CreateImageInput {
+	s.EnhancedImageMetadataEnabled = &v
 	return s
 }
 
@@ -5944,6 +6018,12 @@ type CreateImagePipelineInput struct {
 	// The Amazon Resource Name (ARN) of the distribution configuration that will
 	// be used to configure and distribute images created by this image pipeline.
 	DistributionConfigurationArn *string `locationName:"distributionConfigurationArn" type:"string"`
+
+	// Collects additional information about the image being created, including
+	// the operating system (OS) version and package list. This information is used
+	// to enhance the overall experience of using EC2 Image Builder. Enabled by
+	// default.
+	EnhancedImageMetadataEnabled *bool `locationName:"enhancedImageMetadataEnabled" type:"boolean"`
 
 	// The Amazon Resource Name (ARN) of the image recipe that will be used to configure
 	// images created by this image pipeline.
@@ -6038,6 +6118,12 @@ func (s *CreateImagePipelineInput) SetDescription(v string) *CreateImagePipeline
 // SetDistributionConfigurationArn sets the DistributionConfigurationArn field's value.
 func (s *CreateImagePipelineInput) SetDistributionConfigurationArn(v string) *CreateImagePipelineInput {
 	s.DistributionConfigurationArn = &v
+	return s
+}
+
+// SetEnhancedImageMetadataEnabled sets the EnhancedImageMetadataEnabled field's value.
+func (s *CreateImagePipelineInput) SetEnhancedImageMetadataEnabled(v bool) *CreateImagePipelineInput {
+	s.EnhancedImageMetadataEnabled = &v
 	return s
 }
 
@@ -6147,7 +6233,15 @@ type CreateImageRecipeInput struct {
 	// Name is a required field
 	Name *string `locationName:"name" type:"string" required:"true"`
 
-	// The parent image of the image recipe.
+	// The parent image of the image recipe. The value of the string can be the
+	// ARN of the parent image or an AMI ID. The format for the ARN follows this
+	// example: arn:aws:imagebuilder:us-west-2:aws:image/windows-server-2016-english-full-base-x86/2019.x.x.
+	// The ARN ends with /20xx.x.x, which communicates to EC2 Image Builder that
+	// you want to use the latest AMI created in 20xx (year). You can provide the
+	// specific version that you want to use, or you can use a wildcard in all of
+	// the fields. If you enter an AMI ID for the string value, you must have access
+	// to the AMI, and the AMI must be in the same Region in which you are using
+	// Image Builder.
 	//
 	// ParentImage is a required field
 	ParentImage *string `locationName:"parentImage" min:"1" type:"string" required:"true"`
@@ -8089,6 +8183,12 @@ type Image struct {
 	// The distribution configuration used when creating this image.
 	DistributionConfiguration *DistributionConfiguration `locationName:"distributionConfiguration" type:"structure"`
 
+	// Collects additional information about the image being created, including
+	// the operating system (OS) version and package list. This information is used
+	// to enhance the overall experience of using EC2 Image Builder. Enabled by
+	// default.
+	EnhancedImageMetadataEnabled *bool `locationName:"enhancedImageMetadataEnabled" type:"boolean"`
+
 	// The image recipe used when creating the image.
 	ImageRecipe *ImageRecipe `locationName:"imageRecipe" type:"structure"`
 
@@ -8100,6 +8200,10 @@ type Image struct {
 
 	// The name of the image.
 	Name *string `locationName:"name" type:"string"`
+
+	// The operating system version of the instance. For example, Amazon Linux 2,
+	// Ubuntu 18, or Microsoft Windows Server 2019.
+	OsVersion *string `locationName:"osVersion" min:"1" type:"string"`
 
 	// The output resources produced when creating this image.
 	OutputResources *OutputResources `locationName:"outputResources" type:"structure"`
@@ -8151,6 +8255,12 @@ func (s *Image) SetDistributionConfiguration(v *DistributionConfiguration) *Imag
 	return s
 }
 
+// SetEnhancedImageMetadataEnabled sets the EnhancedImageMetadataEnabled field's value.
+func (s *Image) SetEnhancedImageMetadataEnabled(v bool) *Image {
+	s.EnhancedImageMetadataEnabled = &v
+	return s
+}
+
 // SetImageRecipe sets the ImageRecipe field's value.
 func (s *Image) SetImageRecipe(v *ImageRecipe) *Image {
 	s.ImageRecipe = v
@@ -8172,6 +8282,12 @@ func (s *Image) SetInfrastructureConfiguration(v *InfrastructureConfiguration) *
 // SetName sets the Name field's value.
 func (s *Image) SetName(v string) *Image {
 	s.Name = &v
+	return s
+}
+
+// SetOsVersion sets the OsVersion field's value.
+func (s *Image) SetOsVersion(v string) *Image {
+	s.OsVersion = &v
 	return s
 }
 
@@ -8242,6 +8358,12 @@ type ImagePipeline struct {
 	// The Amazon Resource Name (ARN) of the distribution configuration associated
 	// with this image pipeline.
 	DistributionConfigurationArn *string `locationName:"distributionConfigurationArn" type:"string"`
+
+	// Collects additional information about the image being created, including
+	// the operating system (OS) version and package list. This information is used
+	// to enhance the overall experience of using EC2 Image Builder. Enabled by
+	// default.
+	EnhancedImageMetadataEnabled *bool `locationName:"enhancedImageMetadataEnabled" type:"boolean"`
 
 	// The Amazon Resource Name (ARN) of the image recipe associated with this image
 	// pipeline.
@@ -8319,6 +8441,12 @@ func (s *ImagePipeline) SetDescription(v string) *ImagePipeline {
 // SetDistributionConfigurationArn sets the DistributionConfigurationArn field's value.
 func (s *ImagePipeline) SetDistributionConfigurationArn(v string) *ImagePipeline {
 	s.DistributionConfigurationArn = &v
+	return s
+}
+
+// SetEnhancedImageMetadataEnabled sets the EnhancedImageMetadataEnabled field's value.
+func (s *ImagePipeline) SetEnhancedImageMetadataEnabled(v bool) *ImagePipeline {
+	s.EnhancedImageMetadataEnabled = &v
 	return s
 }
 
@@ -8608,6 +8736,10 @@ type ImageSummary struct {
 	// The name of the image.
 	Name *string `locationName:"name" type:"string"`
 
+	// The operating system version of the instance. For example, Amazon Linux 2,
+	// Ubuntu 18, or Microsoft Windows Server 2019.
+	OsVersion *string `locationName:"osVersion" min:"1" type:"string"`
+
 	// The output resources produced when creating this image.
 	OutputResources *OutputResources `locationName:"outputResources" type:"structure"`
 
@@ -8652,6 +8784,12 @@ func (s *ImageSummary) SetDateCreated(v string) *ImageSummary {
 // SetName sets the Name field's value.
 func (s *ImageSummary) SetName(v string) *ImageSummary {
 	s.Name = &v
+	return s
+}
+
+// SetOsVersion sets the OsVersion field's value.
+func (s *ImageSummary) SetOsVersion(v string) *ImageSummary {
+	s.OsVersion = &v
 	return s
 }
 
@@ -8750,6 +8888,10 @@ type ImageVersion struct {
 	// The name of the image semantic version.
 	Name *string `locationName:"name" type:"string"`
 
+	// The operating system version of the instance. For example, Amazon Linux 2,
+	// Ubuntu 18, or Microsoft Windows Server 2019.
+	OsVersion *string `locationName:"osVersion" min:"1" type:"string"`
+
 	// The owner of the image semantic version.
 	Owner *string `locationName:"owner" min:"1" type:"string"`
 
@@ -8785,6 +8927,12 @@ func (s *ImageVersion) SetDateCreated(v string) *ImageVersion {
 // SetName sets the Name field's value.
 func (s *ImageVersion) SetName(v string) *ImageVersion {
 	s.Name = &v
+	return s
+}
+
+// SetOsVersion sets the OsVersion field's value.
+func (s *ImageVersion) SetOsVersion(v string) *ImageVersion {
+	s.OsVersion = &v
 	return s
 }
 
@@ -11982,6 +12130,12 @@ type UpdateImagePipelineInput struct {
 	// be used to configure and distribute images updated by this image pipeline.
 	DistributionConfigurationArn *string `locationName:"distributionConfigurationArn" type:"string"`
 
+	// Collects additional information about the image being created, including
+	// the operating system (OS) version and package list. This information is used
+	// to enhance the overall experience of using EC2 Image Builder. Enabled by
+	// default.
+	EnhancedImageMetadataEnabled *bool `locationName:"enhancedImageMetadataEnabled" type:"boolean"`
+
 	// The Amazon Resource Name (ARN) of the image pipeline that you want to update.
 	//
 	// ImagePipelineArn is a required field
@@ -12069,6 +12223,12 @@ func (s *UpdateImagePipelineInput) SetDescription(v string) *UpdateImagePipeline
 // SetDistributionConfigurationArn sets the DistributionConfigurationArn field's value.
 func (s *UpdateImagePipelineInput) SetDistributionConfigurationArn(v string) *UpdateImagePipelineInput {
 	s.DistributionConfigurationArn = &v
+	return s
+}
+
+// SetEnhancedImageMetadataEnabled sets the EnhancedImageMetadataEnabled field's value.
+func (s *UpdateImagePipelineInput) SetEnhancedImageMetadataEnabled(v bool) *UpdateImagePipelineInput {
+	s.EnhancedImageMetadataEnabled = &v
 	return s
 }
 
