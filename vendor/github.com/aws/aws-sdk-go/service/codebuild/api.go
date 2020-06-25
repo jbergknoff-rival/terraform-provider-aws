@@ -66,8 +66,8 @@ func (c *CodeBuild) BatchDeleteBuildsRequest(input *BatchDeleteBuildsInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation BatchDeleteBuilds for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchDeleteBuilds
@@ -145,8 +145,8 @@ func (c *CodeBuild) BatchGetBuildsRequest(input *BatchGetBuildsInput) (req *requ
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation BatchGetBuilds for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetBuilds
@@ -224,8 +224,8 @@ func (c *CodeBuild) BatchGetProjectsRequest(input *BatchGetProjectsInput) (req *
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation BatchGetProjects for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetProjects
@@ -303,8 +303,8 @@ func (c *CodeBuild) BatchGetReportGroupsRequest(input *BatchGetReportGroupsInput
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation BatchGetReportGroups for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetReportGroups
@@ -382,8 +382,8 @@ func (c *CodeBuild) BatchGetReportsRequest(input *BatchGetReportsInput) (req *re
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation BatchGetReports for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/BatchGetReports
@@ -461,15 +461,15 @@ func (c *CodeBuild) CreateProjectRequest(input *CreateProjectInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation CreateProject for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceAlreadyExistsException "ResourceAlreadyExistsException"
+//   * ResourceAlreadyExistsException
 //   The specified AWS resource cannot be created, because an AWS resource with
 //   the same settings already exists.
 //
-//   * ErrCodeAccountLimitExceededException "AccountLimitExceededException"
+//   * AccountLimitExceededException
 //   An AWS service limit was exceeded for the calling AWS account.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateProject
@@ -547,15 +547,15 @@ func (c *CodeBuild) CreateReportGroupRequest(input *CreateReportGroupInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation CreateReportGroup for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceAlreadyExistsException "ResourceAlreadyExistsException"
+//   * ResourceAlreadyExistsException
 //   The specified AWS resource cannot be created, because an AWS resource with
 //   the same settings already exists.
 //
-//   * ErrCodeAccountLimitExceededException "AccountLimitExceededException"
+//   * AccountLimitExceededException
 //   An AWS service limit was exceeded for the calling AWS account.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateReportGroup
@@ -644,18 +644,18 @@ func (c *CodeBuild) CreateWebhookRequest(input *CreateWebhookInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation CreateWebhook for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeOAuthProviderException "OAuthProviderException"
+//   * OAuthProviderException
 //   There was a problem with the underlying OAuth provider.
 //
-//   * ErrCodeResourceAlreadyExistsException "ResourceAlreadyExistsException"
+//   * ResourceAlreadyExistsException
 //   The specified AWS resource cannot be created, because an AWS resource with
 //   the same settings already exists.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/CreateWebhook
@@ -734,8 +734,8 @@ func (c *CodeBuild) DeleteProjectRequest(input *DeleteProjectInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteProject for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteProject
@@ -814,8 +814,8 @@ func (c *CodeBuild) DeleteReportRequest(input *DeleteReportInput) (req *request.
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteReport for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteReport
@@ -898,8 +898,8 @@ func (c *CodeBuild) DeleteReportGroupRequest(input *DeleteReportGroupInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteReportGroup for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteReportGroup
@@ -978,8 +978,8 @@ func (c *CodeBuild) DeleteResourcePolicyRequest(input *DeleteResourcePolicyInput
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteResourcePolicy for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteResourcePolicy
@@ -1057,11 +1057,11 @@ func (c *CodeBuild) DeleteSourceCredentialsRequest(input *DeleteSourceCredential
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteSourceCredentials for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteSourceCredentials
@@ -1142,14 +1142,14 @@ func (c *CodeBuild) DeleteWebhookRequest(input *DeleteWebhookInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DeleteWebhook for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
-//   * ErrCodeOAuthProviderException "OAuthProviderException"
+//   * OAuthProviderException
 //   There was a problem with the underlying OAuth provider.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DeleteWebhook
@@ -1205,6 +1205,12 @@ func (c *CodeBuild) DescribeTestCasesRequest(input *DescribeTestCasesInput) (req
 		Name:       opDescribeTestCases,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1227,11 +1233,11 @@ func (c *CodeBuild) DescribeTestCasesRequest(input *DescribeTestCasesInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation DescribeTestCases for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/DescribeTestCases
@@ -1254,6 +1260,58 @@ func (c *CodeBuild) DescribeTestCasesWithContext(ctx aws.Context, input *Describ
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// DescribeTestCasesPages iterates over the pages of a DescribeTestCases operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See DescribeTestCases method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a DescribeTestCases operation.
+//    pageNum := 0
+//    err := client.DescribeTestCasesPages(params,
+//        func(page *codebuild.DescribeTestCasesOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) DescribeTestCasesPages(input *DescribeTestCasesInput, fn func(*DescribeTestCasesOutput, bool) bool) error {
+	return c.DescribeTestCasesPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// DescribeTestCasesPagesWithContext same as DescribeTestCasesPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) DescribeTestCasesPagesWithContext(ctx aws.Context, input *DescribeTestCasesInput, fn func(*DescribeTestCasesOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *DescribeTestCasesInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.DescribeTestCasesRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*DescribeTestCasesOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opGetResourcePolicy = "GetResourcePolicy"
@@ -1309,11 +1367,11 @@ func (c *CodeBuild) GetResourcePolicyRequest(input *GetResourcePolicyInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation GetResourcePolicy for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+// Returned Error Types:
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
-//   * ErrCodeInvalidInputException "InvalidInputException"
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/GetResourcePolicy
@@ -1392,14 +1450,14 @@ func (c *CodeBuild) ImportSourceCredentialsRequest(input *ImportSourceCredential
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ImportSourceCredentials for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeAccountLimitExceededException "AccountLimitExceededException"
+//   * AccountLimitExceededException
 //   An AWS service limit was exceeded for the calling AWS account.
 //
-//   * ErrCodeResourceAlreadyExistsException "ResourceAlreadyExistsException"
+//   * ResourceAlreadyExistsException
 //   The specified AWS resource cannot be created, because an AWS resource with
 //   the same settings already exists.
 //
@@ -1479,11 +1537,11 @@ func (c *CodeBuild) InvalidateProjectCacheRequest(input *InvalidateProjectCacheI
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation InvalidateProjectCache for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/InvalidateProjectCache
@@ -1539,6 +1597,12 @@ func (c *CodeBuild) ListBuildsRequest(input *ListBuildsInput) (req *request.Requ
 		Name:       opListBuilds,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1561,8 +1625,8 @@ func (c *CodeBuild) ListBuildsRequest(input *ListBuildsInput) (req *request.Requ
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListBuilds for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuilds
@@ -1585,6 +1649,58 @@ func (c *CodeBuild) ListBuildsWithContext(ctx aws.Context, input *ListBuildsInpu
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListBuildsPages iterates over the pages of a ListBuilds operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListBuilds method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListBuilds operation.
+//    pageNum := 0
+//    err := client.ListBuildsPages(params,
+//        func(page *codebuild.ListBuildsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListBuildsPages(input *ListBuildsInput, fn func(*ListBuildsOutput, bool) bool) error {
+	return c.ListBuildsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListBuildsPagesWithContext same as ListBuildsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListBuildsPagesWithContext(ctx aws.Context, input *ListBuildsInput, fn func(*ListBuildsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListBuildsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListBuildsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListBuildsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListBuildsForProject = "ListBuildsForProject"
@@ -1618,6 +1734,12 @@ func (c *CodeBuild) ListBuildsForProjectRequest(input *ListBuildsForProjectInput
 		Name:       opListBuildsForProject,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1641,11 +1763,11 @@ func (c *CodeBuild) ListBuildsForProjectRequest(input *ListBuildsForProjectInput
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListBuildsForProject for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListBuildsForProject
@@ -1668,6 +1790,58 @@ func (c *CodeBuild) ListBuildsForProjectWithContext(ctx aws.Context, input *List
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListBuildsForProjectPages iterates over the pages of a ListBuildsForProject operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListBuildsForProject method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListBuildsForProject operation.
+//    pageNum := 0
+//    err := client.ListBuildsForProjectPages(params,
+//        func(page *codebuild.ListBuildsForProjectOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListBuildsForProjectPages(input *ListBuildsForProjectInput, fn func(*ListBuildsForProjectOutput, bool) bool) error {
+	return c.ListBuildsForProjectPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListBuildsForProjectPagesWithContext same as ListBuildsForProjectPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListBuildsForProjectPagesWithContext(ctx aws.Context, input *ListBuildsForProjectInput, fn func(*ListBuildsForProjectOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListBuildsForProjectInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListBuildsForProjectRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListBuildsForProjectOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListCuratedEnvironmentImages = "ListCuratedEnvironmentImages"
@@ -1775,6 +1949,12 @@ func (c *CodeBuild) ListProjectsRequest(input *ListProjectsInput) (req *request.
 		Name:       opListProjects,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1798,8 +1978,8 @@ func (c *CodeBuild) ListProjectsRequest(input *ListProjectsInput) (req *request.
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListProjects for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListProjects
@@ -1822,6 +2002,58 @@ func (c *CodeBuild) ListProjectsWithContext(ctx aws.Context, input *ListProjects
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListProjectsPages iterates over the pages of a ListProjects operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListProjects method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListProjects operation.
+//    pageNum := 0
+//    err := client.ListProjectsPages(params,
+//        func(page *codebuild.ListProjectsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListProjectsPages(input *ListProjectsInput, fn func(*ListProjectsOutput, bool) bool) error {
+	return c.ListProjectsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListProjectsPagesWithContext same as ListProjectsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListProjectsPagesWithContext(ctx aws.Context, input *ListProjectsInput, fn func(*ListProjectsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListProjectsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListProjectsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListProjectsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListReportGroups = "ListReportGroups"
@@ -1855,6 +2087,12 @@ func (c *CodeBuild) ListReportGroupsRequest(input *ListReportGroupsInput) (req *
 		Name:       opListReportGroups,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1877,8 +2115,8 @@ func (c *CodeBuild) ListReportGroupsRequest(input *ListReportGroupsInput) (req *
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListReportGroups for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReportGroups
@@ -1901,6 +2139,58 @@ func (c *CodeBuild) ListReportGroupsWithContext(ctx aws.Context, input *ListRepo
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListReportGroupsPages iterates over the pages of a ListReportGroups operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListReportGroups method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListReportGroups operation.
+//    pageNum := 0
+//    err := client.ListReportGroupsPages(params,
+//        func(page *codebuild.ListReportGroupsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListReportGroupsPages(input *ListReportGroupsInput, fn func(*ListReportGroupsOutput, bool) bool) error {
+	return c.ListReportGroupsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListReportGroupsPagesWithContext same as ListReportGroupsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListReportGroupsPagesWithContext(ctx aws.Context, input *ListReportGroupsInput, fn func(*ListReportGroupsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListReportGroupsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListReportGroupsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListReportGroupsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListReports = "ListReports"
@@ -1934,6 +2224,12 @@ func (c *CodeBuild) ListReportsRequest(input *ListReportsInput) (req *request.Re
 		Name:       opListReports,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -1956,8 +2252,8 @@ func (c *CodeBuild) ListReportsRequest(input *ListReportsInput) (req *request.Re
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListReports for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReports
@@ -1980,6 +2276,58 @@ func (c *CodeBuild) ListReportsWithContext(ctx aws.Context, input *ListReportsIn
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListReportsPages iterates over the pages of a ListReports operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListReports method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListReports operation.
+//    pageNum := 0
+//    err := client.ListReportsPages(params,
+//        func(page *codebuild.ListReportsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListReportsPages(input *ListReportsInput, fn func(*ListReportsOutput, bool) bool) error {
+	return c.ListReportsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListReportsPagesWithContext same as ListReportsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListReportsPagesWithContext(ctx aws.Context, input *ListReportsInput, fn func(*ListReportsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListReportsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListReportsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListReportsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListReportsForReportGroup = "ListReportsForReportGroup"
@@ -2013,6 +2361,12 @@ func (c *CodeBuild) ListReportsForReportGroupRequest(input *ListReportsForReport
 		Name:       opListReportsForReportGroup,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -2035,11 +2389,11 @@ func (c *CodeBuild) ListReportsForReportGroupRequest(input *ListReportsForReport
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListReportsForReportGroup for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListReportsForReportGroup
@@ -2062,6 +2416,58 @@ func (c *CodeBuild) ListReportsForReportGroupWithContext(ctx aws.Context, input 
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListReportsForReportGroupPages iterates over the pages of a ListReportsForReportGroup operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListReportsForReportGroup method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListReportsForReportGroup operation.
+//    pageNum := 0
+//    err := client.ListReportsForReportGroupPages(params,
+//        func(page *codebuild.ListReportsForReportGroupOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListReportsForReportGroupPages(input *ListReportsForReportGroupInput, fn func(*ListReportsForReportGroupOutput, bool) bool) error {
+	return c.ListReportsForReportGroupPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListReportsForReportGroupPagesWithContext same as ListReportsForReportGroupPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListReportsForReportGroupPagesWithContext(ctx aws.Context, input *ListReportsForReportGroupInput, fn func(*ListReportsForReportGroupOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListReportsForReportGroupInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListReportsForReportGroupRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListReportsForReportGroupOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListSharedProjects = "ListSharedProjects"
@@ -2095,6 +2501,12 @@ func (c *CodeBuild) ListSharedProjectsRequest(input *ListSharedProjectsInput) (r
 		Name:       opListSharedProjects,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -2117,8 +2529,8 @@ func (c *CodeBuild) ListSharedProjectsRequest(input *ListSharedProjectsInput) (r
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListSharedProjects for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListSharedProjects
@@ -2141,6 +2553,58 @@ func (c *CodeBuild) ListSharedProjectsWithContext(ctx aws.Context, input *ListSh
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListSharedProjectsPages iterates over the pages of a ListSharedProjects operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListSharedProjects method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListSharedProjects operation.
+//    pageNum := 0
+//    err := client.ListSharedProjectsPages(params,
+//        func(page *codebuild.ListSharedProjectsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListSharedProjectsPages(input *ListSharedProjectsInput, fn func(*ListSharedProjectsOutput, bool) bool) error {
+	return c.ListSharedProjectsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListSharedProjectsPagesWithContext same as ListSharedProjectsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListSharedProjectsPagesWithContext(ctx aws.Context, input *ListSharedProjectsInput, fn func(*ListSharedProjectsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListSharedProjectsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListSharedProjectsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListSharedProjectsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListSharedReportGroups = "ListSharedReportGroups"
@@ -2174,6 +2638,12 @@ func (c *CodeBuild) ListSharedReportGroupsRequest(input *ListSharedReportGroupsI
 		Name:       opListSharedReportGroups,
 		HTTPMethod: "POST",
 		HTTPPath:   "/",
+		Paginator: &request.Paginator{
+			InputTokens:     []string{"nextToken"},
+			OutputTokens:    []string{"nextToken"},
+			LimitToken:      "maxResults",
+			TruncationToken: "",
+		},
 	}
 
 	if input == nil {
@@ -2196,8 +2666,8 @@ func (c *CodeBuild) ListSharedReportGroupsRequest(input *ListSharedReportGroupsI
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation ListSharedReportGroups for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/ListSharedReportGroups
@@ -2220,6 +2690,58 @@ func (c *CodeBuild) ListSharedReportGroupsWithContext(ctx aws.Context, input *Li
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// ListSharedReportGroupsPages iterates over the pages of a ListSharedReportGroups operation,
+// calling the "fn" function with the response data for each page. To stop
+// iterating, return false from the fn function.
+//
+// See ListSharedReportGroups method for more information on how to use this operation.
+//
+// Note: This operation can generate multiple requests to a service.
+//
+//    // Example iterating over at most 3 pages of a ListSharedReportGroups operation.
+//    pageNum := 0
+//    err := client.ListSharedReportGroupsPages(params,
+//        func(page *codebuild.ListSharedReportGroupsOutput, lastPage bool) bool {
+//            pageNum++
+//            fmt.Println(page)
+//            return pageNum <= 3
+//        })
+//
+func (c *CodeBuild) ListSharedReportGroupsPages(input *ListSharedReportGroupsInput, fn func(*ListSharedReportGroupsOutput, bool) bool) error {
+	return c.ListSharedReportGroupsPagesWithContext(aws.BackgroundContext(), input, fn)
+}
+
+// ListSharedReportGroupsPagesWithContext same as ListSharedReportGroupsPages except
+// it takes a Context and allows setting request options on the pages.
+//
+// The context must be non-nil and will be used for request cancellation. If
+// the context is nil a panic will occur. In the future the SDK may create
+// sub-contexts for http.Requests. See https://golang.org/pkg/context/
+// for more information on using Contexts.
+func (c *CodeBuild) ListSharedReportGroupsPagesWithContext(ctx aws.Context, input *ListSharedReportGroupsInput, fn func(*ListSharedReportGroupsOutput, bool) bool, opts ...request.Option) error {
+	p := request.Pagination{
+		NewRequest: func() (*request.Request, error) {
+			var inCpy *ListSharedReportGroupsInput
+			if input != nil {
+				tmp := *input
+				inCpy = &tmp
+			}
+			req, _ := c.ListSharedReportGroupsRequest(inCpy)
+			req.SetContext(ctx)
+			req.ApplyOptions(opts...)
+			return req, nil
+		},
+	}
+
+	for p.Next() {
+		if !fn(p.Page().(*ListSharedReportGroupsOutput), !p.HasNextPage()) {
+			break
+		}
+	}
+
+	return p.Err()
 }
 
 const opListSourceCredentials = "ListSourceCredentials"
@@ -2349,11 +2871,11 @@ func (c *CodeBuild) PutResourcePolicyRequest(input *PutResourcePolicyInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation PutResourcePolicy for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+// Returned Error Types:
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
-//   * ErrCodeInvalidInputException "InvalidInputException"
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/PutResourcePolicy
@@ -2431,14 +2953,14 @@ func (c *CodeBuild) StartBuildRequest(input *StartBuildInput) (req *request.Requ
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation StartBuild for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
-//   * ErrCodeAccountLimitExceededException "AccountLimitExceededException"
+//   * AccountLimitExceededException
 //   An AWS service limit was exceeded for the calling AWS account.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StartBuild
@@ -2516,11 +3038,11 @@ func (c *CodeBuild) StopBuildRequest(input *StopBuildInput) (req *request.Reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation StopBuild for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/StopBuild
@@ -2598,11 +3120,11 @@ func (c *CodeBuild) UpdateProjectRequest(input *UpdateProjectInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation UpdateProject for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateProject
@@ -2680,11 +3202,11 @@ func (c *CodeBuild) UpdateReportGroupRequest(input *UpdateReportGroupInput) (req
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation UpdateReportGroup for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateReportGroup
@@ -2764,14 +3286,14 @@ func (c *CodeBuild) UpdateWebhookRequest(input *UpdateWebhookInput) (req *reques
 // See the AWS API reference guide for AWS CodeBuild's
 // API operation UpdateWebhook for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeInvalidInputException "InvalidInputException"
+// Returned Error Types:
+//   * InvalidInputException
 //   The input value that was provided is not valid.
 //
-//   * ErrCodeResourceNotFoundException "ResourceNotFoundException"
+//   * ResourceNotFoundException
 //   The specified AWS resource cannot be found.
 //
-//   * ErrCodeOAuthProviderException "OAuthProviderException"
+//   * OAuthProviderException
 //   There was a problem with the underlying OAuth provider.
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/codebuild-2016-10-06/UpdateWebhook
@@ -2794,6 +3316,62 @@ func (c *CodeBuild) UpdateWebhookWithContext(ctx aws.Context, input *UpdateWebho
 	req.SetContext(ctx)
 	req.ApplyOptions(opts...)
 	return out, req.Send()
+}
+
+// An AWS service limit was exceeded for the calling AWS account.
+type AccountLimitExceededException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s AccountLimitExceededException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s AccountLimitExceededException) GoString() string {
+	return s.String()
+}
+
+func newErrorAccountLimitExceededException(v protocol.ResponseMetadata) error {
+	return &AccountLimitExceededException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *AccountLimitExceededException) Code() string {
+	return "AccountLimitExceededException"
+}
+
+// Message returns the exception's message.
+func (s *AccountLimitExceededException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *AccountLimitExceededException) OrigErr() error {
+	return nil
+}
+
+func (s *AccountLimitExceededException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *AccountLimitExceededException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *AccountLimitExceededException) RequestID() string {
+	return s.RespMetadata.RequestID
 }
 
 type BatchDeleteBuildsInput struct {
@@ -3223,6 +3801,11 @@ type Build struct {
 	// A list of exported environment variables for this build.
 	ExportedEnvironmentVariables []*ExportedEnvironmentVariable `locationName:"exportedEnvironmentVariables" type:"list"`
 
+	// An array of ProjectFileSystemLocation objects for a CodeBuild build project.
+	// A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
+	// mountPoint, and type of a file system created using Amazon Elastic File System.
+	FileSystemLocations []*ProjectFileSystemLocation `locationName:"fileSystemLocations" type:"list"`
+
 	// The unique ID for the build.
 	Id *string `locationName:"id" min:"1" type:"string"`
 
@@ -3398,6 +3981,12 @@ func (s *Build) SetExportedEnvironmentVariables(v []*ExportedEnvironmentVariable
 	return s
 }
 
+// SetFileSystemLocations sets the FileSystemLocations field's value.
+func (s *Build) SetFileSystemLocations(v []*ProjectFileSystemLocation) *Build {
+	s.FileSystemLocations = v
+	return s
+}
+
 // SetId sets the Id field's value.
 func (s *Build) SetId(v string) *Build {
 	s.Id = &v
@@ -3528,8 +4117,8 @@ type BuildArtifacts struct {
 	// to ZIP.
 	Md5sum *string `locationName:"md5sum" type:"string"`
 
-	// If this flag is set, a name specified in the build spec file overrides the
-	// artifact name. The name specified in a build spec file is calculated at build
+	// If this flag is set, a name specified in the buildspec file overrides the
+	// artifact name. The name specified in a buildspec file is calculated at build
 	// time and uses the Shell Command Language. For example, you can append a date
 	// and time to your artifact name so that it is always unique.
 	OverrideArtifactName *bool `locationName:"overrideArtifactName" type:"boolean"`
@@ -3831,6 +4420,11 @@ type CreateProjectInput struct {
 	// Environment is a required field
 	Environment *ProjectEnvironment `locationName:"environment" type:"structure" required:"true"`
 
+	// An array of ProjectFileSystemLocation objects for a CodeBuild build project.
+	// A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
+	// mountPoint, and type of a file system created using Amazon Elastic File System.
+	FileSystemLocations []*ProjectFileSystemLocation `locationName:"fileSystemLocations" type:"list"`
+
 	// Information about logs for the build project. These can be logs in Amazon
 	// CloudWatch Logs, logs uploaded to a specified S3 bucket, or both.
 	LogsConfig *LogsConfig `locationName:"logsConfig" type:"structure"`
@@ -3893,7 +4487,7 @@ type CreateProjectInput struct {
 	// in the AWS CodeBuild User Guide.
 	SourceVersion *string `locationName:"sourceVersion" type:"string"`
 
-	// A set of tags for this build project.
+	// A list of tag key and value pairs associated with this build project.
 	//
 	// These tags are available for use by AWS services that support AWS CodeBuild
 	// build project tags.
@@ -4064,6 +4658,12 @@ func (s *CreateProjectInput) SetEnvironment(v *ProjectEnvironment) *CreateProjec
 	return s
 }
 
+// SetFileSystemLocations sets the FileSystemLocations field's value.
+func (s *CreateProjectInput) SetFileSystemLocations(v []*ProjectFileSystemLocation) *CreateProjectInput {
+	s.FileSystemLocations = v
+	return s
+}
+
 // SetLogsConfig sets the LogsConfig field's value.
 func (s *CreateProjectInput) SetLogsConfig(v *LogsConfig) *CreateProjectInput {
 	s.LogsConfig = v
@@ -4173,6 +4773,12 @@ type CreateReportGroupInput struct {
 	// Name is a required field
 	Name *string `locationName:"name" min:"2" type:"string" required:"true"`
 
+	// A list of tag key and value pairs associated with this report group.
+	//
+	// These tags are available for use by AWS services that support AWS CodeBuild
+	// report group tags.
+	Tags []*Tag `locationName:"tags" type:"list"`
+
 	// The type of report group.
 	//
 	// Type is a required field
@@ -4209,6 +4815,16 @@ func (s *CreateReportGroupInput) Validate() error {
 			invalidParams.AddNested("ExportConfig", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.Tags != nil {
+		for i, v := range s.Tags {
+			if v == nil {
+				continue
+			}
+			if err := v.Validate(); err != nil {
+				invalidParams.AddNested(fmt.Sprintf("%s[%v]", "Tags", i), err.(request.ErrInvalidParams))
+			}
+		}
+	}
 
 	if invalidParams.Len() > 0 {
 		return invalidParams
@@ -4225,6 +4841,12 @@ func (s *CreateReportGroupInput) SetExportConfig(v *ReportExportConfig) *CreateR
 // SetName sets the Name field's value.
 func (s *CreateReportGroupInput) SetName(v string) *CreateReportGroupInput {
 	s.Name = &v
+	return s
+}
+
+// SetTags sets the Tags field's value.
+func (s *CreateReportGroupInput) SetTags(v []*Tag) *CreateReportGroupInput {
+	s.Tags = v
 	return s
 }
 
@@ -4925,19 +5547,24 @@ type EnvironmentVariable struct {
 	// The type of environment variable. Valid values include:
 	//
 	//    * PARAMETER_STORE: An environment variable stored in Amazon EC2 Systems
-	//    Manager Parameter Store.
+	//    Manager Parameter Store. To learn how to specify a parameter store environment
+	//    variable, see parameter store reference-key in the buildspec file (https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#parameter-store-build-spec).
 	//
-	//    * PLAINTEXT: An environment variable in plain text format.
+	//    * PLAINTEXT: An environment variable in plain text format. This is the
+	//    default value.
 	//
 	//    * SECRETS_MANAGER: An environment variable stored in AWS Secrets Manager.
+	//    To learn how to specify a secrets manager environment variable, see secrets
+	//    manager reference-key in the buildspec file (https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#secrets-manager-build-spec).
 	Type *string `locationName:"type" type:"string" enum:"EnvironmentVariableType"`
 
 	// The value of the environment variable.
 	//
-	// We strongly discourage the use of environment variables to store sensitive
-	// values, especially AWS secret key IDs and secret access keys. Environment
-	// variables can be displayed in plain text using the AWS CodeBuild console
-	// and the AWS Command Line Interface (AWS CLI).
+	// We strongly discourage the use of PLAINTEXT environment variables to store
+	// sensitive values, especially AWS secret key IDs and secret access keys. PLAINTEXT
+	// environment variables can be displayed in plain text using the AWS CodeBuild
+	// console and the AWS Command Line Interface (AWS CLI). For sensitive values,
+	// we recommend you use an environment variable of type PARAMETER_STORE or SECRETS_MANAGER.
 	//
 	// Value is a required field
 	Value *string `locationName:"value" type:"string" required:"true"`
@@ -5249,6 +5876,62 @@ func (s ImportSourceCredentialsOutput) GoString() string {
 func (s *ImportSourceCredentialsOutput) SetArn(v string) *ImportSourceCredentialsOutput {
 	s.Arn = &v
 	return s
+}
+
+// The input value that was provided is not valid.
+type InvalidInputException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s InvalidInputException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s InvalidInputException) GoString() string {
+	return s.String()
+}
+
+func newErrorInvalidInputException(v protocol.ResponseMetadata) error {
+	return &InvalidInputException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *InvalidInputException) Code() string {
+	return "InvalidInputException"
+}
+
+// Message returns the exception's message.
+func (s *InvalidInputException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *InvalidInputException) OrigErr() error {
+	return nil
+}
+
+func (s *InvalidInputException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *InvalidInputException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *InvalidInputException) RequestID() string {
+	return s.RespMetadata.RequestID
 }
 
 type InvalidateProjectCacheInput struct {
@@ -6450,6 +7133,62 @@ func (s *NetworkInterface) SetSubnetId(v string) *NetworkInterface {
 	return s
 }
 
+// There was a problem with the underlying OAuth provider.
+type OAuthProviderException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s OAuthProviderException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s OAuthProviderException) GoString() string {
+	return s.String()
+}
+
+func newErrorOAuthProviderException(v protocol.ResponseMetadata) error {
+	return &OAuthProviderException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *OAuthProviderException) Code() string {
+	return "OAuthProviderException"
+}
+
+// Message returns the exception's message.
+func (s *OAuthProviderException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *OAuthProviderException) OrigErr() error {
+	return nil
+}
+
+func (s *OAuthProviderException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *OAuthProviderException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *OAuthProviderException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
 // Additional information about a build phase that has an error. You can use
 // this information for troubleshooting.
 type PhaseContext struct {
@@ -6520,6 +7259,11 @@ type Project struct {
 	// Information about the build environment for this build project.
 	Environment *ProjectEnvironment `locationName:"environment" type:"structure"`
 
+	// An array of ProjectFileSystemLocation objects for a CodeBuild build project.
+	// A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
+	// mountPoint, and type of a file system created using Amazon Elastic File System.
+	FileSystemLocations []*ProjectFileSystemLocation `locationName:"fileSystemLocations" type:"list"`
+
 	// When the build project's settings were last modified, expressed in Unix time
 	// format.
 	LastModified *time.Time `locationName:"lastModified" type:"timestamp"`
@@ -6580,7 +7324,7 @@ type Project struct {
 	// in the AWS CodeBuild User Guide.
 	SourceVersion *string `locationName:"sourceVersion" type:"string"`
 
-	// The tags for this build project.
+	// A list of tag key and value pairs associated with this build project.
 	//
 	// These tags are available for use by AWS services that support AWS CodeBuild
 	// build project tags.
@@ -6654,6 +7398,12 @@ func (s *Project) SetEncryptionKey(v string) *Project {
 // SetEnvironment sets the Environment field's value.
 func (s *Project) SetEnvironment(v *ProjectEnvironment) *Project {
 	s.Environment = v
+	return s
+}
+
+// SetFileSystemLocations sets the FileSystemLocations field's value.
+func (s *Project) SetFileSystemLocations(v []*ProjectFileSystemLocation) *Project {
+	s.FileSystemLocations = v
 	return s
 }
 
@@ -6810,8 +7560,8 @@ type ProjectArtifacts struct {
 	// and name is set to MyArtifact.zip, the output artifact is stored in MyArtifacts/build-ID/MyArtifact.zip.
 	NamespaceType *string `locationName:"namespaceType" type:"string" enum:"ArtifactNamespace"`
 
-	// If this flag is set, a name specified in the build spec file overrides the
-	// artifact name. The name specified in a build spec file is calculated at build
+	// If this flag is set, a name specified in the buildspec file overrides the
+	// artifact name. The name specified in a buildspec file is calculated at build
 	// time and uses the Shell Command Language. For example, you can append a date
 	// and time to your artifact name so that it is always unique.
 	OverrideArtifactName *bool `locationName:"overrideArtifactName" type:"boolean"`
@@ -7176,16 +7926,16 @@ type ProjectEnvironment struct {
 	//    (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Sydney), and EU (Frankfurt).
 	//
 	//    * The environment type LINUX_CONTAINER with compute type build.general1.2xlarge
-	//    is available only in regions US East (N. Virginia), US East (N. Virginia),
-	//    US West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt),
+	//    is available only in regions US East (N. Virginia), US East (Ohio), US
+	//    West (Oregon), Canada (Central), EU (Ireland), EU (London), EU (Frankfurt),
 	//    Asia Pacific (Tokyo), Asia Pacific (Seoul), Asia Pacific (Singapore),
 	//    Asia Pacific (Sydney), China (Beijing), and China (Ningxia).
 	//
 	//    * The environment type LINUX_GPU_CONTAINER is available only in regions
-	//    US East (N. Virginia), US East (N. Virginia), US West (Oregon), Canada
-	//    (Central), EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo),
-	//    Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney)
-	//    , China (Beijing), and China (Ningxia).
+	//    US East (N. Virginia), US East (Ohio), US West (Oregon), Canada (Central),
+	//    EU (Ireland), EU (London), EU (Frankfurt), Asia Pacific (Tokyo), Asia
+	//    Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney) , China
+	//    (Beijing), and China (Ningxia).
 	//
 	// Type is a required field
 	Type *string `locationName:"type" type:"string" required:"true" enum:"EnvironmentType"`
@@ -7286,6 +8036,83 @@ func (s *ProjectEnvironment) SetType(v string) *ProjectEnvironment {
 	return s
 }
 
+// Information about a file system created by Amazon Elastic File System (EFS).
+// For more information, see What Is Amazon Elastic File System? (https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
+type ProjectFileSystemLocation struct {
+	_ struct{} `type:"structure"`
+
+	// The name used to access a file system created by Amazon EFS. CodeBuild creates
+	// an environment variable by appending the identifier in all capital letters
+	// to CODEBUILD_. For example, if you specify my-efs for identifier, a new environment
+	// variable is create named CODEBUILD_MY-EFS.
+	//
+	// The identifier is used to mount your file system.
+	Identifier *string `locationName:"identifier" type:"string"`
+
+	// A string that specifies the location of the file system created by Amazon
+	// EFS. Its format is efs-dns-name:/directory-path. You can find the DNS name
+	// of file system when you view it in the AWS EFS console. The directory path
+	// is a path to a directory in the file system that CodeBuild mounts. For example,
+	// if the DNS name of a file system is fs-abcd1234.efs.us-west-2.amazonaws.com,
+	// and its mount directory is my-efs-mount-directory, then the location is fs-abcd1234.efs.us-west-2.amazonaws.com:/my-efs-mount-directory.
+	//
+	// The directory path in the format efs-dns-name:/directory-path is optional.
+	// If you do not specify a directory path, the location is only the DNS name
+	// and CodeBuild mounts the entire file system.
+	Location *string `locationName:"location" type:"string"`
+
+	// The mount options for a file system created by AWS EFS. The default mount
+	// options used by CodeBuild are nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2.
+	// For more information, see Recommended NFS Mount Options (https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html).
+	MountOptions *string `locationName:"mountOptions" type:"string"`
+
+	// The location in the container where you mount the file system.
+	MountPoint *string `locationName:"mountPoint" type:"string"`
+
+	// The type of the file system. The one supported type is EFS.
+	Type *string `locationName:"type" type:"string" enum:"FileSystemType"`
+}
+
+// String returns the string representation
+func (s ProjectFileSystemLocation) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s ProjectFileSystemLocation) GoString() string {
+	return s.String()
+}
+
+// SetIdentifier sets the Identifier field's value.
+func (s *ProjectFileSystemLocation) SetIdentifier(v string) *ProjectFileSystemLocation {
+	s.Identifier = &v
+	return s
+}
+
+// SetLocation sets the Location field's value.
+func (s *ProjectFileSystemLocation) SetLocation(v string) *ProjectFileSystemLocation {
+	s.Location = &v
+	return s
+}
+
+// SetMountOptions sets the MountOptions field's value.
+func (s *ProjectFileSystemLocation) SetMountOptions(v string) *ProjectFileSystemLocation {
+	s.MountOptions = &v
+	return s
+}
+
+// SetMountPoint sets the MountPoint field's value.
+func (s *ProjectFileSystemLocation) SetMountPoint(v string) *ProjectFileSystemLocation {
+	s.MountPoint = &v
+	return s
+}
+
+// SetType sets the Type field's value.
+func (s *ProjectFileSystemLocation) SetType(v string) *ProjectFileSystemLocation {
+	s.Type = &v
+	return s
+}
+
 // Information about the build input source code for the build project.
 type ProjectSource struct {
 	_ struct{} `type:"structure"`
@@ -7297,10 +8124,16 @@ type ProjectSource struct {
 	// not get or set this information directly.
 	Auth *SourceAuth `locationName:"auth" type:"structure"`
 
-	// The build spec declaration to use for the builds in this build project.
+	// The buildspec file declaration to use for the builds in this build project.
 	//
-	// If this value is not specified, a build spec must be included along with
-	// the source code to be built.
+	// If this value is set, it can be either an inline buildspec definition, the
+	// path to an alternate buildspec file relative to the value of the built-in
+	// CODEBUILD_SRC_DIR environment variable, or the path to an S3 bucket. The
+	// bucket must be in the same AWS Region as the build project. Specify the buildspec
+	// file using its ARN (for example, arn:aws:s3:::my-codebuild-sample2/buildspec.yml).
+	// If this value is not provided or is set to an empty string, the source code
+	// must contain a buildspec file in its root directory. For more information,
+	// see Buildspec File Name and Storage Location (https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage).
 	Buildspec *string `locationName:"buildspec" type:"string"`
 
 	// Information about the Git clone depth for the build project.
@@ -7322,8 +8155,8 @@ type ProjectSource struct {
 	//    uses the settings in a pipeline's source action instead of this value.
 	//
 	//    * For source code in an AWS CodeCommit repository, the HTTPS clone URL
-	//    to the repository that contains the source code and the build spec (for
-	//    example, https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name
+	//    to the repository that contains the source code and the buildspec file
+	//    (for example, https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name
 	//    ).
 	//
 	//    * For source code in an Amazon Simple Storage Service (Amazon S3) input
@@ -7332,8 +8165,8 @@ type ProjectSource struct {
 	//    to the folder that contains the source code (for example, bucket-name/path/to/source-code/folder/).
 	//
 	//    * For source code in a GitHub repository, the HTTPS clone URL to the repository
-	//    that contains the source and the build spec. You must connect your AWS
-	//    account to your GitHub account. Use the AWS CodeBuild console to start
+	//    that contains the source and the buildspec file. You must connect your
+	//    AWS account to your GitHub account. Use the AWS CodeBuild console to start
 	//    creating a build project. When you use the console to connect (or reconnect)
 	//    with GitHub, on the GitHub Authorize application page, for Organization
 	//    access, choose Request access next to each repository you want to allow
@@ -7344,7 +8177,7 @@ type ProjectSource struct {
 	//    set the auth object's type value to OAUTH.
 	//
 	//    * For source code in a Bitbucket repository, the HTTPS clone URL to the
-	//    repository that contains the source and the build spec. You must connect
+	//    repository that contains the source and the buildspec file. You must connect
 	//    your AWS account to your Bitbucket account. Use the AWS CodeBuild console
 	//    to start creating a build project. When you use the console to connect
 	//    (or reconnect) with Bitbucket, on the Bitbucket Confirm access to your
@@ -7653,7 +8486,7 @@ type RegistryCredential struct {
 	// Manager.
 	//
 	// The credential can use the name of the credentials only if they exist in
-	// your current region.
+	// your current AWS Region.
 	//
 	// Credential is a required field
 	Credential *string `locationName:"credential" min:"1" type:"string" required:"true"`
@@ -7927,6 +8760,12 @@ type ReportGroup struct {
 	// The name of a ReportGroup.
 	Name *string `locationName:"name" min:"2" type:"string"`
 
+	// A list of tag key and value pairs associated with this report group.
+	//
+	// These tags are available for use by AWS services that support AWS CodeBuild
+	// report group tags.
+	Tags []*Tag `locationName:"tags" type:"list"`
+
 	// The type of the ReportGroup. The one valid value is TEST.
 	Type *string `locationName:"type" type:"string" enum:"ReportType"`
 }
@@ -7971,10 +8810,129 @@ func (s *ReportGroup) SetName(v string) *ReportGroup {
 	return s
 }
 
+// SetTags sets the Tags field's value.
+func (s *ReportGroup) SetTags(v []*Tag) *ReportGroup {
+	s.Tags = v
+	return s
+}
+
 // SetType sets the Type field's value.
 func (s *ReportGroup) SetType(v string) *ReportGroup {
 	s.Type = &v
 	return s
+}
+
+// The specified AWS resource cannot be created, because an AWS resource with
+// the same settings already exists.
+type ResourceAlreadyExistsException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s ResourceAlreadyExistsException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s ResourceAlreadyExistsException) GoString() string {
+	return s.String()
+}
+
+func newErrorResourceAlreadyExistsException(v protocol.ResponseMetadata) error {
+	return &ResourceAlreadyExistsException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *ResourceAlreadyExistsException) Code() string {
+	return "ResourceAlreadyExistsException"
+}
+
+// Message returns the exception's message.
+func (s *ResourceAlreadyExistsException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *ResourceAlreadyExistsException) OrigErr() error {
+	return nil
+}
+
+func (s *ResourceAlreadyExistsException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *ResourceAlreadyExistsException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *ResourceAlreadyExistsException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
+// The specified AWS resource cannot be found.
+type ResourceNotFoundException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s ResourceNotFoundException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s ResourceNotFoundException) GoString() string {
+	return s.String()
+}
+
+func newErrorResourceNotFoundException(v protocol.ResponseMetadata) error {
+	return &ResourceNotFoundException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *ResourceNotFoundException) Code() string {
+	return "ResourceNotFoundException"
+}
+
+// Message returns the exception's message.
+func (s *ResourceNotFoundException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *ResourceNotFoundException) OrigErr() error {
+	return nil
+}
+
+func (s *ResourceNotFoundException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *ResourceNotFoundException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *ResourceNotFoundException) RequestID() string {
+	return s.RespMetadata.RequestID
 }
 
 // Information about S3 logs for a build project.
@@ -8231,8 +9189,17 @@ type StartBuildInput struct {
 	// ones already defined in the build project.
 	ArtifactsOverride *ProjectArtifacts `locationName:"artifactsOverride" type:"structure"`
 
-	// A build spec declaration that overrides, for this build only, the latest
+	// A buildspec file declaration that overrides, for this build only, the latest
 	// one already defined in the build project.
+	//
+	// If this value is set, it can be either an inline buildspec definition, the
+	// path to an alternate buildspec file relative to the value of the built-in
+	// CODEBUILD_SRC_DIR environment variable, or the path to an S3 bucket. The
+	// bucket must be in the same AWS Region as the build project. Specify the buildspec
+	// file using its ARN (for example, arn:aws:s3:::my-codebuild-sample2/buildspec.yml).
+	// If this value is not provided or is set to an empty string, the source code
+	// must contain a buildspec file in its root directory. For more information,
+	// see Buildspec File Name and Storage Location (https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-name-storage).
 	BuildspecOverride *string `locationName:"buildspecOverride" type:"string"`
 
 	// A ProjectCache object specified for this build that overrides the one defined
@@ -8246,6 +9213,17 @@ type StartBuildInput struct {
 	// The name of a compute type for this build that overrides the one specified
 	// in the build project.
 	ComputeTypeOverride *string `locationName:"computeTypeOverride" type:"string" enum:"ComputeType"`
+
+	// The AWS Key Management Service (AWS KMS) customer master key (CMK) that overrides
+	// the one specified in the build project. The CMK key encrypts the build output
+	// artifacts.
+	//
+	// You can use a cross-account KMS key to encrypt the build output artifacts
+	// if your service role has permission to that key.
+	//
+	// You can specify either the Amazon Resource Name (ARN) of the CMK or, if available,
+	// the CMK's alias (using the format alias/alias-name ).
+	EncryptionKeyOverride *string `locationName:"encryptionKeyOverride" min:"1" type:"string"`
 
 	// A container type for this build that overrides the one specified in the build
 	// project.
@@ -8393,6 +9371,9 @@ func (s StartBuildInput) GoString() string {
 // Validate inspects the fields of the type to determine if they are valid.
 func (s *StartBuildInput) Validate() error {
 	invalidParams := request.ErrInvalidParams{Context: "StartBuildInput"}
+	if s.EncryptionKeyOverride != nil && len(*s.EncryptionKeyOverride) < 1 {
+		invalidParams.Add(request.NewErrParamMinLen("EncryptionKeyOverride", 1))
+	}
 	if s.ImageOverride != nil && len(*s.ImageOverride) < 1 {
 		invalidParams.Add(request.NewErrParamMinLen("ImageOverride", 1))
 	}
@@ -8515,6 +9496,12 @@ func (s *StartBuildInput) SetCertificateOverride(v string) *StartBuildInput {
 // SetComputeTypeOverride sets the ComputeTypeOverride field's value.
 func (s *StartBuildInput) SetComputeTypeOverride(v string) *StartBuildInput {
 	s.ComputeTypeOverride = &v
+	return s
+}
+
+// SetEncryptionKeyOverride sets the EncryptionKeyOverride field's value.
+func (s *StartBuildInput) SetEncryptionKeyOverride(v string) *StartBuildInput {
+	s.EncryptionKeyOverride = &v
 	return s
 }
 
@@ -8753,7 +9740,7 @@ type Tag struct {
 	Key *string `locationName:"key" min:"1" type:"string"`
 
 	// The tag's value.
-	Value *string `locationName:"value" min:"1" type:"string"`
+	Value *string `locationName:"value" type:"string"`
 }
 
 // String returns the string representation
@@ -8771,9 +9758,6 @@ func (s *Tag) Validate() error {
 	invalidParams := request.ErrInvalidParams{Context: "Tag"}
 	if s.Key != nil && len(*s.Key) < 1 {
 		invalidParams.Add(request.NewErrParamMinLen("Key", 1))
-	}
-	if s.Value != nil && len(*s.Value) < 1 {
-		invalidParams.Add(request.NewErrParamMinLen("Value", 1))
 	}
 
 	if invalidParams.Len() > 0 {
@@ -8992,6 +9976,11 @@ type UpdateProjectInput struct {
 	// Information to be changed about the build environment for the build project.
 	Environment *ProjectEnvironment `locationName:"environment" type:"structure"`
 
+	// An array of ProjectFileSystemLocation objects for a CodeBuild build project.
+	// A ProjectFileSystemLocation object specifies the identifier, location, mountOptions,
+	// mountPoint, and type of a file system created using Amazon Elastic File System.
+	FileSystemLocations []*ProjectFileSystemLocation `locationName:"fileSystemLocations" type:"list"`
+
 	// Information about logs for the build project. A project can create logs in
 	// Amazon CloudWatch Logs, logs in an S3 bucket, or both.
 	LogsConfig *LogsConfig `locationName:"logsConfig" type:"structure"`
@@ -9053,7 +10042,7 @@ type UpdateProjectInput struct {
 	// in the AWS CodeBuild User Guide.
 	SourceVersion *string `locationName:"sourceVersion" type:"string"`
 
-	// The replacement set of tags for this build project.
+	// An updated list of tag key and value pairs associated with this build project.
 	//
 	// These tags are available for use by AWS services that support AWS CodeBuild
 	// build project tags.
@@ -9211,6 +10200,12 @@ func (s *UpdateProjectInput) SetEnvironment(v *ProjectEnvironment) *UpdateProjec
 	return s
 }
 
+// SetFileSystemLocations sets the FileSystemLocations field's value.
+func (s *UpdateProjectInput) SetFileSystemLocations(v []*ProjectFileSystemLocation) *UpdateProjectInput {
+	s.FileSystemLocations = v
+	return s
+}
+
 // SetLogsConfig sets the LogsConfig field's value.
 func (s *UpdateProjectInput) SetLogsConfig(v *LogsConfig) *UpdateProjectInput {
 	s.LogsConfig = v
@@ -9320,6 +10315,12 @@ type UpdateReportGroupInput struct {
 	//
 	//    * NO_EXPORT: The report results are not exported.
 	ExportConfig *ReportExportConfig `locationName:"exportConfig" type:"structure"`
+
+	// An updated list of tag key and value pairs associated with this report group.
+	//
+	// These tags are available for use by AWS services that support AWS CodeBuild
+	// report group tags.
+	Tags []*Tag `locationName:"tags" type:"list"`
 }
 
 // String returns the string representation
@@ -9346,6 +10347,16 @@ func (s *UpdateReportGroupInput) Validate() error {
 			invalidParams.AddNested("ExportConfig", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.Tags != nil {
+		for i, v := range s.Tags {
+			if v == nil {
+				continue
+			}
+			if err := v.Validate(); err != nil {
+				invalidParams.AddNested(fmt.Sprintf("%s[%v]", "Tags", i), err.(request.ErrInvalidParams))
+			}
+		}
+	}
 
 	if invalidParams.Len() > 0 {
 		return invalidParams
@@ -9362,6 +10373,12 @@ func (s *UpdateReportGroupInput) SetArn(v string) *UpdateReportGroupInput {
 // SetExportConfig sets the ExportConfig field's value.
 func (s *UpdateReportGroupInput) SetExportConfig(v *ReportExportConfig) *UpdateReportGroupInput {
 	s.ExportConfig = v
+	return s
+}
+
+// SetTags sets the Tags field's value.
+func (s *UpdateReportGroupInput) SetTags(v []*Tag) *UpdateReportGroupInput {
+	s.Tags = v
 	return s
 }
 
@@ -9656,10 +10673,10 @@ type WebhookFilter struct {
 	// EVENT
 	//
 	// A webhook event triggers a build when the provided pattern matches one of
-	// four event types: PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED, and PULL_REQUEST_REOPENED.
-	// The EVENT patterns are specified as a comma-separated string. For example,
-	// PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED filters all push, pull request
-	// created, and pull request updated events.
+	// five event types: PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED, PULL_REQUEST_REOPENED,
+	// and PULL_REQUEST_MERGED. The EVENT patterns are specified as a comma-separated
+	// string. For example, PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED filters
+	// all push, pull request created, and pull request updated events.
 	//
 	// The PULL_REQUEST_REOPENED works with GitHub and GitHub Enterprise only.
 	//
@@ -9859,6 +10876,11 @@ const (
 
 	// EnvironmentVariableTypeSecretsManager is a EnvironmentVariableType enum value
 	EnvironmentVariableTypeSecretsManager = "SECRETS_MANAGER"
+)
+
+const (
+	// FileSystemTypeEfs is a FileSystemType enum value
+	FileSystemTypeEfs = "EFS"
 )
 
 const (
@@ -10073,4 +11095,7 @@ const (
 
 	// WebhookFilterTypeFilePath is a WebhookFilterType enum value
 	WebhookFilterTypeFilePath = "FILE_PATH"
+
+	// WebhookFilterTypeCommitMessage is a WebhookFilterType enum value
+	WebhookFilterTypeCommitMessage = "COMMIT_MESSAGE"
 )

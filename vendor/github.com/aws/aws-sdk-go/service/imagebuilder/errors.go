@@ -2,6 +2,10 @@
 
 package imagebuilder
 
+import (
+	"github.com/aws/aws-sdk-go/private/protocol"
+)
+
 const (
 
 	// ErrCodeCallRateLimitExceededException for service response error code
@@ -27,7 +31,7 @@ const (
 	// ErrCodeIdempotentParameterMismatchException for service response error code
 	// "IdempotentParameterMismatchException".
 	//
-	// You have specified an client token for an operation using parameter values
+	// You have specified a client token for an operation using parameter values
 	// that differ from a previous request that used the same client token.
 	ErrCodeIdempotentParameterMismatchException = "IdempotentParameterMismatchException"
 
@@ -79,14 +83,14 @@ const (
 	// "ResourceDependencyException".
 	//
 	// You have attempted to mutate or delete a resource with a dependency that
-	// is prohibitting this action. See the error message for more details.
+	// prohibits this action. See the error message for more details.
 	ErrCodeResourceDependencyException = "ResourceDependencyException"
 
 	// ErrCodeResourceInUseException for service response error code
 	// "ResourceInUseException".
 	//
 	// The resource that you are trying to operate on is currently in use. Review
-	// the message details, and retry later.
+	// the message details and retry later.
 	ErrCodeResourceInUseException = "ResourceInUseException"
 
 	// ErrCodeResourceNotFoundException for service response error code
@@ -101,9 +105,36 @@ const (
 	// This exception is thrown when the service encounters an unrecoverable exception.
 	ErrCodeServiceException = "ServiceException"
 
+	// ErrCodeServiceQuotaExceededException for service response error code
+	// "ServiceQuotaExceededException".
+	//
+	// You have exceeded the number of permitted resources or operations for this
+	// service. For service quotas, see EC2 Image Builder endpoints and quotas (https://docs.aws.amazon.com/general/latest/gr/imagebuilder.html#limits_imagebuilder).
+	ErrCodeServiceQuotaExceededException = "ServiceQuotaExceededException"
+
 	// ErrCodeServiceUnavailableException for service response error code
 	// "ServiceUnavailableException".
 	//
 	// The service is unable to process your request at this time.
 	ErrCodeServiceUnavailableException = "ServiceUnavailableException"
 )
+
+var exceptionFromCode = map[string]func(protocol.ResponseMetadata) error{
+	"CallRateLimitExceededException":       newErrorCallRateLimitExceededException,
+	"ClientException":                      newErrorClientException,
+	"ForbiddenException":                   newErrorForbiddenException,
+	"IdempotentParameterMismatchException": newErrorIdempotentParameterMismatchException,
+	"InvalidPaginationTokenException":      newErrorInvalidPaginationTokenException,
+	"InvalidParameterCombinationException": newErrorInvalidParameterCombinationException,
+	"InvalidParameterException":            newErrorInvalidParameterException,
+	"InvalidParameterValueException":       newErrorInvalidParameterValueException,
+	"InvalidRequestException":              newErrorInvalidRequestException,
+	"InvalidVersionNumberException":        newErrorInvalidVersionNumberException,
+	"ResourceAlreadyExistsException":       newErrorResourceAlreadyExistsException,
+	"ResourceDependencyException":          newErrorResourceDependencyException,
+	"ResourceInUseException":               newErrorResourceInUseException,
+	"ResourceNotFoundException":            newErrorResourceNotFoundException,
+	"ServiceException":                     newErrorServiceException,
+	"ServiceQuotaExceededException":        newErrorServiceQuotaExceededException,
+	"ServiceUnavailableException":          newErrorServiceUnavailableException,
+}

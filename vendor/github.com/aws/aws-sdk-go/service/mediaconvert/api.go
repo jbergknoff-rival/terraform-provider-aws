@@ -68,18 +68,18 @@ func (c *MediaConvert) AssociateCertificateRequest(input *AssociateCertificateIn
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation AssociateCertificate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/AssociateCertificate
 func (c *MediaConvert) AssociateCertificate(input *AssociateCertificateInput) (*AssociateCertificateOutput, error) {
@@ -158,18 +158,18 @@ func (c *MediaConvert) CancelJobRequest(input *CancelJobInput) (req *request.Req
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation CancelJob for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CancelJob
 func (c *MediaConvert) CancelJob(input *CancelJobInput) (*CancelJobOutput, error) {
@@ -247,18 +247,18 @@ func (c *MediaConvert) CreateJobRequest(input *CreateJobInput) (req *request.Req
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation CreateJob for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateJob
 func (c *MediaConvert) CreateJob(input *CreateJobInput) (*CreateJobOutput, error) {
@@ -336,18 +336,18 @@ func (c *MediaConvert) CreateJobTemplateRequest(input *CreateJobTemplateInput) (
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation CreateJobTemplate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateJobTemplate
 func (c *MediaConvert) CreateJobTemplate(input *CreateJobTemplateInput) (*CreateJobTemplateOutput, error) {
@@ -425,18 +425,18 @@ func (c *MediaConvert) CreatePresetRequest(input *CreatePresetInput) (req *reque
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation CreatePreset for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreatePreset
 func (c *MediaConvert) CreatePreset(input *CreatePresetInput) (*CreatePresetOutput, error) {
@@ -514,18 +514,18 @@ func (c *MediaConvert) CreateQueueRequest(input *CreateQueueInput) (req *request
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation CreateQueue for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/CreateQueue
 func (c *MediaConvert) CreateQueue(input *CreateQueueInput) (*CreateQueueOutput, error) {
@@ -603,18 +603,18 @@ func (c *MediaConvert) DeleteJobTemplateRequest(input *DeleteJobTemplateInput) (
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation DeleteJobTemplate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeleteJobTemplate
 func (c *MediaConvert) DeleteJobTemplate(input *DeleteJobTemplateInput) (*DeleteJobTemplateOutput, error) {
@@ -692,18 +692,18 @@ func (c *MediaConvert) DeletePresetRequest(input *DeletePresetInput) (req *reque
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation DeletePreset for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeletePreset
 func (c *MediaConvert) DeletePreset(input *DeletePresetInput) (*DeletePresetOutput, error) {
@@ -781,18 +781,18 @@ func (c *MediaConvert) DeleteQueueRequest(input *DeleteQueueInput) (req *request
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation DeleteQueue for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeleteQueue
 func (c *MediaConvert) DeleteQueue(input *DeleteQueueInput) (*DeleteQueueOutput, error) {
@@ -876,18 +876,18 @@ func (c *MediaConvert) DescribeEndpointsRequest(input *DescribeEndpointsInput) (
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation DescribeEndpoints for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DescribeEndpoints
 func (c *MediaConvert) DescribeEndpoints(input *DescribeEndpointsInput) (*DescribeEndpointsOutput, error) {
@@ -1018,18 +1018,18 @@ func (c *MediaConvert) DisassociateCertificateRequest(input *DisassociateCertifi
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation DisassociateCertificate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DisassociateCertificate
 func (c *MediaConvert) DisassociateCertificate(input *DisassociateCertificateInput) (*DisassociateCertificateOutput, error) {
@@ -1106,18 +1106,18 @@ func (c *MediaConvert) GetJobRequest(input *GetJobInput) (req *request.Request, 
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation GetJob for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetJob
 func (c *MediaConvert) GetJob(input *GetJobInput) (*GetJobOutput, error) {
@@ -1194,18 +1194,18 @@ func (c *MediaConvert) GetJobTemplateRequest(input *GetJobTemplateInput) (req *r
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation GetJobTemplate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetJobTemplate
 func (c *MediaConvert) GetJobTemplate(input *GetJobTemplateInput) (*GetJobTemplateOutput, error) {
@@ -1282,18 +1282,18 @@ func (c *MediaConvert) GetPresetRequest(input *GetPresetInput) (req *request.Req
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation GetPreset for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetPreset
 func (c *MediaConvert) GetPreset(input *GetPresetInput) (*GetPresetOutput, error) {
@@ -1370,18 +1370,18 @@ func (c *MediaConvert) GetQueueRequest(input *GetQueueInput) (req *request.Reque
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation GetQueue for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetQueue
 func (c *MediaConvert) GetQueue(input *GetQueueInput) (*GetQueueOutput, error) {
@@ -1466,18 +1466,18 @@ func (c *MediaConvert) ListJobTemplatesRequest(input *ListJobTemplatesInput) (re
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation ListJobTemplates for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListJobTemplates
 func (c *MediaConvert) ListJobTemplates(input *ListJobTemplatesInput) (*ListJobTemplatesOutput, error) {
@@ -1615,18 +1615,18 @@ func (c *MediaConvert) ListJobsRequest(input *ListJobsInput) (req *request.Reque
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation ListJobs for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListJobs
 func (c *MediaConvert) ListJobs(input *ListJobsInput) (*ListJobsOutput, error) {
@@ -1763,18 +1763,18 @@ func (c *MediaConvert) ListPresetsRequest(input *ListPresetsInput) (req *request
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation ListPresets for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListPresets
 func (c *MediaConvert) ListPresets(input *ListPresetsInput) (*ListPresetsOutput, error) {
@@ -1911,18 +1911,18 @@ func (c *MediaConvert) ListQueuesRequest(input *ListQueuesInput) (req *request.R
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation ListQueues for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListQueues
 func (c *MediaConvert) ListQueues(input *ListQueuesInput) (*ListQueuesOutput, error) {
@@ -2051,18 +2051,18 @@ func (c *MediaConvert) ListTagsForResourceRequest(input *ListTagsForResourceInpu
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation ListTagsForResource for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/ListTagsForResource
 func (c *MediaConvert) ListTagsForResource(input *ListTagsForResourceInput) (*ListTagsForResourceOutput, error) {
@@ -2141,18 +2141,18 @@ func (c *MediaConvert) TagResourceRequest(input *TagResourceInput) (req *request
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation TagResource for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/TagResource
 func (c *MediaConvert) TagResource(input *TagResourceInput) (*TagResourceOutput, error) {
@@ -2231,18 +2231,18 @@ func (c *MediaConvert) UntagResourceRequest(input *UntagResourceInput) (req *req
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation UntagResource for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UntagResource
 func (c *MediaConvert) UntagResource(input *UntagResourceInput) (*UntagResourceOutput, error) {
@@ -2319,18 +2319,18 @@ func (c *MediaConvert) UpdateJobTemplateRequest(input *UpdateJobTemplateInput) (
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation UpdateJobTemplate for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdateJobTemplate
 func (c *MediaConvert) UpdateJobTemplate(input *UpdateJobTemplateInput) (*UpdateJobTemplateOutput, error) {
@@ -2407,18 +2407,18 @@ func (c *MediaConvert) UpdatePresetRequest(input *UpdatePresetInput) (req *reque
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation UpdatePreset for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdatePreset
 func (c *MediaConvert) UpdatePreset(input *UpdatePresetInput) (*UpdatePresetOutput, error) {
@@ -2495,18 +2495,18 @@ func (c *MediaConvert) UpdateQueueRequest(input *UpdateQueueInput) (req *request
 // See the AWS API reference guide for AWS Elemental MediaConvert's
 // API operation UpdateQueue for usage and error information.
 //
-// Returned Error Codes:
-//   * ErrCodeBadRequestException "BadRequestException"
+// Returned Error Types:
+//   * BadRequestException
 //
-//   * ErrCodeInternalServerErrorException "InternalServerErrorException"
+//   * InternalServerErrorException
 //
-//   * ErrCodeForbiddenException "ForbiddenException"
+//   * ForbiddenException
 //
-//   * ErrCodeNotFoundException "NotFoundException"
+//   * NotFoundException
 //
-//   * ErrCodeTooManyRequestsException "TooManyRequestsException"
+//   * TooManyRequestsException
 //
-//   * ErrCodeConflictException "ConflictException"
+//   * ConflictException
 //
 // See also, https://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/UpdateQueue
 func (c *MediaConvert) UpdateQueue(input *UpdateQueueInput) (*UpdateQueueOutput, error) {
@@ -2785,9 +2785,7 @@ func (s *Ac3Settings) SetSampleRate(v int64) *Ac3Settings {
 }
 
 // Accelerated transcoding can significantly speed up jobs with long, visually
-// complex content. Outputs that use this feature incur pro-tier pricing. For
-// information about feature limitations, see the AWS Elemental MediaConvert
-// User Guide.
+// complex content.
 type AccelerationSettings struct {
 	_ struct{} `type:"structure"`
 
@@ -3015,8 +3013,9 @@ func (s AssociateCertificateOutput) GoString() string {
 // depending on the value that you choose for Audio codec (Codec). For each
 // codec enum that you choose, define the corresponding settings object. The
 // following lists the codec enum, settings object pairs. * AAC, AacSettings
-// * MP2, Mp2Settings * WAV, WavSettings * AIFF, AiffSettings * AC3, Ac3Settings
-// * EAC3, Eac3Settings * EAC3_ATMOS, Eac3AtmosSettings
+// * MP2, Mp2Settings * MP3, Mp3Settings * WAV, WavSettings * AIFF, AiffSettings
+// * AC3, Ac3Settings * EAC3, Eac3Settings * EAC3_ATMOS, Eac3AtmosSettings *
+// VORBIS, VorbisSettings * OPUS, OpusSettings
 type AudioCodecSettings struct {
 	_ struct{} `type:"structure"`
 
@@ -3051,6 +3050,18 @@ type AudioCodecSettings struct {
 	// Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to
 	// the value MP2.
 	Mp2Settings *Mp2Settings `locationName:"mp2Settings" type:"structure"`
+
+	// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+	// value MP3.
+	Mp3Settings *Mp3Settings `locationName:"mp3Settings" type:"structure"`
+
+	// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+	// value OPUS.
+	OpusSettings *OpusSettings `locationName:"opusSettings" type:"structure"`
+
+	// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+	// value Vorbis.
+	VorbisSettings *VorbisSettings `locationName:"vorbisSettings" type:"structure"`
 
 	// Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to
 	// the value WAV.
@@ -3098,6 +3109,21 @@ func (s *AudioCodecSettings) Validate() error {
 	if s.Mp2Settings != nil {
 		if err := s.Mp2Settings.Validate(); err != nil {
 			invalidParams.AddNested("Mp2Settings", err.(request.ErrInvalidParams))
+		}
+	}
+	if s.Mp3Settings != nil {
+		if err := s.Mp3Settings.Validate(); err != nil {
+			invalidParams.AddNested("Mp3Settings", err.(request.ErrInvalidParams))
+		}
+	}
+	if s.OpusSettings != nil {
+		if err := s.OpusSettings.Validate(); err != nil {
+			invalidParams.AddNested("OpusSettings", err.(request.ErrInvalidParams))
+		}
+	}
+	if s.VorbisSettings != nil {
+		if err := s.VorbisSettings.Validate(); err != nil {
+			invalidParams.AddNested("VorbisSettings", err.(request.ErrInvalidParams))
 		}
 	}
 	if s.WavSettings != nil {
@@ -3154,6 +3180,24 @@ func (s *AudioCodecSettings) SetMp2Settings(v *Mp2Settings) *AudioCodecSettings 
 	return s
 }
 
+// SetMp3Settings sets the Mp3Settings field's value.
+func (s *AudioCodecSettings) SetMp3Settings(v *Mp3Settings) *AudioCodecSettings {
+	s.Mp3Settings = v
+	return s
+}
+
+// SetOpusSettings sets the OpusSettings field's value.
+func (s *AudioCodecSettings) SetOpusSettings(v *OpusSettings) *AudioCodecSettings {
+	s.OpusSettings = v
+	return s
+}
+
+// SetVorbisSettings sets the VorbisSettings field's value.
+func (s *AudioCodecSettings) SetVorbisSettings(v *VorbisSettings) *AudioCodecSettings {
+	s.VorbisSettings = v
+	return s
+}
+
 // SetWavSettings sets the WavSettings field's value.
 func (s *AudioCodecSettings) SetWavSettings(v *WavSettings) *AudioCodecSettings {
 	s.WavSettings = v
@@ -3198,8 +3242,9 @@ type AudioDescription struct {
 	// depending on the value that you choose for Audio codec (Codec). For each
 	// codec enum that you choose, define the corresponding settings object. The
 	// following lists the codec enum, settings object pairs. * AAC, AacSettings
-	// * MP2, Mp2Settings * WAV, WavSettings * AIFF, AiffSettings * AC3, Ac3Settings
-	// * EAC3, Eac3Settings * EAC3_ATMOS, Eac3AtmosSettings
+	// * MP2, Mp2Settings * MP3, Mp3Settings * WAV, WavSettings * AIFF, AiffSettings
+	// * AC3, Ac3Settings * EAC3, Eac3Settings * EAC3_ATMOS, Eac3AtmosSettings *
+	// VORBIS, VorbisSettings * OPUS, OpusSettings
 	CodecSettings *AudioCodecSettings `locationName:"codecSettings" type:"structure"`
 
 	// Specify the language for this audio output track. The service puts this language
@@ -3354,8 +3399,7 @@ type AudioNormalizationSettings struct {
 	AlgorithmControl *string `locationName:"algorithmControl" type:"string" enum:"AudioNormalizationAlgorithmControl"`
 
 	// Content measuring above this level will be corrected to the target level.
-	// Content measuring below this level will not be corrected. Gating only applies
-	// when not using real_time_correction.
+	// Content measuring below this level will not be corrected.
 	CorrectionGateLevel *int64 `locationName:"correctionGateLevel" type:"integer"`
 
 	// If set to LOG, log each output's audio track loudness to a CSV file.
@@ -3605,6 +3649,255 @@ func (s *AudioSelectorGroup) SetAudioSelectorNames(v []*string) *AudioSelectorGr
 	return s
 }
 
+// Settings for quality-defined variable bitrate encoding with the AV1 codec.
+// Required when you set Rate control mode to QVBR. Not valid when you set Rate
+// control mode to a value other than QVBR, or when you don't define Rate control
+// mode.
+type Av1QvbrSettings struct {
+	_ struct{} `type:"structure"`
+
+	// Required when you use QVBR rate control mode. That is, when you specify qvbrSettings
+	// within av1Settings. Specify the general target quality level for this output,
+	// from 1 to 10. Use higher numbers for greater quality. Level 10 results in
+	// nearly lossless compression. The quality level for most broadcast-quality
+	// transcodes is between 6 and 9. Optionally, to specify a value between whole
+	// numbers, also provide a value for the setting qvbrQualityLevelFineTune. For
+	// example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel
+	// to 7 and set qvbrQualityLevelFineTune to .33.
+	QvbrQualityLevel *int64 `locationName:"qvbrQualityLevel" min:"1" type:"integer"`
+
+	// Optional. Specify a value here to set the QVBR quality to a level that is
+	// between whole numbers. For example, if you want your QVBR quality level to
+	// be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+	// MediaConvert rounds your QVBR quality level to the nearest third of a whole
+	// number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune
+	// to .25, your actual QVBR quality level is 7.33.
+	QvbrQualityLevelFineTune *float64 `locationName:"qvbrQualityLevelFineTune" type:"double"`
+}
+
+// String returns the string representation
+func (s Av1QvbrSettings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s Av1QvbrSettings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *Av1QvbrSettings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "Av1QvbrSettings"}
+	if s.QvbrQualityLevel != nil && *s.QvbrQualityLevel < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("QvbrQualityLevel", 1))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetQvbrQualityLevel sets the QvbrQualityLevel field's value.
+func (s *Av1QvbrSettings) SetQvbrQualityLevel(v int64) *Av1QvbrSettings {
+	s.QvbrQualityLevel = &v
+	return s
+}
+
+// SetQvbrQualityLevelFineTune sets the QvbrQualityLevelFineTune field's value.
+func (s *Av1QvbrSettings) SetQvbrQualityLevelFineTune(v float64) *Av1QvbrSettings {
+	s.QvbrQualityLevelFineTune = &v
+	return s
+}
+
+// Required when you set Codec, under VideoDescription>CodecSettings to the
+// value AV1.
+type Av1Settings struct {
+	_ struct{} `type:"structure"`
+
+	// Adaptive quantization. Allows intra-frame quantizers to vary to improve visual
+	// quality.
+	AdaptiveQuantization *string `locationName:"adaptiveQuantization" type:"string" enum:"Av1AdaptiveQuantization"`
+
+	// If you are using the console, use the Framerate setting to specify the frame
+	// rate for this output. If you want to keep the same frame rate as the input
+	// video, choose Follow source. If you want to do frame rate conversion, choose
+	// a frame rate from the dropdown list or choose Custom. The framerates shown
+	// in the dropdown list are decimal approximations of fractions. If you choose
+	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+	// job specification as a JSON file without the console, use FramerateControl
+	// to specify which value the service uses for the frame rate for this output.
+	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+	// from the input. Choose SPECIFIED if you want the service to use the frame
+	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"Av1FramerateControl"`
+
+	// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"Av1FramerateConversionAlgorithm"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateDenominator to specify the denominator of this fraction. In this
+	// example, use 1001 for the value of FramerateDenominator. When you use the
+	// console for transcode jobs that use frame rate conversion, provide the value
+	// as a decimal number for Framerate. In this example, specify 23.976.
+	FramerateDenominator *int64 `locationName:"framerateDenominator" min:"1" type:"integer"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateNumerator to specify the numerator of this fraction. In this example,
+	// use 24000 for the value of FramerateNumerator. When you use the console for
+	// transcode jobs that use frame rate conversion, provide the value as a decimal
+	// number for Framerate. In this example, specify 23.976.
+	FramerateNumerator *int64 `locationName:"framerateNumerator" min:"1" type:"integer"`
+
+	// Specify the GOP length (keyframe interval) in frames. With AV1, MediaConvert
+	// doesn't support GOP length in seconds. This value must be greater than zero
+	// and preferably equal to 1 + ((numberBFrames + 1) * x), where x is an integer
+	// value.
+	GopSize *float64 `locationName:"gopSize" type:"double"`
+
+	// Maximum bitrate in bits/second. For example, enter five megabits per second
+	// as 5000000. Required when Rate control mode is QVBR.
+	MaxBitrate *int64 `locationName:"maxBitrate" min:"1000" type:"integer"`
+
+	// Specify the number of B-frames. With AV1, MediaConvert supports only 7 or
+	// 15.
+	NumberBFramesBetweenReferenceFrames *int64 `locationName:"numberBFramesBetweenReferenceFrames" min:"7" type:"integer"`
+
+	// Settings for quality-defined variable bitrate encoding with the AV1 codec.
+	// Required when you set Rate control mode to QVBR. Not valid when you set Rate
+	// control mode to a value other than QVBR, or when you don't define Rate control
+	// mode.
+	QvbrSettings *Av1QvbrSettings `locationName:"qvbrSettings" type:"structure"`
+
+	// 'With AV1 outputs, for rate control mode, MediaConvert supports only quality-defined
+	// variable bitrate (QVBR). You can''t use CBR or VBR.'
+	RateControlMode *string `locationName:"rateControlMode" type:"string" enum:"Av1RateControlMode"`
+
+	// Specify the number of slices per picture. This value must be 1, 2, 4, 8,
+	// 16, or 32. For progressive pictures, this value must be less than or equal
+	// to the number of macroblock rows. For interlaced pictures, this value must
+	// be less than or equal to half the number of macroblock rows.
+	Slices *int64 `locationName:"slices" min:"1" type:"integer"`
+
+	// Adjust quantization within each frame based on spatial variation of content
+	// complexity.
+	SpatialAdaptiveQuantization *string `locationName:"spatialAdaptiveQuantization" type:"string" enum:"Av1SpatialAdaptiveQuantization"`
+}
+
+// String returns the string representation
+func (s Av1Settings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s Av1Settings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *Av1Settings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "Av1Settings"}
+	if s.FramerateDenominator != nil && *s.FramerateDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateDenominator", 1))
+	}
+	if s.FramerateNumerator != nil && *s.FramerateNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateNumerator", 1))
+	}
+	if s.MaxBitrate != nil && *s.MaxBitrate < 1000 {
+		invalidParams.Add(request.NewErrParamMinValue("MaxBitrate", 1000))
+	}
+	if s.NumberBFramesBetweenReferenceFrames != nil && *s.NumberBFramesBetweenReferenceFrames < 7 {
+		invalidParams.Add(request.NewErrParamMinValue("NumberBFramesBetweenReferenceFrames", 7))
+	}
+	if s.Slices != nil && *s.Slices < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("Slices", 1))
+	}
+	if s.QvbrSettings != nil {
+		if err := s.QvbrSettings.Validate(); err != nil {
+			invalidParams.AddNested("QvbrSettings", err.(request.ErrInvalidParams))
+		}
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetAdaptiveQuantization sets the AdaptiveQuantization field's value.
+func (s *Av1Settings) SetAdaptiveQuantization(v string) *Av1Settings {
+	s.AdaptiveQuantization = &v
+	return s
+}
+
+// SetFramerateControl sets the FramerateControl field's value.
+func (s *Av1Settings) SetFramerateControl(v string) *Av1Settings {
+	s.FramerateControl = &v
+	return s
+}
+
+// SetFramerateConversionAlgorithm sets the FramerateConversionAlgorithm field's value.
+func (s *Av1Settings) SetFramerateConversionAlgorithm(v string) *Av1Settings {
+	s.FramerateConversionAlgorithm = &v
+	return s
+}
+
+// SetFramerateDenominator sets the FramerateDenominator field's value.
+func (s *Av1Settings) SetFramerateDenominator(v int64) *Av1Settings {
+	s.FramerateDenominator = &v
+	return s
+}
+
+// SetFramerateNumerator sets the FramerateNumerator field's value.
+func (s *Av1Settings) SetFramerateNumerator(v int64) *Av1Settings {
+	s.FramerateNumerator = &v
+	return s
+}
+
+// SetGopSize sets the GopSize field's value.
+func (s *Av1Settings) SetGopSize(v float64) *Av1Settings {
+	s.GopSize = &v
+	return s
+}
+
+// SetMaxBitrate sets the MaxBitrate field's value.
+func (s *Av1Settings) SetMaxBitrate(v int64) *Av1Settings {
+	s.MaxBitrate = &v
+	return s
+}
+
+// SetNumberBFramesBetweenReferenceFrames sets the NumberBFramesBetweenReferenceFrames field's value.
+func (s *Av1Settings) SetNumberBFramesBetweenReferenceFrames(v int64) *Av1Settings {
+	s.NumberBFramesBetweenReferenceFrames = &v
+	return s
+}
+
+// SetQvbrSettings sets the QvbrSettings field's value.
+func (s *Av1Settings) SetQvbrSettings(v *Av1QvbrSettings) *Av1Settings {
+	s.QvbrSettings = v
+	return s
+}
+
+// SetRateControlMode sets the RateControlMode field's value.
+func (s *Av1Settings) SetRateControlMode(v string) *Av1Settings {
+	s.RateControlMode = &v
+	return s
+}
+
+// SetSlices sets the Slices field's value.
+func (s *Av1Settings) SetSlices(v int64) *Av1Settings {
+	s.Slices = &v
+	return s
+}
+
+// SetSpatialAdaptiveQuantization sets the SpatialAdaptiveQuantization field's value.
+func (s *Av1Settings) SetSpatialAdaptiveQuantization(v string) *Av1Settings {
+	s.SpatialAdaptiveQuantization = &v
+	return s
+}
+
 // Settings for Avail Blanking
 type AvailBlanking struct {
 	_ struct{} `type:"structure"`
@@ -3641,6 +3934,61 @@ func (s *AvailBlanking) Validate() error {
 func (s *AvailBlanking) SetAvailBlankingImage(v string) *AvailBlanking {
 	s.AvailBlankingImage = &v
 	return s
+}
+
+type BadRequestException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s BadRequestException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s BadRequestException) GoString() string {
+	return s.String()
+}
+
+func newErrorBadRequestException(v protocol.ResponseMetadata) error {
+	return &BadRequestException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *BadRequestException) Code() string {
+	return "BadRequestException"
+}
+
+// Message returns the exception's message.
+func (s *BadRequestException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *BadRequestException) OrigErr() error {
+	return nil
+}
+
+func (s *BadRequestException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *BadRequestException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *BadRequestException) RequestID() string {
+	return s.RespMetadata.RequestID
 }
 
 // Burn-In Destination Settings.
@@ -4315,6 +4663,65 @@ func (s *CaptionSelector) SetSourceSettings(v *CaptionSourceSettings) *CaptionSe
 	return s
 }
 
+// Ignore this setting unless your input captions format is SCC. To have the
+// service compensate for differing frame rates between your input captions
+// and input video, specify the frame rate of the captions file. Specify this
+// value as a fraction, using the settings Framerate numerator (framerateNumerator)
+// and Framerate denominator (framerateDenominator). For example, you might
+// specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for 23.976 fps,
+// or 30000 / 1001 for 29.97 fps.
+type CaptionSourceFramerate struct {
+	_ struct{} `type:"structure"`
+
+	// Specify the denominator of the fraction that represents the frame rate for
+	// the setting Caption source frame rate (CaptionSourceFramerate). Use this
+	// setting along with the setting Framerate numerator (framerateNumerator).
+	FramerateDenominator *int64 `locationName:"framerateDenominator" min:"1" type:"integer"`
+
+	// Specify the numerator of the fraction that represents the frame rate for
+	// the setting Caption source frame rate (CaptionSourceFramerate). Use this
+	// setting along with the setting Framerate denominator (framerateDenominator).
+	FramerateNumerator *int64 `locationName:"framerateNumerator" min:"1" type:"integer"`
+}
+
+// String returns the string representation
+func (s CaptionSourceFramerate) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s CaptionSourceFramerate) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *CaptionSourceFramerate) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "CaptionSourceFramerate"}
+	if s.FramerateDenominator != nil && *s.FramerateDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateDenominator", 1))
+	}
+	if s.FramerateNumerator != nil && *s.FramerateNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateNumerator", 1))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetFramerateDenominator sets the FramerateDenominator field's value.
+func (s *CaptionSourceFramerate) SetFramerateDenominator(v int64) *CaptionSourceFramerate {
+	s.FramerateDenominator = &v
+	return s
+}
+
+// SetFramerateNumerator sets the FramerateNumerator field's value.
+func (s *CaptionSourceFramerate) SetFramerateNumerator(v int64) *CaptionSourceFramerate {
+	s.FramerateNumerator = &v
+	return s
+}
+
 // If your input captions are SCC, TTML, STL, SMI, SRT, or IMSC in an xml file,
 // specify the URI of the input captions source file. If your input captions
 // are IMSC in an IMF package, use TrackSourceSettings instead of FileSoureSettings.
@@ -4717,6 +5124,14 @@ type CmafGroupSettings struct {
 
 	// When set to ENABLED, an Apple HLS manifest will be generated for this output.
 	WriteHlsManifest *string `locationName:"writeHlsManifest" type:"string" enum:"CmafWriteHLSManifest"`
+
+	// When you enable Precise segment duration in DASH manifests (writeSegmentTimelineInRepresentation),
+	// your DASH manifest shows precise segment durations. The segment duration
+	// information appears inside the SegmentTimeline element, inside SegmentTemplate
+	// at the Representation level. When this feature isn't enabled, the segment
+	// durations in your DASH manifest are approximate. The segment duration information
+	// appears in the duration attribute of the SegmentTemplate element.
+	WriteSegmentTimelineInRepresentation *string `locationName:"writeSegmentTimelineInRepresentation" type:"string" enum:"CmafWriteSegmentTimelineInRepresentation"`
 }
 
 // String returns the string representation
@@ -4868,6 +5283,51 @@ func (s *CmafGroupSettings) SetWriteHlsManifest(v string) *CmafGroupSettings {
 	return s
 }
 
+// SetWriteSegmentTimelineInRepresentation sets the WriteSegmentTimelineInRepresentation field's value.
+func (s *CmafGroupSettings) SetWriteSegmentTimelineInRepresentation(v string) *CmafGroupSettings {
+	s.WriteSegmentTimelineInRepresentation = &v
+	return s
+}
+
+// Settings for MP4 segments in CMAF
+type CmfcSettings struct {
+	_ struct{} `type:"structure"`
+
+	// Use this setting only when you specify SCTE-35 markers from ESAM. Choose
+	// INSERT to put SCTE-35 markers in this output at the insertion points that
+	// you specify in an ESAM XML document. Provide the document in the setting
+	// SCC XML (sccXml).
+	Scte35Esam *string `locationName:"scte35Esam" type:"string" enum:"CmfcScte35Esam"`
+
+	// Ignore this setting unless you have SCTE-35 markers in your input video file.
+	// Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear
+	// in your input to also appear in this output. Choose None (NONE) if you don't
+	// want those SCTE-35 markers in this output.
+	Scte35Source *string `locationName:"scte35Source" type:"string" enum:"CmfcScte35Source"`
+}
+
+// String returns the string representation
+func (s CmfcSettings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s CmfcSettings) GoString() string {
+	return s.String()
+}
+
+// SetScte35Esam sets the Scte35Esam field's value.
+func (s *CmfcSettings) SetScte35Esam(v string) *CmfcSettings {
+	s.Scte35Esam = &v
+	return s
+}
+
+// SetScte35Source sets the Scte35Source field's value.
+func (s *CmfcSettings) SetScte35Source(v string) *CmfcSettings {
+	s.Scte35Source = &v
+	return s
+}
+
 // Settings for color correction.
 type ColorCorrector struct {
 	_ struct{} `type:"structure"`
@@ -4876,10 +5336,11 @@ type ColorCorrector struct {
 	Brightness *int64 `locationName:"brightness" min:"1" type:"integer"`
 
 	// Specify the color space you want for this output. The service supports conversion
-	// between HDR formats, between SDR formats, and from SDR to HDR. The service
-	// doesn't support conversion from HDR to SDR. SDR to HDR conversion doesn't
-	// upgrade the dynamic range. The converted video has an HDR format, but visually
-	// appears the same as an unconverted output.
+	// between HDR formats, between SDR formats, from SDR to HDR, and from HDR to
+	// SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted
+	// video has an HDR format, but visually appears the same as an unconverted
+	// output. HDR to SDR conversion uses Elemental tone mapping technology to approximate
+	// the outcome of manually regrading from HDR to SDR.
 	ColorSpaceConversion *string `locationName:"colorSpaceConversion" type:"string" enum:"ColorSpaceConversion"`
 
 	// Contrast level.
@@ -4974,9 +5435,67 @@ func (s *ColorCorrector) SetSaturation(v int64) *ColorCorrector {
 	return s
 }
 
+type ConflictException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s ConflictException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s ConflictException) GoString() string {
+	return s.String()
+}
+
+func newErrorConflictException(v protocol.ResponseMetadata) error {
+	return &ConflictException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *ConflictException) Code() string {
+	return "ConflictException"
+}
+
+// Message returns the exception's message.
+func (s *ConflictException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *ConflictException) OrigErr() error {
+	return nil
+}
+
+func (s *ConflictException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *ConflictException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *ConflictException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
 // Container specific settings.
 type ContainerSettings struct {
 	_ struct{} `type:"structure"`
+
+	// Settings for MP4 segments in CMAF
+	CmfcSettings *CmfcSettings `locationName:"cmfcSettings" type:"structure"`
 
 	// Container for this output. Some containers require a container settings object.
 	// If not specified, the default object will be created.
@@ -5009,6 +5528,9 @@ type ContainerSettings struct {
 
 	// Settings for MP4 segments in DASH
 	MpdSettings *MpdSettings `locationName:"mpdSettings" type:"structure"`
+
+	// MXF settings
+	MxfSettings *MxfSettings `locationName:"mxfSettings" type:"structure"`
 }
 
 // String returns the string representation
@@ -5039,6 +5561,12 @@ func (s *ContainerSettings) Validate() error {
 		return invalidParams
 	}
 	return nil
+}
+
+// SetCmfcSettings sets the CmfcSettings field's value.
+func (s *ContainerSettings) SetCmfcSettings(v *CmfcSettings) *ContainerSettings {
+	s.CmfcSettings = v
+	return s
 }
 
 // SetContainer sets the Container field's value.
@@ -5083,14 +5611,20 @@ func (s *ContainerSettings) SetMpdSettings(v *MpdSettings) *ContainerSettings {
 	return s
 }
 
+// SetMxfSettings sets the MxfSettings field's value.
+func (s *ContainerSettings) SetMxfSettings(v *MxfSettings) *ContainerSettings {
+	s.MxfSettings = v
+	return s
+}
+
 // Send your create job request with your job settings and IAM role. Optionally,
 // include user metadata and the ARN for the queue.
 type CreateJobInput struct {
 	_ struct{} `type:"structure"`
 
-	// Accelerated transcoding can significantly speed up jobs with long, visually
-	// complex content. Outputs that use this feature incur pro-tier pricing. For
-	// information about feature limitations, see the AWS Elemental MediaConvert
+	// Optional. Accelerated transcoding can significantly speed up jobs with long,
+	// visually complex content. Outputs that use this feature incur pro-tier pricing.
+	// For information about feature limitations, see the AWS Elemental MediaConvert
 	// User Guide.
 	AccelerationSettings *AccelerationSettings `locationName:"accelerationSettings" type:"structure"`
 
@@ -5101,18 +5635,25 @@ type CreateJobInput struct {
 	// for this field, your job outputs will appear on the billing report unsorted.
 	BillingTagsSource *string `locationName:"billingTagsSource" type:"string" enum:"BillingTagsSource"`
 
-	// Idempotency token for CreateJob operation.
+	// Optional. Idempotency token for CreateJob operation.
 	ClientRequestToken *string `locationName:"clientRequestToken" type:"string" idempotencyToken:"true"`
 
-	// When you create a job, you can either specify a job template or specify the
-	// transcoding settings individually
+	// Optional. Use queue hopping to avoid overly long waits in the backlog of
+	// the queue that you submit your job to. Specify an alternate queue and the
+	// maximum time that your job will wait in the initial queue before hopping.
+	// For more information about this feature, see the AWS Elemental MediaConvert
+	// User Guide.
+	HopDestinations []*HopDestination `locationName:"hopDestinations" type:"list"`
+
+	// Optional. When you create a job, you can either specify a job template or
+	// specify the transcoding settings individually.
 	JobTemplate *string `locationName:"jobTemplate" type:"string"`
 
-	// Specify the relative priority for this job. In any given queue, the service
-	// begins processing the job with the highest value first. When more than one
-	// job has the same priority, the service begins processing the job that you
-	// submitted first. If you don't specify a priority, the service uses the default
-	// value 0.
+	// Optional. Specify the relative priority for this job. In any given queue,
+	// the service begins processing the job with the highest value first. When
+	// more than one job has the same priority, the service begins processing the
+	// job that you submitted first. If you don't specify a priority, the service
+	// uses the default value 0.
 	Priority *int64 `locationName:"priority" type:"integer"`
 
 	// Optional. When you create a job, you can specify a queue to send it to. If
@@ -5131,24 +5672,25 @@ type CreateJobInput struct {
 	// Settings is a required field
 	Settings *JobSettings `locationName:"settings" type:"structure" required:"true"`
 
-	// Enable this setting when you run a test job to estimate how many reserved
-	// transcoding slots (RTS) you need. When this is enabled, MediaConvert runs
-	// your job from an on-demand queue with similar performance to what you will
-	// see with one RTS in a reserved queue. This setting is disabled by default.
+	// Optional. Enable this setting when you run a test job to estimate how many
+	// reserved transcoding slots (RTS) you need. When this is enabled, MediaConvert
+	// runs your job from an on-demand queue with similar performance to what you
+	// will see with one RTS in a reserved queue. This setting is disabled by default.
 	SimulateReservedQueue *string `locationName:"simulateReservedQueue" type:"string" enum:"SimulateReservedQueue"`
 
-	// Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch
-	// Events. Set the interval, in seconds, between status updates. MediaConvert
-	// sends an update at this interval from the time the service begins processing
-	// your job to the time it completes the transcode or encounters an error.
+	// Optional. Specify how often MediaConvert sends STATUS_UPDATE events to Amazon
+	// CloudWatch Events. Set the interval, in seconds, between status updates.
+	// MediaConvert sends an update at this interval from the time the service begins
+	// processing your job to the time it completes the transcode or encounters
+	// an error.
 	StatusUpdateInterval *string `locationName:"statusUpdateInterval" type:"string" enum:"StatusUpdateInterval"`
 
-	// The tags that you want to add to the resource. You can tag resources with
-	// a key-value pair or with only a key.
+	// Optional. The tags that you want to add to the resource. You can tag resources
+	// with a key-value pair or with only a key.
 	Tags map[string]*string `locationName:"tags" type:"map"`
 
-	// User-defined metadata that you want to associate with an MediaConvert job.
-	// You specify metadata in key/value pairs.
+	// Optional. User-defined metadata that you want to associate with an MediaConvert
+	// job. You specify metadata in key/value pairs.
 	UserMetadata map[string]*string `locationName:"userMetadata" type:"map"`
 }
 
@@ -5179,6 +5721,16 @@ func (s *CreateJobInput) Validate() error {
 			invalidParams.AddNested("AccelerationSettings", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.HopDestinations != nil {
+		for i, v := range s.HopDestinations {
+			if v == nil {
+				continue
+			}
+			if err := v.Validate(); err != nil {
+				invalidParams.AddNested(fmt.Sprintf("%s[%v]", "HopDestinations", i), err.(request.ErrInvalidParams))
+			}
+		}
+	}
 	if s.Settings != nil {
 		if err := s.Settings.Validate(); err != nil {
 			invalidParams.AddNested("Settings", err.(request.ErrInvalidParams))
@@ -5206,6 +5758,12 @@ func (s *CreateJobInput) SetBillingTagsSource(v string) *CreateJobInput {
 // SetClientRequestToken sets the ClientRequestToken field's value.
 func (s *CreateJobInput) SetClientRequestToken(v string) *CreateJobInput {
 	s.ClientRequestToken = &v
+	return s
+}
+
+// SetHopDestinations sets the HopDestinations field's value.
+func (s *CreateJobInput) SetHopDestinations(v []*HopDestination) *CreateJobInput {
+	s.HopDestinations = v
 	return s
 }
 
@@ -5306,6 +5864,13 @@ type CreateJobTemplateInput struct {
 	// Optional. A description of the job template you are creating.
 	Description *string `locationName:"description" type:"string"`
 
+	// Optional. Use queue hopping to avoid overly long waits in the backlog of
+	// the queue that you submit your job to. Specify an alternate queue and the
+	// maximum time that your job will wait in the initial queue before hopping.
+	// For more information about this feature, see the AWS Elemental MediaConvert
+	// User Guide.
+	HopDestinations []*HopDestination `locationName:"hopDestinations" type:"list"`
+
 	// The name of the job template you are creating.
 	//
 	// Name is a required field
@@ -5366,6 +5931,16 @@ func (s *CreateJobTemplateInput) Validate() error {
 			invalidParams.AddNested("AccelerationSettings", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.HopDestinations != nil {
+		for i, v := range s.HopDestinations {
+			if v == nil {
+				continue
+			}
+			if err := v.Validate(); err != nil {
+				invalidParams.AddNested(fmt.Sprintf("%s[%v]", "HopDestinations", i), err.(request.ErrInvalidParams))
+			}
+		}
+	}
 	if s.Settings != nil {
 		if err := s.Settings.Validate(); err != nil {
 			invalidParams.AddNested("Settings", err.(request.ErrInvalidParams))
@@ -5393,6 +5968,12 @@ func (s *CreateJobTemplateInput) SetCategory(v string) *CreateJobTemplateInput {
 // SetDescription sets the Description field's value.
 func (s *CreateJobTemplateInput) SetDescription(v string) *CreateJobTemplateInput {
 	s.Description = &v
+	return s
+}
+
+// SetHopDestinations sets the HopDestinations field's value.
+func (s *CreateJobTemplateInput) SetHopDestinations(v []*HopDestination) *CreateJobTemplateInput {
+	s.HopDestinations = v
 	return s
 }
 
@@ -7725,6 +8306,15 @@ type FileSourceSettings struct {
 	// 608 data into 708.
 	Convert608To708 *string `locationName:"convert608To708" type:"string" enum:"FileSourceConvert608To708"`
 
+	// Ignore this setting unless your input captions format is SCC. To have the
+	// service compensate for differing frame rates between your input captions
+	// and input video, specify the frame rate of the captions file. Specify this
+	// value as a fraction, using the settings Framerate numerator (framerateNumerator)
+	// and Framerate denominator (framerateDenominator). For example, you might
+	// specify 24 / 1 for 24 fps, 25 / 1 for 25 fps, 24000 / 1001 for 23.976 fps,
+	// or 30000 / 1001 for 29.97 fps.
+	Framerate *CaptionSourceFramerate `locationName:"framerate" type:"structure"`
+
 	// External caption file used for loading captions. Accepted file extensions
 	// are 'scc', 'ttml', 'dfxp', 'stl', 'srt', 'xml', and 'smi'.
 	SourceFile *string `locationName:"sourceFile" min:"14" type:"string"`
@@ -7753,6 +8343,11 @@ func (s *FileSourceSettings) Validate() error {
 	if s.TimeDelta != nil && *s.TimeDelta < -2.147483648e+09 {
 		invalidParams.Add(request.NewErrParamMinValue("TimeDelta", -2.147483648e+09))
 	}
+	if s.Framerate != nil {
+		if err := s.Framerate.Validate(); err != nil {
+			invalidParams.AddNested("Framerate", err.(request.ErrInvalidParams))
+		}
+	}
 
 	if invalidParams.Len() > 0 {
 		return invalidParams
@@ -7766,6 +8361,12 @@ func (s *FileSourceSettings) SetConvert608To708(v string) *FileSourceSettings {
 	return s
 }
 
+// SetFramerate sets the Framerate field's value.
+func (s *FileSourceSettings) SetFramerate(v *CaptionSourceFramerate) *FileSourceSettings {
+	s.Framerate = v
+	return s
+}
+
 // SetSourceFile sets the SourceFile field's value.
 func (s *FileSourceSettings) SetSourceFile(v string) *FileSourceSettings {
 	s.SourceFile = &v
@@ -7776,6 +8377,61 @@ func (s *FileSourceSettings) SetSourceFile(v string) *FileSourceSettings {
 func (s *FileSourceSettings) SetTimeDelta(v int64) *FileSourceSettings {
 	s.TimeDelta = &v
 	return s
+}
+
+type ForbiddenException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s ForbiddenException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s ForbiddenException) GoString() string {
+	return s.String()
+}
+
+func newErrorForbiddenException(v protocol.ResponseMetadata) error {
+	return &ForbiddenException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *ForbiddenException) Code() string {
+	return "ForbiddenException"
+}
+
+// Message returns the exception's message.
+func (s *ForbiddenException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *ForbiddenException) OrigErr() error {
+	return nil
+}
+
+func (s *ForbiddenException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *ForbiddenException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *ForbiddenException) RequestID() string {
+	return s.RespMetadata.RequestID
 }
 
 // Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
@@ -8150,11 +8806,22 @@ type H264QvbrSettings struct {
 	MaxAverageBitrate *int64 `locationName:"maxAverageBitrate" min:"1000" type:"integer"`
 
 	// Required when you use QVBR rate control mode. That is, when you specify qvbrSettings
-	// within h264Settings. Specify the target quality level for this output, from
-	// 1 to 10. Use higher numbers for greater quality. Level 10 results in nearly
-	// lossless compression. The quality level for most broadcast-quality transcodes
-	// is between 6 and 9.
+	// within h264Settings. Specify the general target quality level for this output,
+	// from 1 to 10. Use higher numbers for greater quality. Level 10 results in
+	// nearly lossless compression. The quality level for most broadcast-quality
+	// transcodes is between 6 and 9. Optionally, to specify a value between whole
+	// numbers, also provide a value for the setting qvbrQualityLevelFineTune. For
+	// example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel
+	// to 7 and set qvbrQualityLevelFineTune to .33.
 	QvbrQualityLevel *int64 `locationName:"qvbrQualityLevel" min:"1" type:"integer"`
+
+	// Optional. Specify a value here to set the QVBR quality to a level that is
+	// between whole numbers. For example, if you want your QVBR quality level to
+	// be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+	// MediaConvert rounds your QVBR quality level to the nearest third of a whole
+	// number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune
+	// to .25, your actual QVBR quality level is 7.33.
+	QvbrQualityLevelFineTune *float64 `locationName:"qvbrQualityLevelFineTune" type:"double"`
 }
 
 // String returns the string representation
@@ -8192,6 +8859,12 @@ func (s *H264QvbrSettings) SetMaxAverageBitrate(v int64) *H264QvbrSettings {
 // SetQvbrQualityLevel sets the QvbrQualityLevel field's value.
 func (s *H264QvbrSettings) SetQvbrQualityLevel(v int64) *H264QvbrSettings {
 	s.QvbrQualityLevel = &v
+	return s
+}
+
+// SetQvbrQualityLevelFineTune sets the QvbrQualityLevelFineTune field's value.
+func (s *H264QvbrSettings) SetQvbrQualityLevelFineTune(v float64) *H264QvbrSettings {
+	s.QvbrQualityLevelFineTune = &v
 	return s
 }
 
@@ -8246,7 +8919,8 @@ type H264Settings struct {
 	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
 	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"H264FramerateControl"`
 
-	// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+	// Optional. Specify how the transcoder performs framerate conversion. The default
+	// behavior is to use duplicate drop conversion.
 	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"H264FramerateConversionAlgorithm"`
 
 	// When you use the API for transcode jobs that use frame rate conversion, specify
@@ -8318,9 +8992,12 @@ type H264Settings struct {
 	// if using B-frames and/or interlaced encoding.
 	NumberReferenceFrames *int64 `locationName:"numberReferenceFrames" min:"1" type:"integer"`
 
-	// Using the API, enable ParFollowSource if you want the service to use the
-	// pixel aspect ratio from the input. Using the console, do this by choosing
-	// Follow source for Pixel aspect ratio.
+	// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+	// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+	// uses the PAR from your input video for your output. To use a different PAR,
+	// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+	// than Follow source. When you choose SPECIFIED for this setting, you must
+	// also specify values for the parNumerator and parDenominator settings.
 	ParControl *string `locationName:"parControl" type:"string" enum:"H264ParControl"`
 
 	// Pixel Aspect Ratio denominator.
@@ -8329,9 +9006,9 @@ type H264Settings struct {
 	// Pixel Aspect Ratio numerator.
 	ParNumerator *int64 `locationName:"parNumerator" min:"1" type:"integer"`
 
-	// Use Quality tuning level (H264QualityTuningLevel) to specifiy whether to
-	// use fast single-pass, high-quality singlepass, or high-quality multipass
-	// video encoding.
+	// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+	// want to trade off encoding speed for output video quality. The default behavior
+	// is faster, lower quality, single-pass encoding.
 	QualityTuningLevel *string `locationName:"qualityTuningLevel" type:"string" enum:"H264QualityTuningLevel"`
 
 	// Settings for quality-defined variable bitrate encoding with the H.264 codec.
@@ -8690,11 +9367,22 @@ type H265QvbrSettings struct {
 	MaxAverageBitrate *int64 `locationName:"maxAverageBitrate" min:"1000" type:"integer"`
 
 	// Required when you use QVBR rate control mode. That is, when you specify qvbrSettings
-	// within h265Settings. Specify the target quality level for this output, from
-	// 1 to 10. Use higher numbers for greater quality. Level 10 results in nearly
-	// lossless compression. The quality level for most broadcast-quality transcodes
-	// is between 6 and 9.
+	// within h265Settings. Specify the general target quality level for this output,
+	// from 1 to 10. Use higher numbers for greater quality. Level 10 results in
+	// nearly lossless compression. The quality level for most broadcast-quality
+	// transcodes is between 6 and 9. Optionally, to specify a value between whole
+	// numbers, also provide a value for the setting qvbrQualityLevelFineTune. For
+	// example, if you want your QVBR quality level to be 7.33, set qvbrQualityLevel
+	// to 7 and set qvbrQualityLevelFineTune to .33.
 	QvbrQualityLevel *int64 `locationName:"qvbrQualityLevel" min:"1" type:"integer"`
+
+	// Optional. Specify a value here to set the QVBR quality to a level that is
+	// between whole numbers. For example, if you want your QVBR quality level to
+	// be 7.33, set qvbrQualityLevel to 7 and set qvbrQualityLevelFineTune to .33.
+	// MediaConvert rounds your QVBR quality level to the nearest third of a whole
+	// number. For example, if you set qvbrQualityLevel to 7 and you set qvbrQualityLevelFineTune
+	// to .25, your actual QVBR quality level is 7.33.
+	QvbrQualityLevelFineTune *float64 `locationName:"qvbrQualityLevelFineTune" type:"double"`
 }
 
 // String returns the string representation
@@ -8732,6 +9420,12 @@ func (s *H265QvbrSettings) SetMaxAverageBitrate(v int64) *H265QvbrSettings {
 // SetQvbrQualityLevel sets the QvbrQualityLevel field's value.
 func (s *H265QvbrSettings) SetQvbrQualityLevel(v int64) *H265QvbrSettings {
 	s.QvbrQualityLevel = &v
+	return s
+}
+
+// SetQvbrQualityLevelFineTune sets the QvbrQualityLevelFineTune field's value.
+func (s *H265QvbrSettings) SetQvbrQualityLevelFineTune(v float64) *H265QvbrSettings {
+	s.QvbrQualityLevelFineTune = &v
 	return s
 }
 
@@ -8776,7 +9470,7 @@ type H265Settings struct {
 	// a frame rate from the dropdown list or choose Custom. The framerates shown
 	// in the dropdown list are decimal approximations of fractions. If you choose
 	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
-	// job sepecification as a JSON file without the console, use FramerateControl
+	// job specification as a JSON file without the console, use FramerateControl
 	// to specify which value the service uses for the frame rate for this output.
 	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 	// from the input. Choose SPECIFIED if you want the service to use the frame
@@ -8851,9 +9545,12 @@ type H265Settings struct {
 	// if using B-frames and/or interlaced encoding.
 	NumberReferenceFrames *int64 `locationName:"numberReferenceFrames" min:"1" type:"integer"`
 
-	// Using the API, enable ParFollowSource if you want the service to use the
-	// pixel aspect ratio from the input. Using the console, do this by choosing
-	// Follow source for Pixel aspect ratio.
+	// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+	// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+	// uses the PAR from your input video for your output. To use a different PAR,
+	// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+	// than Follow source. When you choose SPECIFIED for this setting, you must
+	// also specify values for the parNumerator and parDenominator settings.
 	ParControl *string `locationName:"parControl" type:"string" enum:"H265ParControl"`
 
 	// Pixel Aspect Ratio denominator.
@@ -8862,9 +9559,9 @@ type H265Settings struct {
 	// Pixel Aspect Ratio numerator.
 	ParNumerator *int64 `locationName:"parNumerator" min:"1" type:"integer"`
 
-	// Use Quality tuning level (H265QualityTuningLevel) to specifiy whether to
-	// use fast single-pass, high-quality singlepass, or high-quality multipass
-	// video encoding.
+	// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+	// want to trade off encoding speed for output video quality. The default behavior
+	// is faster, lower quality, single-pass encoding.
 	QualityTuningLevel *string `locationName:"qualityTuningLevel" type:"string" enum:"H265QualityTuningLevel"`
 
 	// Settings for quality-defined variable bitrate encoding with the H.265 codec.
@@ -9967,7 +10664,10 @@ type HlsSettings struct {
 	// manifest
 	IFrameOnlyManifest *string `locationName:"iFrameOnlyManifest" type:"string" enum:"HlsIFrameOnlyManifest"`
 
-	// String concatenated to end of segment filenames. Accepts "Format Identifiers":#format_identifier_parameters.
+	// Use this setting to add an identifying string to the filename of each segment.
+	// The service adds this string between the name modifier and segment index
+	// number. You can use format identifiers in the string. For more information,
+	// see https://docs.aws.amazon.com/mediaconvert/latest/ug/using-variables-in-your-job-settings.html
 	SegmentModifier *string `locationName:"segmentModifier" type:"string"`
 }
 
@@ -10014,6 +10714,70 @@ func (s *HlsSettings) SetIFrameOnlyManifest(v string) *HlsSettings {
 // SetSegmentModifier sets the SegmentModifier field's value.
 func (s *HlsSettings) SetSegmentModifier(v string) *HlsSettings {
 	s.SegmentModifier = &v
+	return s
+}
+
+// Optional. Configuration for a destination queue to which the job can hop
+// once a customer-defined minimum wait time has passed.
+type HopDestination struct {
+	_ struct{} `type:"structure"`
+
+	// Optional. When you set up a job to use queue hopping, you can specify a different
+	// relative priority for the job in the destination queue. If you don't specify,
+	// the relative priority will remain the same as in the previous queue.
+	Priority *int64 `locationName:"priority" type:"integer"`
+
+	// Optional unless the job is submitted on the default queue. When you set up
+	// a job to use queue hopping, you can specify a destination queue. This queue
+	// cannot be the original queue to which the job is submitted. If the original
+	// queue isn't the default queue and you don't specify the destination queue,
+	// the job will move to the default queue.
+	Queue *string `locationName:"queue" type:"string"`
+
+	// Required for setting up a job to use queue hopping. Minimum wait time in
+	// minutes until the job can hop to the destination queue. Valid range is 1
+	// to 1440 minutes, inclusive.
+	WaitMinutes *int64 `locationName:"waitMinutes" type:"integer"`
+}
+
+// String returns the string representation
+func (s HopDestination) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s HopDestination) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *HopDestination) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "HopDestination"}
+	if s.Priority != nil && *s.Priority < -50 {
+		invalidParams.Add(request.NewErrParamMinValue("Priority", -50))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetPriority sets the Priority field's value.
+func (s *HopDestination) SetPriority(v int64) *HopDestination {
+	s.Priority = &v
+	return s
+}
+
+// SetQueue sets the Queue field's value.
+func (s *HopDestination) SetQueue(v string) *HopDestination {
+	s.Queue = &v
+	return s
+}
+
+// SetWaitMinutes sets the WaitMinutes field's value.
+func (s *HopDestination) SetWaitMinutes(v int64) *HopDestination {
+	s.WaitMinutes = &v
 	return s
 }
 
@@ -10106,8 +10870,8 @@ type ImscDestinationSettings struct {
 
 	// Keep this setting enabled to have MediaConvert use the font style and position
 	// information from the captions source in the output. This option is available
-	// only when your input captions are CFF-TT, IMSC, SMPTE-TT, or TTML. Disable
-	// this setting for simplified output captions.
+	// only when your input captions are IMSC, SMPTE-TT, or TTML. Disable this setting
+	// for simplified output captions.
 	StylePassthrough *string `locationName:"stylePassthrough" type:"string" enum:"ImscStylePassthrough"`
 }
 
@@ -10137,12 +10901,12 @@ type Input struct {
 	AudioSelectorGroups map[string]*AudioSelectorGroup `locationName:"audioSelectorGroups" type:"map"`
 
 	// Use Audio selectors (AudioSelectors) to specify a track or set of tracks
-	// from the input that you will use in your outputs. You can use mutiple Audio
+	// from the input that you will use in your outputs. You can use multiple Audio
 	// selectors per input.
 	AudioSelectors map[string]*AudioSelector `locationName:"audioSelectors" type:"map"`
 
 	// Use Captions selectors (CaptionSelectors) to specify the captions data from
-	// the input that you will use in your outputs. You can use mutiple captions
+	// the input that you will use in your outputs. You can use multiple captions
 	// selectors per input.
 	CaptionSelectors map[string]*CaptionSelector `locationName:"captionSelectors" type:"map"`
 
@@ -10153,7 +10917,7 @@ type Input struct {
 	Crop *Rectangle `locationName:"crop" type:"structure"`
 
 	// Enable Deblock (InputDeblockFilter) to produce smoother motion in the output.
-	// Default is disabled. Only manaully controllable for MPEG2 and uncompressed
+	// Default is disabled. Only manually controllable for MPEG2 and uncompressed
 	// video inputs.
 	DeblockFilter *string `locationName:"deblockFilter" type:"string" enum:"InputDeblockFilter"`
 
@@ -10585,12 +11349,12 @@ type InputTemplate struct {
 	AudioSelectorGroups map[string]*AudioSelectorGroup `locationName:"audioSelectorGroups" type:"map"`
 
 	// Use Audio selectors (AudioSelectors) to specify a track or set of tracks
-	// from the input that you will use in your outputs. You can use mutiple Audio
+	// from the input that you will use in your outputs. You can use multiple Audio
 	// selectors per input.
 	AudioSelectors map[string]*AudioSelector `locationName:"audioSelectors" type:"map"`
 
 	// Use Captions selectors (CaptionSelectors) to specify the captions data from
-	// the input that you will use in your outputs. You can use mutiple captions
+	// the input that you will use in your outputs. You can use multiple captions
 	// selectors per input.
 	CaptionSelectors map[string]*CaptionSelector `locationName:"captionSelectors" type:"map"`
 
@@ -10601,7 +11365,7 @@ type InputTemplate struct {
 	Crop *Rectangle `locationName:"crop" type:"structure"`
 
 	// Enable Deblock (InputDeblockFilter) to produce smoother motion in the output.
-	// Default is disabled. Only manaully controllable for MPEG2 and uncompressed
+	// Default is disabled. Only manually controllable for MPEG2 and uncompressed
 	// video inputs.
 	DeblockFilter *string `locationName:"deblockFilter" type:"string" enum:"InputDeblockFilter"`
 
@@ -10993,6 +11757,61 @@ func (s *InsertableImage) SetWidth(v int64) *InsertableImage {
 	return s
 }
 
+type InternalServerErrorException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s InternalServerErrorException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s InternalServerErrorException) GoString() string {
+	return s.String()
+}
+
+func newErrorInternalServerErrorException(v protocol.ResponseMetadata) error {
+	return &InternalServerErrorException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *InternalServerErrorException) Code() string {
+	return "InternalServerErrorException"
+}
+
+// Message returns the exception's message.
+func (s *InternalServerErrorException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *InternalServerErrorException) OrigErr() error {
+	return nil
+}
+
+func (s *InternalServerErrorException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *InternalServerErrorException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *InternalServerErrorException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
 // Each job converts an input file into an output file or files. For more information,
 // see the User Guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
 type Job struct {
@@ -11018,11 +11837,8 @@ type Job struct {
 	// An identifier for this resource that is unique within all of AWS.
 	Arn *string `locationName:"arn" type:"string"`
 
-	// Optional. Choose a tag type that AWS Billing and Cost Management will use
-	// to sort your AWS Elemental MediaConvert costs on any billing report that
-	// you set up. Any transcoding outputs that don't have an associated tag will
-	// appear in your billing report unsorted. If you don't choose a valid value
-	// for this field, your job outputs will appear on the billing report unsorted.
+	// The tag type that AWS Billing and Cost Management will use to sort your AWS
+	// Elemental MediaConvert costs on any billing report that you set up.
 	BillingTagsSource *string `locationName:"billingTagsSource" type:"string" enum:"BillingTagsSource"`
 
 	// The time, in Unix epoch format in seconds, when the job got created.
@@ -11036,6 +11852,9 @@ type Job struct {
 
 	// Error message of Job
 	ErrorMessage *string `locationName:"errorMessage" type:"string"`
+
+	// Optional list of hop destinations.
+	HopDestinations []*HopDestination `locationName:"hopDestinations" type:"list"`
 
 	// A portion of the job's ARN, unique within your AWS Elemental MediaConvert
 	// resources
@@ -11065,10 +11884,13 @@ type Job struct {
 	// Relative priority on the job.
 	Priority *int64 `locationName:"priority" type:"integer"`
 
-	// Optional. When you create a job, you can specify a queue to send it to. If
-	// you don't specify, the job will go to the default queue. For more about queues,
-	// see the User Guide topic at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+	// When you create a job, you can specify a queue to send it to. If you don't
+	// specify, the job will go to the default queue. For more about queues, see
+	// the User Guide topic at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
 	Queue *string `locationName:"queue" type:"string"`
+
+	// The job's queue hopping history.
+	QueueTransitions []*QueueTransition `locationName:"queueTransitions" type:"list"`
 
 	// The number of times that the service automatically attempted to process your
 	// job after encountering an error.
@@ -11167,6 +11989,12 @@ func (s *Job) SetErrorMessage(v string) *Job {
 	return s
 }
 
+// SetHopDestinations sets the HopDestinations field's value.
+func (s *Job) SetHopDestinations(v []*HopDestination) *Job {
+	s.HopDestinations = v
+	return s
+}
+
 // SetId sets the Id field's value.
 func (s *Job) SetId(v string) *Job {
 	s.Id = &v
@@ -11206,6 +12034,12 @@ func (s *Job) SetPriority(v int64) *Job {
 // SetQueue sets the Queue field's value.
 func (s *Job) SetQueue(v string) *Job {
 	s.Queue = &v
+	return s
+}
+
+// SetQueueTransitions sets the QueueTransitions field's value.
+func (s *Job) SetQueueTransitions(v []*QueueTransition) *Job {
+	s.QueueTransitions = v
 	return s
 }
 
@@ -11475,6 +12309,9 @@ type JobTemplate struct {
 	// An optional description you create for each job template.
 	Description *string `locationName:"description" type:"string"`
 
+	// Optional list of hop destinations.
+	HopDestinations []*HopDestination `locationName:"hopDestinations" type:"list"`
+
 	// The timestamp in epoch seconds when the Job template was last updated.
 	LastUpdated *time.Time `locationName:"lastUpdated" type:"timestamp" timestampFormat:"unixTimestamp"`
 
@@ -11545,6 +12382,12 @@ func (s *JobTemplate) SetCreatedAt(v time.Time) *JobTemplate {
 // SetDescription sets the Description field's value.
 func (s *JobTemplate) SetDescription(v string) *JobTemplate {
 	s.Description = &v
+	return s
+}
+
+// SetHopDestinations sets the HopDestinations field's value.
+func (s *JobTemplate) SetHopDestinations(v []*HopDestination) *JobTemplate {
+	s.HopDestinations = v
 	return s
 }
 
@@ -11776,7 +12619,7 @@ type ListJobTemplatesInput struct {
 	// the next batch of job templates.
 	NextToken *string `location:"querystring" locationName:"nextToken" type:"string"`
 
-	// When you request lists of resources, you can optionally specify whether they
+	// Optional. When you request lists of resources, you can specify whether they
 	// are sorted in ASCENDING or DESCENDING order. Default varies by resource.
 	Order *string `location:"querystring" locationName:"order" type:"string" enum:"Order"`
 }
@@ -11879,18 +12722,19 @@ type ListJobsInput struct {
 	// Optional. Number of jobs, up to twenty, that will be returned at one time.
 	MaxResults *int64 `location:"querystring" locationName:"maxResults" min:"1" type:"integer"`
 
-	// Use this string, provided with the response to a previous request, to request
-	// the next batch of jobs.
+	// Optional. Use this string, provided with the response to a previous request,
+	// to request the next batch of jobs.
 	NextToken *string `location:"querystring" locationName:"nextToken" type:"string"`
 
-	// When you request lists of resources, you can optionally specify whether they
+	// Optional. When you request lists of resources, you can specify whether they
 	// are sorted in ASCENDING or DESCENDING order. Default varies by resource.
 	Order *string `location:"querystring" locationName:"order" type:"string" enum:"Order"`
 
-	// Provide a queue name to get back only jobs from that queue.
+	// Optional. Provide a queue name to get back only jobs from that queue.
 	Queue *string `location:"querystring" locationName:"queue" type:"string"`
 
-	// A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.
+	// Optional. A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED,
+	// or ERROR.
 	Status *string `location:"querystring" locationName:"status" type:"string" enum:"JobStatus"`
 }
 
@@ -12004,7 +12848,7 @@ type ListPresetsInput struct {
 	// the next batch of presets.
 	NextToken *string `location:"querystring" locationName:"nextToken" type:"string"`
 
-	// When you request lists of resources, you can optionally specify whether they
+	// Optional. When you request lists of resources, you can specify whether they
 	// are sorted in ASCENDING or DESCENDING order. Default varies by resource.
 	Order *string `location:"querystring" locationName:"order" type:"string" enum:"Order"`
 }
@@ -12113,7 +12957,7 @@ type ListQueuesInput struct {
 	// the next batch of queues.
 	NextToken *string `location:"querystring" locationName:"nextToken" type:"string"`
 
-	// When you request lists of resources, you can optionally specify whether they
+	// Optional. When you request lists of resources, you can specify whether they
 	// are sorted in ASCENDING or DESCENDING order. Default varies by resource.
 	Order *string `location:"querystring" locationName:"order" type:"string" enum:"Order"`
 }
@@ -13325,6 +14169,91 @@ func (s *Mp2Settings) SetSampleRate(v int64) *Mp2Settings {
 	return s
 }
 
+// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+// value MP3.
+type Mp3Settings struct {
+	_ struct{} `type:"structure"`
+
+	// Specify the average bitrate in bits per second.
+	Bitrate *int64 `locationName:"bitrate" min:"16000" type:"integer"`
+
+	// Specify the number of channels in this output audio track. Choosing Mono
+	// on the console gives you 1 output channel; choosing Stereo gives you 2. In
+	// the API, valid values are 1 and 2.
+	Channels *int64 `locationName:"channels" min:"1" type:"integer"`
+
+	// Specify whether the service encodes this MP3 audio output with a constant
+	// bitrate (CBR) or a variable bitrate (VBR).
+	RateControlMode *string `locationName:"rateControlMode" type:"string" enum:"Mp3RateControlMode"`
+
+	// Sample rate in hz.
+	SampleRate *int64 `locationName:"sampleRate" min:"22050" type:"integer"`
+
+	// Required when you set Bitrate control mode (rateControlMode) to VBR. Specify
+	// the audio quality of this MP3 output from 0 (highest quality) to 9 (lowest
+	// quality).
+	VbrQuality *int64 `locationName:"vbrQuality" type:"integer"`
+}
+
+// String returns the string representation
+func (s Mp3Settings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s Mp3Settings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *Mp3Settings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "Mp3Settings"}
+	if s.Bitrate != nil && *s.Bitrate < 16000 {
+		invalidParams.Add(request.NewErrParamMinValue("Bitrate", 16000))
+	}
+	if s.Channels != nil && *s.Channels < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("Channels", 1))
+	}
+	if s.SampleRate != nil && *s.SampleRate < 22050 {
+		invalidParams.Add(request.NewErrParamMinValue("SampleRate", 22050))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetBitrate sets the Bitrate field's value.
+func (s *Mp3Settings) SetBitrate(v int64) *Mp3Settings {
+	s.Bitrate = &v
+	return s
+}
+
+// SetChannels sets the Channels field's value.
+func (s *Mp3Settings) SetChannels(v int64) *Mp3Settings {
+	s.Channels = &v
+	return s
+}
+
+// SetRateControlMode sets the RateControlMode field's value.
+func (s *Mp3Settings) SetRateControlMode(v string) *Mp3Settings {
+	s.RateControlMode = &v
+	return s
+}
+
+// SetSampleRate sets the SampleRate field's value.
+func (s *Mp3Settings) SetSampleRate(v int64) *Mp3Settings {
+	s.SampleRate = &v
+	return s
+}
+
+// SetVbrQuality sets the VbrQuality field's value.
+func (s *Mp3Settings) SetVbrQuality(v int64) *Mp3Settings {
+	s.VbrQuality = &v
+	return s
+}
+
 // Settings for MP4 container. You can create audio-only AAC outputs with this
 // container.
 type Mp4Settings struct {
@@ -13335,6 +14264,14 @@ type Mp4Settings struct {
 	// and a 'cslg' (composition shift least greatest) box will be included per
 	// 14496-1 amendment 1. This improves compatibility with Apple players and tools.
 	CslgAtom *string `locationName:"cslgAtom" type:"string" enum:"Mp4CslgAtom"`
+
+	// Ignore this setting unless compliance to the CTTS box version specification
+	// matters in your workflow. Specify a value of 1 to set your CTTS box version
+	// to 1 and make your output compliant with the specification. When you specify
+	// a value of 1, you must also set CSLG atom (cslgAtom) to the value INCLUDE.
+	// Keep the default value 0 to set your CTTS box version to 0. This can provide
+	// backward compatibility for some players and packagers.
+	CttsVersion *int64 `locationName:"cttsVersion" type:"integer"`
 
 	// Inserts a free-space box immediately after the moov box.
 	FreeSpaceBox *string `locationName:"freeSpaceBox" type:"string" enum:"Mp4FreeSpaceBox"`
@@ -13362,6 +14299,12 @@ func (s Mp4Settings) GoString() string {
 // SetCslgAtom sets the CslgAtom field's value.
 func (s *Mp4Settings) SetCslgAtom(v string) *Mp4Settings {
 	s.CslgAtom = &v
+	return s
+}
+
+// SetCttsVersion sets the CttsVersion field's value.
+func (s *Mp4Settings) SetCttsVersion(v int64) *Mp4Settings {
+	s.CttsVersion = &v
 	return s
 }
 
@@ -13469,14 +14412,15 @@ type Mpeg2Settings struct {
 	// a frame rate from the dropdown list or choose Custom. The framerates shown
 	// in the dropdown list are decimal approximations of fractions. If you choose
 	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
-	// job sepecification as a JSON file without the console, use FramerateControl
+	// job specification as a JSON file without the console, use FramerateControl
 	// to specify which value the service uses for the frame rate for this output.
 	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 	// from the input. Choose SPECIFIED if you want the service to use the frame
 	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
 	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"Mpeg2FramerateControl"`
 
-	// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+	// Optional. Specify how the transcoder performs framerate conversion. The default
+	// behavior is to use duplicate drop conversion.
 	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"Mpeg2FramerateConversionAlgorithm"`
 
 	// Frame rate denominator.
@@ -13541,9 +14485,12 @@ type Mpeg2Settings struct {
 	// Number of B-frames between reference frames.
 	NumberBFramesBetweenReferenceFrames *int64 `locationName:"numberBFramesBetweenReferenceFrames" type:"integer"`
 
-	// Using the API, enable ParFollowSource if you want the service to use the
-	// pixel aspect ratio from the input. Using the console, do this by choosing
-	// Follow source for Pixel aspect ratio.
+	// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+	// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+	// uses the PAR from your input video for your output. To use a different PAR,
+	// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+	// than Follow source. When you choose SPECIFIED for this setting, you must
+	// also specify values for the parNumerator and parDenominator settings.
 	ParControl *string `locationName:"parControl" type:"string" enum:"Mpeg2ParControl"`
 
 	// Pixel Aspect Ratio denominator.
@@ -13552,8 +14499,9 @@ type Mpeg2Settings struct {
 	// Pixel Aspect Ratio numerator.
 	ParNumerator *int64 `locationName:"parNumerator" min:"1" type:"integer"`
 
-	// Use Quality tuning level (Mpeg2QualityTuningLevel) to specifiy whether to
-	// use single-pass or multipass video encoding.
+	// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+	// want to trade off encoding speed for output video quality. The default behavior
+	// is faster, lower quality, single-pass encoding.
 	QualityTuningLevel *string `locationName:"qualityTuningLevel" type:"string" enum:"Mpeg2QualityTuningLevel"`
 
 	// Use Rate control mode (Mpeg2RateControlMode) to specifiy whether the bitrate
@@ -14008,6 +14956,38 @@ func (s *MsSmoothGroupSettings) SetManifestEncoding(v string) *MsSmoothGroupSett
 	return s
 }
 
+// MXF settings
+type MxfSettings struct {
+	_ struct{} `type:"structure"`
+
+	// Optional. When you have AFD signaling set up in your output video stream,
+	// use this setting to choose whether to also include it in the MXF wrapper.
+	// Choose Don't copy (NO_COPY) to exclude AFD signaling from the MXF wrapper.
+	// Choose Copy from video stream (COPY_FROM_VIDEO) to copy the AFD values from
+	// the video stream for this output to the MXF wrapper. Regardless of which
+	// option you choose, the AFD values remain in the video stream. Related settings:
+	// To set up your output to include or exclude AFD values, see AfdSignaling,
+	// under VideoDescription. On the console, find AFD signaling under the output's
+	// video encoding settings.
+	AfdSignaling *string `locationName:"afdSignaling" type:"string" enum:"MxfAfdSignaling"`
+}
+
+// String returns the string representation
+func (s MxfSettings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s MxfSettings) GoString() string {
+	return s.String()
+}
+
+// SetAfdSignaling sets the AfdSignaling field's value.
+func (s *MxfSettings) SetAfdSignaling(v string) *MxfSettings {
+	s.AfdSignaling = &v
+	return s
+}
+
 // Settings for your Nielsen configuration. If you don't do Nielsen measurement
 // and analytics, ignore these settings. When you enable Nielsen configuration
 // (nielsenConfiguration), MediaConvert enables PCM to ID3 tagging for all outputs
@@ -14222,6 +15202,12 @@ type NoiseReducerTemporalFilterSettings struct {
 	// and creates better VQ for low bitrate outputs.
 	AggressiveMode *int64 `locationName:"aggressiveMode" type:"integer"`
 
+	// Optional. When you set Noise reducer (noiseReducer) to Temporal (TEMPORAL),
+	// you can optionally use this setting to apply additional sharpening. The default
+	// behavior, Auto (AUTO) allows the transcoder to determine whether to apply
+	// filtering, depending on input type and quality.
+	PostTemporalSharpening *string `locationName:"postTemporalSharpening" type:"string" enum:"NoiseFilterPostTemporalSharpening"`
+
 	// The speed of the filter (higher number is faster). Low setting reduces bit
 	// rate at the cost of transcode time, high setting improves transcode time
 	// at the cost of bit rate.
@@ -14264,6 +15250,12 @@ func (s *NoiseReducerTemporalFilterSettings) SetAggressiveMode(v int64) *NoiseRe
 	return s
 }
 
+// SetPostTemporalSharpening sets the PostTemporalSharpening field's value.
+func (s *NoiseReducerTemporalFilterSettings) SetPostTemporalSharpening(v string) *NoiseReducerTemporalFilterSettings {
+	s.PostTemporalSharpening = &v
+	return s
+}
+
 // SetSpeed sets the Speed field's value.
 func (s *NoiseReducerTemporalFilterSettings) SetSpeed(v int64) *NoiseReducerTemporalFilterSettings {
 	s.Speed = &v
@@ -14273,6 +15265,128 @@ func (s *NoiseReducerTemporalFilterSettings) SetSpeed(v int64) *NoiseReducerTemp
 // SetStrength sets the Strength field's value.
 func (s *NoiseReducerTemporalFilterSettings) SetStrength(v int64) *NoiseReducerTemporalFilterSettings {
 	s.Strength = &v
+	return s
+}
+
+type NotFoundException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s NotFoundException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s NotFoundException) GoString() string {
+	return s.String()
+}
+
+func newErrorNotFoundException(v protocol.ResponseMetadata) error {
+	return &NotFoundException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *NotFoundException) Code() string {
+	return "NotFoundException"
+}
+
+// Message returns the exception's message.
+func (s *NotFoundException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *NotFoundException) OrigErr() error {
+	return nil
+}
+
+func (s *NotFoundException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *NotFoundException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *NotFoundException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
+// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+// value OPUS.
+type OpusSettings struct {
+	_ struct{} `type:"structure"`
+
+	// Optional. Specify the average bitrate in bits per second. Valid values are
+	// multiples of 8000, from 32000 through 192000. The default value is 96000,
+	// which we recommend for quality and bandwidth.
+	Bitrate *int64 `locationName:"bitrate" min:"32000" type:"integer"`
+
+	// Specify the number of channels in this output audio track. Choosing Mono
+	// on the console gives you 1 output channel; choosing Stereo gives you 2. In
+	// the API, valid values are 1 and 2.
+	Channels *int64 `locationName:"channels" min:"1" type:"integer"`
+
+	// Optional. Sample rate in hz. Valid values are 16000, 24000, and 48000. The
+	// default value is 48000.
+	SampleRate *int64 `locationName:"sampleRate" min:"16000" type:"integer"`
+}
+
+// String returns the string representation
+func (s OpusSettings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s OpusSettings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *OpusSettings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "OpusSettings"}
+	if s.Bitrate != nil && *s.Bitrate < 32000 {
+		invalidParams.Add(request.NewErrParamMinValue("Bitrate", 32000))
+	}
+	if s.Channels != nil && *s.Channels < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("Channels", 1))
+	}
+	if s.SampleRate != nil && *s.SampleRate < 16000 {
+		invalidParams.Add(request.NewErrParamMinValue("SampleRate", 16000))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetBitrate sets the Bitrate field's value.
+func (s *OpusSettings) SetBitrate(v int64) *OpusSettings {
+	s.Bitrate = &v
+	return s
+}
+
+// SetChannels sets the Channels field's value.
+func (s *OpusSettings) SetChannels(v int64) *OpusSettings {
+	s.Channels = &v
+	return s
+}
+
+// SetSampleRate sets the SampleRate field's value.
+func (s *OpusSettings) SetSampleRate(v int64) *OpusSettings {
+	s.SampleRate = &v
 	return s
 }
 
@@ -14297,8 +15411,9 @@ type Output struct {
 	// Use Extension (Extension) to specify the file extension for outputs in File
 	// output groups. If you do not specify a value, the service will use default
 	// extensions by container type as follows * MPEG-2 transport stream, m2ts *
-	// Quicktime, mov * MXF container, mxf * MPEG-4 container, mp4 * No Container,
-	// the service will use codec extensions (e.g. AAC, H265, H265, AC3)
+	// Quicktime, mov * MXF container, mxf * MPEG-4 container, mp4 * WebM container,
+	// webm * No Container, the service will use codec extensions (e.g. AAC, H265,
+	// H265, AC3)
 	Extension *string `locationName:"extension" type:"string"`
 
 	// Use Name modifier (NameModifier) to have the service add a string to the
@@ -14922,14 +16037,15 @@ type ProresSettings struct {
 	// a frame rate from the dropdown list or choose Custom. The framerates shown
 	// in the dropdown list are decimal approximations of fractions. If you choose
 	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
-	// job sepecification as a JSON file without the console, use FramerateControl
+	// job specification as a JSON file without the console, use FramerateControl
 	// to specify which value the service uses for the frame rate for this output.
 	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 	// from the input. Choose SPECIFIED if you want the service to use the frame
 	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
 	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"ProresFramerateControl"`
 
-	// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+	// Optional. Specify how the transcoder performs framerate conversion. The default
+	// behavior is to use duplicate drop conversion.
 	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"ProresFramerateConversionAlgorithm"`
 
 	// Frame rate denominator.
@@ -14954,11 +16070,12 @@ type ProresSettings struct {
 	// on which of the Follow options you chose.
 	InterlaceMode *string `locationName:"interlaceMode" type:"string" enum:"ProresInterlaceMode"`
 
-	// Use (ProresParControl) to specify how the service determines the pixel aspect
-	// ratio. Set to Follow source (INITIALIZE_FROM_SOURCE) to use the pixel aspect
-	// ratio from the input. To specify a different pixel aspect ratio: Using the
-	// console, choose it from the dropdown menu. Using the API, set ProresParControl
-	// to (SPECIFIED) and provide for (ParNumerator) and (ParDenominator).
+	// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+	// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+	// uses the PAR from your input video for your output. To use a different PAR,
+	// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+	// than Follow source. When you choose SPECIFIED for this setting, you must
+	// also specify values for the parNumerator and parDenominator settings.
 	ParControl *string `locationName:"parControl" type:"string" enum:"ProresParControl"`
 
 	// Pixel Aspect Ratio denominator.
@@ -15202,6 +16319,50 @@ func (s *Queue) SetSubmittedJobsCount(v int64) *Queue {
 // SetType sets the Type field's value.
 func (s *Queue) SetType(v string) *Queue {
 	s.Type = &v
+	return s
+}
+
+// Description of the source and destination queues between which the job has
+// moved, along with the timestamp of the move
+type QueueTransition struct {
+	_ struct{} `type:"structure"`
+
+	// The queue that the job was on after the transition.
+	DestinationQueue *string `locationName:"destinationQueue" type:"string"`
+
+	// The queue that the job was on before the transition.
+	SourceQueue *string `locationName:"sourceQueue" type:"string"`
+
+	// The time, in Unix epoch format, that the job moved from the source queue
+	// to the destination queue.
+	Timestamp *time.Time `locationName:"timestamp" type:"timestamp" timestampFormat:"unixTimestamp"`
+}
+
+// String returns the string representation
+func (s QueueTransition) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s QueueTransition) GoString() string {
+	return s.String()
+}
+
+// SetDestinationQueue sets the DestinationQueue field's value.
+func (s *QueueTransition) SetDestinationQueue(v string) *QueueTransition {
+	s.DestinationQueue = &v
+	return s
+}
+
+// SetSourceQueue sets the SourceQueue field's value.
+func (s *QueueTransition) SetSourceQueue(v string) *QueueTransition {
+	s.SourceQueue = &v
+	return s
+}
+
+// SetTimestamp sets the Timestamp field's value.
+func (s *QueueTransition) SetTimestamp(v time.Time) *QueueTransition {
+	s.Timestamp = &v
 	return s
 }
 
@@ -16231,6 +17392,61 @@ func (s *Timing) SetSubmitTime(v time.Time) *Timing {
 	return s
 }
 
+type TooManyRequestsException struct {
+	_            struct{}                  `type:"structure"`
+	RespMetadata protocol.ResponseMetadata `json:"-" xml:"-"`
+
+	Message_ *string `locationName:"message" type:"string"`
+}
+
+// String returns the string representation
+func (s TooManyRequestsException) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s TooManyRequestsException) GoString() string {
+	return s.String()
+}
+
+func newErrorTooManyRequestsException(v protocol.ResponseMetadata) error {
+	return &TooManyRequestsException{
+		RespMetadata: v,
+	}
+}
+
+// Code returns the exception type name.
+func (s *TooManyRequestsException) Code() string {
+	return "TooManyRequestsException"
+}
+
+// Message returns the exception's message.
+func (s *TooManyRequestsException) Message() string {
+	if s.Message_ != nil {
+		return *s.Message_
+	}
+	return ""
+}
+
+// OrigErr always returns nil, satisfies awserr.Error interface.
+func (s *TooManyRequestsException) OrigErr() error {
+	return nil
+}
+
+func (s *TooManyRequestsException) Error() string {
+	return fmt.Sprintf("%s: %s", s.Code(), s.Message())
+}
+
+// Status code returns the HTTP status code for the request's response error.
+func (s *TooManyRequestsException) StatusCode() int {
+	return s.RespMetadata.StatusCode
+}
+
+// RequestID returns the service's response RequestID for request.
+func (s *TooManyRequestsException) RequestID() string {
+	return s.RespMetadata.RequestID
+}
+
 // Settings specific to caption sources that are specified by track number.
 // Currently, this is only IMSC captions in an IMF package. If your caption
 // source is IMSC 1.1 in a separate xml file, use FileSourceSettings instead
@@ -16282,7 +17498,7 @@ type TtmlDestinationSettings struct {
 	_ struct{} `type:"structure"`
 
 	// Pass through style and position information from a TTML-like input source
-	// (TTML, SMPTE-TT, CFF-TT) to the CFF-TT output or TTML output.
+	// (TTML, SMPTE-TT) to the TTML output.
 	StylePassthrough *string `locationName:"stylePassthrough" type:"string" enum:"TtmlStylePassthrough"`
 }
 
@@ -16388,6 +17604,9 @@ type UpdateJobTemplateInput struct {
 	// The new description for the job template, if you are changing it.
 	Description *string `locationName:"description" type:"string"`
 
+	// Optional list of hop destinations.
+	HopDestinations []*HopDestination `locationName:"hopDestinations" type:"list"`
+
 	// The name of the job template you are modifying
 	//
 	// Name is a required field
@@ -16441,6 +17660,16 @@ func (s *UpdateJobTemplateInput) Validate() error {
 			invalidParams.AddNested("AccelerationSettings", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.HopDestinations != nil {
+		for i, v := range s.HopDestinations {
+			if v == nil {
+				continue
+			}
+			if err := v.Validate(); err != nil {
+				invalidParams.AddNested(fmt.Sprintf("%s[%v]", "HopDestinations", i), err.(request.ErrInvalidParams))
+			}
+		}
+	}
 	if s.Settings != nil {
 		if err := s.Settings.Validate(); err != nil {
 			invalidParams.AddNested("Settings", err.(request.ErrInvalidParams))
@@ -16468,6 +17697,12 @@ func (s *UpdateJobTemplateInput) SetCategory(v string) *UpdateJobTemplateInput {
 // SetDescription sets the Description field's value.
 func (s *UpdateJobTemplateInput) SetDescription(v string) *UpdateJobTemplateInput {
 	s.Description = &v
+	return s
+}
+
+// SetHopDestinations sets the HopDestinations field's value.
+func (s *UpdateJobTemplateInput) SetHopDestinations(v []*HopDestination) *UpdateJobTemplateInput {
+	s.HopDestinations = v
 	return s
 }
 
@@ -16742,11 +17977,16 @@ func (s *UpdateQueueOutput) SetQueue(v *Queue) *UpdateQueueOutput {
 // the group of settings related to video encoding. The settings in this group
 // vary depending on the value that you choose for Video codec (Codec). For
 // each codec enum that you choose, define the corresponding settings object.
-// The following lists the codec enum, settings object pairs. * H_264, H264Settings
-// * H_265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * FRAME_CAPTURE,
-// FrameCaptureSettings
+// The following lists the codec enum, settings object pairs. * FRAME_CAPTURE,
+// FrameCaptureSettings * AV1, Av1Settings * H_264, H264Settings * H_265, H265Settings
+// * MPEG2, Mpeg2Settings * PRORES, ProresSettings * VP8, Vp8Settings * VP9,
+// Vp9Settings
 type VideoCodecSettings struct {
 	_ struct{} `type:"structure"`
+
+	// Required when you set Codec, under VideoDescription>CodecSettings to the
+	// value AV1.
+	Av1Settings *Av1Settings `locationName:"av1Settings" type:"structure"`
 
 	// Specifies the video codec. This must be equal to one of the enum values defined
 	// by the object VideoCodec.
@@ -16770,6 +18010,14 @@ type VideoCodecSettings struct {
 	// Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
 	// the value PRORES.
 	ProresSettings *ProresSettings `locationName:"proresSettings" type:"structure"`
+
+	// Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
+	// the value VP8.
+	Vp8Settings *Vp8Settings `locationName:"vp8Settings" type:"structure"`
+
+	// Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
+	// the value VP9.
+	Vp9Settings *Vp9Settings `locationName:"vp9Settings" type:"structure"`
 }
 
 // String returns the string representation
@@ -16785,6 +18033,11 @@ func (s VideoCodecSettings) GoString() string {
 // Validate inspects the fields of the type to determine if they are valid.
 func (s *VideoCodecSettings) Validate() error {
 	invalidParams := request.ErrInvalidParams{Context: "VideoCodecSettings"}
+	if s.Av1Settings != nil {
+		if err := s.Av1Settings.Validate(); err != nil {
+			invalidParams.AddNested("Av1Settings", err.(request.ErrInvalidParams))
+		}
+	}
 	if s.FrameCaptureSettings != nil {
 		if err := s.FrameCaptureSettings.Validate(); err != nil {
 			invalidParams.AddNested("FrameCaptureSettings", err.(request.ErrInvalidParams))
@@ -16810,11 +18063,27 @@ func (s *VideoCodecSettings) Validate() error {
 			invalidParams.AddNested("ProresSettings", err.(request.ErrInvalidParams))
 		}
 	}
+	if s.Vp8Settings != nil {
+		if err := s.Vp8Settings.Validate(); err != nil {
+			invalidParams.AddNested("Vp8Settings", err.(request.ErrInvalidParams))
+		}
+	}
+	if s.Vp9Settings != nil {
+		if err := s.Vp9Settings.Validate(); err != nil {
+			invalidParams.AddNested("Vp9Settings", err.(request.ErrInvalidParams))
+		}
+	}
 
 	if invalidParams.Len() > 0 {
 		return invalidParams
 	}
 	return nil
+}
+
+// SetAv1Settings sets the Av1Settings field's value.
+func (s *VideoCodecSettings) SetAv1Settings(v *Av1Settings) *VideoCodecSettings {
+	s.Av1Settings = v
+	return s
 }
 
 // SetCodec sets the Codec field's value.
@@ -16853,6 +18122,18 @@ func (s *VideoCodecSettings) SetProresSettings(v *ProresSettings) *VideoCodecSet
 	return s
 }
 
+// SetVp8Settings sets the Vp8Settings field's value.
+func (s *VideoCodecSettings) SetVp8Settings(v *Vp8Settings) *VideoCodecSettings {
+	s.Vp8Settings = v
+	return s
+}
+
+// SetVp9Settings sets the Vp9Settings field's value.
+func (s *VideoCodecSettings) SetVp9Settings(v *Vp9Settings) *VideoCodecSettings {
+	s.Vp9Settings = v
+	return s
+}
+
 // Settings for video outputs
 type VideoDescription struct {
 	_ struct{} `type:"structure"`
@@ -16874,9 +18155,10 @@ type VideoDescription struct {
 	// the group of settings related to video encoding. The settings in this group
 	// vary depending on the value that you choose for Video codec (Codec). For
 	// each codec enum that you choose, define the corresponding settings object.
-	// The following lists the codec enum, settings object pairs. * H_264, H264Settings
-	// * H_265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * FRAME_CAPTURE,
-	// FrameCaptureSettings
+	// The following lists the codec enum, settings object pairs. * FRAME_CAPTURE,
+	// FrameCaptureSettings * AV1, Av1Settings * H_264, H264Settings * H_265, H265Settings
+	// * MPEG2, Mpeg2Settings * PRORES, ProresSettings * VP8, Vp8Settings * VP9,
+	// Vp9Settings
 	CodecSettings *VideoCodecSettings `locationName:"codecSettings" type:"structure"`
 
 	// Choose Insert (INSERT) for this setting to include color metadata in this
@@ -17240,11 +18522,12 @@ func (s *VideoPreprocessor) SetTimecodeBurnin(v *TimecodeBurnin) *VideoPreproces
 type VideoSelector struct {
 	_ struct{} `type:"structure"`
 
-	// Ignore this setting unless this input is a QuickTime animation. Specify which
-	// part of this input MediaConvert uses for your outputs. Leave this setting
-	// set to DISCARD in order to delete the alpha channel and preserve the video.
-	// Use REMAP_TO_LUMA for this setting to delete the video and map the alpha
-	// channel to the luma channel of your outputs.
+	// Ignore this setting unless this input is a QuickTime animation with an alpha
+	// channel. Use this setting to create separate Key and Fill outputs. In each
+	// output, specify which part of the input MediaConvert uses. Leave this setting
+	// at the default value DISCARD to delete the alpha channel and preserve the
+	// video. Set it to REMAP_TO_LUMA to delete the video and map the alpha channel
+	// to the luma channel of your outputs.
 	AlphaBehavior *string `locationName:"alphaBehavior" type:"string" enum:"AlphaBehavior"`
 
 	// If your input video has accurate color space metadata, or if you don't know
@@ -17369,6 +18652,484 @@ func (s *VideoSelector) SetProgramNumber(v int64) *VideoSelector {
 // SetRotate sets the Rotate field's value.
 func (s *VideoSelector) SetRotate(v string) *VideoSelector {
 	s.Rotate = &v
+	return s
+}
+
+// Required when you set Codec, under AudioDescriptions>CodecSettings, to the
+// value Vorbis.
+type VorbisSettings struct {
+	_ struct{} `type:"structure"`
+
+	// Optional. Specify the number of channels in this output audio track. Choosing
+	// Mono on the console gives you 1 output channel; choosing Stereo gives you
+	// 2. In the API, valid values are 1 and 2. The default value is 2.
+	Channels *int64 `locationName:"channels" min:"1" type:"integer"`
+
+	// Optional. Specify the audio sample rate in Hz. Valid values are 22050, 32000,
+	// 44100, and 48000. The default value is 48000.
+	SampleRate *int64 `locationName:"sampleRate" min:"22050" type:"integer"`
+
+	// Optional. Specify the variable audio quality of this Vorbis output from -1
+	// (lowest quality, ~45 kbit/s) to 10 (highest quality, ~500 kbit/s). The default
+	// value is 4 (~128 kbit/s). Values 5 and 6 are approximately 160 and 192 kbit/s,
+	// respectively.
+	VbrQuality *int64 `locationName:"vbrQuality" type:"integer"`
+}
+
+// String returns the string representation
+func (s VorbisSettings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s VorbisSettings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *VorbisSettings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "VorbisSettings"}
+	if s.Channels != nil && *s.Channels < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("Channels", 1))
+	}
+	if s.SampleRate != nil && *s.SampleRate < 22050 {
+		invalidParams.Add(request.NewErrParamMinValue("SampleRate", 22050))
+	}
+	if s.VbrQuality != nil && *s.VbrQuality < -1 {
+		invalidParams.Add(request.NewErrParamMinValue("VbrQuality", -1))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetChannels sets the Channels field's value.
+func (s *VorbisSettings) SetChannels(v int64) *VorbisSettings {
+	s.Channels = &v
+	return s
+}
+
+// SetSampleRate sets the SampleRate field's value.
+func (s *VorbisSettings) SetSampleRate(v int64) *VorbisSettings {
+	s.SampleRate = &v
+	return s
+}
+
+// SetVbrQuality sets the VbrQuality field's value.
+func (s *VorbisSettings) SetVbrQuality(v int64) *VorbisSettings {
+	s.VbrQuality = &v
+	return s
+}
+
+// Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
+// the value VP8.
+type Vp8Settings struct {
+	_ struct{} `type:"structure"`
+
+	// Target bitrate in bits/second. For example, enter five megabits per second
+	// as 5000000.
+	Bitrate *int64 `locationName:"bitrate" min:"1000" type:"integer"`
+
+	// If you are using the console, use the Framerate setting to specify the frame
+	// rate for this output. If you want to keep the same frame rate as the input
+	// video, choose Follow source. If you want to do frame rate conversion, choose
+	// a frame rate from the dropdown list or choose Custom. The framerates shown
+	// in the dropdown list are decimal approximations of fractions. If you choose
+	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+	// job specification as a JSON file without the console, use FramerateControl
+	// to specify which value the service uses for the frame rate for this output.
+	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+	// from the input. Choose SPECIFIED if you want the service to use the frame
+	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"Vp8FramerateControl"`
+
+	// Optional. Specify how the transcoder performs framerate conversion. The default
+	// behavior is to use Drop duplicate (DUPLICATE_DROP) conversion. When you choose
+	// Interpolate (INTERPOLATE) instead, the conversion produces smoother motion.
+	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"Vp8FramerateConversionAlgorithm"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateDenominator to specify the denominator of this fraction. In this
+	// example, use 1001 for the value of FramerateDenominator. When you use the
+	// console for transcode jobs that use frame rate conversion, provide the value
+	// as a decimal number for Framerate. In this example, specify 23.976.
+	FramerateDenominator *int64 `locationName:"framerateDenominator" min:"1" type:"integer"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateNumerator to specify the numerator of this fraction. In this example,
+	// use 24000 for the value of FramerateNumerator. When you use the console for
+	// transcode jobs that use frame rate conversion, provide the value as a decimal
+	// number for Framerate. In this example, specify 23.976.
+	FramerateNumerator *int64 `locationName:"framerateNumerator" min:"1" type:"integer"`
+
+	// GOP Length (keyframe interval) in frames. Must be greater than zero.
+	GopSize *float64 `locationName:"gopSize" type:"double"`
+
+	// Optional. Size of buffer (HRD buffer model) in bits. For example, enter five
+	// megabits as 5000000.
+	HrdBufferSize *int64 `locationName:"hrdBufferSize" type:"integer"`
+
+	// Ignore this setting unless you set qualityTuningLevel to MULTI_PASS. Optional.
+	// Specify the maximum bitrate in bits/second. For example, enter five megabits
+	// per second as 5000000. The default behavior uses twice the target bitrate
+	// as the maximum bitrate.
+	MaxBitrate *int64 `locationName:"maxBitrate" min:"1000" type:"integer"`
+
+	// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+	// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+	// uses the PAR from your input video for your output. To specify a different
+	// PAR in the console, choose any value other than Follow source. To specify
+	// a different PAR by editing the JSON job specification, choose SPECIFIED.
+	// When you choose SPECIFIED for this setting, you must also specify values
+	// for the parNumerator and parDenominator settings.
+	ParControl *string `locationName:"parControl" type:"string" enum:"Vp8ParControl"`
+
+	// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the
+	// console, this corresponds to any value other than Follow source. When you
+	// specify an output pixel aspect ratio (PAR) that is different from your input
+	// video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC
+	// widescreen, you would specify the ratio 40:33. In this example, the value
+	// for parDenominator is 33.
+	ParDenominator *int64 `locationName:"parDenominator" min:"1" type:"integer"`
+
+	// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the
+	// console, this corresponds to any value other than Follow source. When you
+	// specify an output pixel aspect ratio (PAR) that is different from your input
+	// video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC
+	// widescreen, you would specify the ratio 40:33. In this example, the value
+	// for parNumerator is 40.
+	ParNumerator *int64 `locationName:"parNumerator" min:"1" type:"integer"`
+
+	// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+	// want to trade off encoding speed for output video quality. The default behavior
+	// is faster, lower quality, multi-pass encoding.
+	QualityTuningLevel *string `locationName:"qualityTuningLevel" type:"string" enum:"Vp8QualityTuningLevel"`
+
+	// With the VP8 codec, you can use only the variable bitrate (VBR) rate control
+	// mode.
+	RateControlMode *string `locationName:"rateControlMode" type:"string" enum:"Vp8RateControlMode"`
+}
+
+// String returns the string representation
+func (s Vp8Settings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s Vp8Settings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *Vp8Settings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "Vp8Settings"}
+	if s.Bitrate != nil && *s.Bitrate < 1000 {
+		invalidParams.Add(request.NewErrParamMinValue("Bitrate", 1000))
+	}
+	if s.FramerateDenominator != nil && *s.FramerateDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateDenominator", 1))
+	}
+	if s.FramerateNumerator != nil && *s.FramerateNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateNumerator", 1))
+	}
+	if s.MaxBitrate != nil && *s.MaxBitrate < 1000 {
+		invalidParams.Add(request.NewErrParamMinValue("MaxBitrate", 1000))
+	}
+	if s.ParDenominator != nil && *s.ParDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("ParDenominator", 1))
+	}
+	if s.ParNumerator != nil && *s.ParNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("ParNumerator", 1))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetBitrate sets the Bitrate field's value.
+func (s *Vp8Settings) SetBitrate(v int64) *Vp8Settings {
+	s.Bitrate = &v
+	return s
+}
+
+// SetFramerateControl sets the FramerateControl field's value.
+func (s *Vp8Settings) SetFramerateControl(v string) *Vp8Settings {
+	s.FramerateControl = &v
+	return s
+}
+
+// SetFramerateConversionAlgorithm sets the FramerateConversionAlgorithm field's value.
+func (s *Vp8Settings) SetFramerateConversionAlgorithm(v string) *Vp8Settings {
+	s.FramerateConversionAlgorithm = &v
+	return s
+}
+
+// SetFramerateDenominator sets the FramerateDenominator field's value.
+func (s *Vp8Settings) SetFramerateDenominator(v int64) *Vp8Settings {
+	s.FramerateDenominator = &v
+	return s
+}
+
+// SetFramerateNumerator sets the FramerateNumerator field's value.
+func (s *Vp8Settings) SetFramerateNumerator(v int64) *Vp8Settings {
+	s.FramerateNumerator = &v
+	return s
+}
+
+// SetGopSize sets the GopSize field's value.
+func (s *Vp8Settings) SetGopSize(v float64) *Vp8Settings {
+	s.GopSize = &v
+	return s
+}
+
+// SetHrdBufferSize sets the HrdBufferSize field's value.
+func (s *Vp8Settings) SetHrdBufferSize(v int64) *Vp8Settings {
+	s.HrdBufferSize = &v
+	return s
+}
+
+// SetMaxBitrate sets the MaxBitrate field's value.
+func (s *Vp8Settings) SetMaxBitrate(v int64) *Vp8Settings {
+	s.MaxBitrate = &v
+	return s
+}
+
+// SetParControl sets the ParControl field's value.
+func (s *Vp8Settings) SetParControl(v string) *Vp8Settings {
+	s.ParControl = &v
+	return s
+}
+
+// SetParDenominator sets the ParDenominator field's value.
+func (s *Vp8Settings) SetParDenominator(v int64) *Vp8Settings {
+	s.ParDenominator = &v
+	return s
+}
+
+// SetParNumerator sets the ParNumerator field's value.
+func (s *Vp8Settings) SetParNumerator(v int64) *Vp8Settings {
+	s.ParNumerator = &v
+	return s
+}
+
+// SetQualityTuningLevel sets the QualityTuningLevel field's value.
+func (s *Vp8Settings) SetQualityTuningLevel(v string) *Vp8Settings {
+	s.QualityTuningLevel = &v
+	return s
+}
+
+// SetRateControlMode sets the RateControlMode field's value.
+func (s *Vp8Settings) SetRateControlMode(v string) *Vp8Settings {
+	s.RateControlMode = &v
+	return s
+}
+
+// Required when you set (Codec) under (VideoDescription)>(CodecSettings) to
+// the value VP9.
+type Vp9Settings struct {
+	_ struct{} `type:"structure"`
+
+	// Target bitrate in bits/second. For example, enter five megabits per second
+	// as 5000000.
+	Bitrate *int64 `locationName:"bitrate" min:"1000" type:"integer"`
+
+	// If you are using the console, use the Framerate setting to specify the frame
+	// rate for this output. If you want to keep the same frame rate as the input
+	// video, choose Follow source. If you want to do frame rate conversion, choose
+	// a frame rate from the dropdown list or choose Custom. The framerates shown
+	// in the dropdown list are decimal approximations of fractions. If you choose
+	// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+	// job specification as a JSON file without the console, use FramerateControl
+	// to specify which value the service uses for the frame rate for this output.
+	// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+	// from the input. Choose SPECIFIED if you want the service to use the frame
+	// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+	FramerateControl *string `locationName:"framerateControl" type:"string" enum:"Vp9FramerateControl"`
+
+	// Optional. Specify how the transcoder performs framerate conversion. The default
+	// behavior is to use Drop duplicate (DUPLICATE_DROP) conversion. When you choose
+	// Interpolate (INTERPOLATE) instead, the conversion produces smoother motion.
+	FramerateConversionAlgorithm *string `locationName:"framerateConversionAlgorithm" type:"string" enum:"Vp9FramerateConversionAlgorithm"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateDenominator to specify the denominator of this fraction. In this
+	// example, use 1001 for the value of FramerateDenominator. When you use the
+	// console for transcode jobs that use frame rate conversion, provide the value
+	// as a decimal number for Framerate. In this example, specify 23.976.
+	FramerateDenominator *int64 `locationName:"framerateDenominator" min:"1" type:"integer"`
+
+	// When you use the API for transcode jobs that use frame rate conversion, specify
+	// the frame rate as a fraction. For example, 24000 / 1001 = 23.976 fps. Use
+	// FramerateNumerator to specify the numerator of this fraction. In this example,
+	// use 24000 for the value of FramerateNumerator. When you use the console for
+	// transcode jobs that use frame rate conversion, provide the value as a decimal
+	// number for Framerate. In this example, specify 23.976.
+	FramerateNumerator *int64 `locationName:"framerateNumerator" min:"1" type:"integer"`
+
+	// GOP Length (keyframe interval) in frames. Must be greater than zero.
+	GopSize *float64 `locationName:"gopSize" type:"double"`
+
+	// Size of buffer (HRD buffer model) in bits. For example, enter five megabits
+	// as 5000000.
+	HrdBufferSize *int64 `locationName:"hrdBufferSize" type:"integer"`
+
+	// Ignore this setting unless you set qualityTuningLevel to MULTI_PASS. Optional.
+	// Specify the maximum bitrate in bits/second. For example, enter five megabits
+	// per second as 5000000. The default behavior uses twice the target bitrate
+	// as the maximum bitrate.
+	MaxBitrate *int64 `locationName:"maxBitrate" min:"1000" type:"integer"`
+
+	// Optional. Specify how the service determines the pixel aspect ratio for this
+	// output. The default behavior is to use the same pixel aspect ratio as your
+	// input video.
+	ParControl *string `locationName:"parControl" type:"string" enum:"Vp9ParControl"`
+
+	// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the
+	// console, this corresponds to any value other than Follow source. When you
+	// specify an output pixel aspect ratio (PAR) that is different from your input
+	// video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC
+	// widescreen, you would specify the ratio 40:33. In this example, the value
+	// for parDenominator is 33.
+	ParDenominator *int64 `locationName:"parDenominator" min:"1" type:"integer"`
+
+	// Required when you set Pixel aspect ratio (parControl) to SPECIFIED. On the
+	// console, this corresponds to any value other than Follow source. When you
+	// specify an output pixel aspect ratio (PAR) that is different from your input
+	// video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC
+	// widescreen, you would specify the ratio 40:33. In this example, the value
+	// for parNumerator is 40.
+	ParNumerator *int64 `locationName:"parNumerator" min:"1" type:"integer"`
+
+	// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+	// want to trade off encoding speed for output video quality. The default behavior
+	// is faster, lower quality, multi-pass encoding.
+	QualityTuningLevel *string `locationName:"qualityTuningLevel" type:"string" enum:"Vp9QualityTuningLevel"`
+
+	// With the VP9 codec, you can use only the variable bitrate (VBR) rate control
+	// mode.
+	RateControlMode *string `locationName:"rateControlMode" type:"string" enum:"Vp9RateControlMode"`
+}
+
+// String returns the string representation
+func (s Vp9Settings) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s Vp9Settings) GoString() string {
+	return s.String()
+}
+
+// Validate inspects the fields of the type to determine if they are valid.
+func (s *Vp9Settings) Validate() error {
+	invalidParams := request.ErrInvalidParams{Context: "Vp9Settings"}
+	if s.Bitrate != nil && *s.Bitrate < 1000 {
+		invalidParams.Add(request.NewErrParamMinValue("Bitrate", 1000))
+	}
+	if s.FramerateDenominator != nil && *s.FramerateDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateDenominator", 1))
+	}
+	if s.FramerateNumerator != nil && *s.FramerateNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("FramerateNumerator", 1))
+	}
+	if s.MaxBitrate != nil && *s.MaxBitrate < 1000 {
+		invalidParams.Add(request.NewErrParamMinValue("MaxBitrate", 1000))
+	}
+	if s.ParDenominator != nil && *s.ParDenominator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("ParDenominator", 1))
+	}
+	if s.ParNumerator != nil && *s.ParNumerator < 1 {
+		invalidParams.Add(request.NewErrParamMinValue("ParNumerator", 1))
+	}
+
+	if invalidParams.Len() > 0 {
+		return invalidParams
+	}
+	return nil
+}
+
+// SetBitrate sets the Bitrate field's value.
+func (s *Vp9Settings) SetBitrate(v int64) *Vp9Settings {
+	s.Bitrate = &v
+	return s
+}
+
+// SetFramerateControl sets the FramerateControl field's value.
+func (s *Vp9Settings) SetFramerateControl(v string) *Vp9Settings {
+	s.FramerateControl = &v
+	return s
+}
+
+// SetFramerateConversionAlgorithm sets the FramerateConversionAlgorithm field's value.
+func (s *Vp9Settings) SetFramerateConversionAlgorithm(v string) *Vp9Settings {
+	s.FramerateConversionAlgorithm = &v
+	return s
+}
+
+// SetFramerateDenominator sets the FramerateDenominator field's value.
+func (s *Vp9Settings) SetFramerateDenominator(v int64) *Vp9Settings {
+	s.FramerateDenominator = &v
+	return s
+}
+
+// SetFramerateNumerator sets the FramerateNumerator field's value.
+func (s *Vp9Settings) SetFramerateNumerator(v int64) *Vp9Settings {
+	s.FramerateNumerator = &v
+	return s
+}
+
+// SetGopSize sets the GopSize field's value.
+func (s *Vp9Settings) SetGopSize(v float64) *Vp9Settings {
+	s.GopSize = &v
+	return s
+}
+
+// SetHrdBufferSize sets the HrdBufferSize field's value.
+func (s *Vp9Settings) SetHrdBufferSize(v int64) *Vp9Settings {
+	s.HrdBufferSize = &v
+	return s
+}
+
+// SetMaxBitrate sets the MaxBitrate field's value.
+func (s *Vp9Settings) SetMaxBitrate(v int64) *Vp9Settings {
+	s.MaxBitrate = &v
+	return s
+}
+
+// SetParControl sets the ParControl field's value.
+func (s *Vp9Settings) SetParControl(v string) *Vp9Settings {
+	s.ParControl = &v
+	return s
+}
+
+// SetParDenominator sets the ParDenominator field's value.
+func (s *Vp9Settings) SetParDenominator(v int64) *Vp9Settings {
+	s.ParDenominator = &v
+	return s
+}
+
+// SetParNumerator sets the ParNumerator field's value.
+func (s *Vp9Settings) SetParNumerator(v int64) *Vp9Settings {
+	s.ParNumerator = &v
+	return s
+}
+
+// SetQualityTuningLevel sets the QualityTuningLevel field's value.
+func (s *Vp9Settings) SetQualityTuningLevel(v string) *Vp9Settings {
+	s.QualityTuningLevel = &v
+	return s
+}
+
+// SetRateControlMode sets the RateControlMode field's value.
+func (s *Vp9Settings) SetRateControlMode(v string) *Vp9Settings {
+	s.RateControlMode = &v
 	return s
 }
 
@@ -17677,11 +19438,12 @@ const (
 	AfdSignalingFixed = "FIXED"
 )
 
-// Ignore this setting unless this input is a QuickTime animation. Specify which
-// part of this input MediaConvert uses for your outputs. Leave this setting
-// set to DISCARD in order to delete the alpha channel and preserve the video.
-// Use REMAP_TO_LUMA for this setting to delete the video and map the alpha
-// channel to the luma channel of your outputs.
+// Ignore this setting unless this input is a QuickTime animation with an alpha
+// channel. Use this setting to create separate Key and Fill outputs. In each
+// output, specify which part of the input MediaConvert uses. Leave this setting
+// at the default value DISCARD to delete the alpha channel and preserve the
+// video. Set it to REMAP_TO_LUMA to delete the video and map the alpha channel
+// to the luma channel of your outputs.
 const (
 	// AlphaBehaviorDiscard is a AlphaBehavior enum value
 	AlphaBehaviorDiscard = "DISCARD"
@@ -17733,6 +19495,9 @@ const (
 	// AudioCodecMp2 is a AudioCodec enum value
 	AudioCodecMp2 = "MP2"
 
+	// AudioCodecMp3 is a AudioCodec enum value
+	AudioCodecMp3 = "MP3"
+
 	// AudioCodecWav is a AudioCodec enum value
 	AudioCodecWav = "WAV"
 
@@ -17747,6 +19512,12 @@ const (
 
 	// AudioCodecEac3Atmos is a AudioCodec enum value
 	AudioCodecEac3Atmos = "EAC3_ATMOS"
+
+	// AudioCodecVorbis is a AudioCodec enum value
+	AudioCodecVorbis = "VORBIS"
+
+	// AudioCodecOpus is a AudioCodec enum value
+	AudioCodecOpus = "OPUS"
 
 	// AudioCodecPassthrough is a AudioCodec enum value
 	AudioCodecPassthrough = "PASSTHROUGH"
@@ -17855,11 +19626,75 @@ const (
 	AudioTypeControlUseConfigured = "USE_CONFIGURED"
 )
 
-// Optional. Choose a tag type that AWS Billing and Cost Management will use
-// to sort your AWS Elemental MediaConvert costs on any billing report that
-// you set up. Any transcoding outputs that don't have an associated tag will
-// appear in your billing report unsorted. If you don't choose a valid value
-// for this field, your job outputs will appear on the billing report unsorted.
+// Adaptive quantization. Allows intra-frame quantizers to vary to improve visual
+// quality.
+const (
+	// Av1AdaptiveQuantizationOff is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationOff = "OFF"
+
+	// Av1AdaptiveQuantizationLow is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationLow = "LOW"
+
+	// Av1AdaptiveQuantizationMedium is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationMedium = "MEDIUM"
+
+	// Av1AdaptiveQuantizationHigh is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationHigh = "HIGH"
+
+	// Av1AdaptiveQuantizationHigher is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationHigher = "HIGHER"
+
+	// Av1AdaptiveQuantizationMax is a Av1AdaptiveQuantization enum value
+	Av1AdaptiveQuantizationMax = "MAX"
+)
+
+// If you are using the console, use the Framerate setting to specify the frame
+// rate for this output. If you want to keep the same frame rate as the input
+// video, choose Follow source. If you want to do frame rate conversion, choose
+// a frame rate from the dropdown list or choose Custom. The framerates shown
+// in the dropdown list are decimal approximations of fractions. If you choose
+// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+// job specification as a JSON file without the console, use FramerateControl
+// to specify which value the service uses for the frame rate for this output.
+// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+// from the input. Choose SPECIFIED if you want the service to use the frame
+// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+const (
+	// Av1FramerateControlInitializeFromSource is a Av1FramerateControl enum value
+	Av1FramerateControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
+
+	// Av1FramerateControlSpecified is a Av1FramerateControl enum value
+	Av1FramerateControlSpecified = "SPECIFIED"
+)
+
+// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+const (
+	// Av1FramerateConversionAlgorithmDuplicateDrop is a Av1FramerateConversionAlgorithm enum value
+	Av1FramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
+
+	// Av1FramerateConversionAlgorithmInterpolate is a Av1FramerateConversionAlgorithm enum value
+	Av1FramerateConversionAlgorithmInterpolate = "INTERPOLATE"
+)
+
+// 'With AV1 outputs, for rate control mode, MediaConvert supports only quality-defined
+// variable bitrate (QVBR). You can''t use CBR or VBR.'
+const (
+	// Av1RateControlModeQvbr is a Av1RateControlMode enum value
+	Av1RateControlModeQvbr = "QVBR"
+)
+
+// Adjust quantization within each frame based on spatial variation of content
+// complexity.
+const (
+	// Av1SpatialAdaptiveQuantizationDisabled is a Av1SpatialAdaptiveQuantization enum value
+	Av1SpatialAdaptiveQuantizationDisabled = "DISABLED"
+
+	// Av1SpatialAdaptiveQuantizationEnabled is a Av1SpatialAdaptiveQuantization enum value
+	Av1SpatialAdaptiveQuantizationEnabled = "ENABLED"
+)
+
+// The tag type that AWS Billing and Cost Management will use to sort your AWS
+// Elemental MediaConvert costs on any billing report that you set up.
 const (
 	// BillingTagsSourceQueue is a BillingTagsSource enum value
 	BillingTagsSourceQueue = "QUEUE"
@@ -18183,6 +20018,44 @@ const (
 	CmafWriteHLSManifestEnabled = "ENABLED"
 )
 
+// When you enable Precise segment duration in DASH manifests (writeSegmentTimelineInRepresentation),
+// your DASH manifest shows precise segment durations. The segment duration
+// information appears inside the SegmentTimeline element, inside SegmentTemplate
+// at the Representation level. When this feature isn't enabled, the segment
+// durations in your DASH manifest are approximate. The segment duration information
+// appears in the duration attribute of the SegmentTemplate element.
+const (
+	// CmafWriteSegmentTimelineInRepresentationEnabled is a CmafWriteSegmentTimelineInRepresentation enum value
+	CmafWriteSegmentTimelineInRepresentationEnabled = "ENABLED"
+
+	// CmafWriteSegmentTimelineInRepresentationDisabled is a CmafWriteSegmentTimelineInRepresentation enum value
+	CmafWriteSegmentTimelineInRepresentationDisabled = "DISABLED"
+)
+
+// Use this setting only when you specify SCTE-35 markers from ESAM. Choose
+// INSERT to put SCTE-35 markers in this output at the insertion points that
+// you specify in an ESAM XML document. Provide the document in the setting
+// SCC XML (sccXml).
+const (
+	// CmfcScte35EsamInsert is a CmfcScte35Esam enum value
+	CmfcScte35EsamInsert = "INSERT"
+
+	// CmfcScte35EsamNone is a CmfcScte35Esam enum value
+	CmfcScte35EsamNone = "NONE"
+)
+
+// Ignore this setting unless you have SCTE-35 markers in your input video file.
+// Choose Passthrough (PASSTHROUGH) if you want SCTE-35 markers that appear
+// in your input to also appear in this output. Choose None (NONE) if you don't
+// want those SCTE-35 markers in this output.
+const (
+	// CmfcScte35SourcePassthrough is a CmfcScte35Source enum value
+	CmfcScte35SourcePassthrough = "PASSTHROUGH"
+
+	// CmfcScte35SourceNone is a CmfcScte35Source enum value
+	CmfcScte35SourceNone = "NONE"
+)
+
 // Choose Insert (INSERT) for this setting to include color metadata in this
 // output. Choose Ignore (IGNORE) to exclude color metadata from this output.
 // If you don't specify a value, the service sets this to Insert by default.
@@ -18221,10 +20094,11 @@ const (
 )
 
 // Specify the color space you want for this output. The service supports conversion
-// between HDR formats, between SDR formats, and from SDR to HDR. The service
-// doesn't support conversion from HDR to SDR. SDR to HDR conversion doesn't
-// upgrade the dynamic range. The converted video has an HDR format, but visually
-// appears the same as an unconverted output.
+// between HDR formats, between SDR formats, from SDR to HDR, and from HDR to
+// SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The converted
+// video has an HDR format, but visually appears the same as an unconverted
+// output. HDR to SDR conversion uses Elemental tone mapping technology to approximate
+// the outcome of manually regrading from HDR to SDR.
 const (
 	// ColorSpaceConversionNone is a ColorSpaceConversion enum value
 	ColorSpaceConversionNone = "NONE"
@@ -18293,6 +20167,9 @@ const (
 
 	// ContainerTypeMxf is a ContainerType enum value
 	ContainerTypeMxf = "MXF"
+
+	// ContainerTypeWebm is a ContainerType enum value
+	ContainerTypeWebm = "WEBM"
 
 	// ContainerTypeRaw is a ContainerType enum value
 	ContainerTypeRaw = "RAW"
@@ -19103,7 +20980,8 @@ const (
 	H264FramerateControlSpecified = "SPECIFIED"
 )
 
-// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+// Optional. Specify how the transcoder performs framerate conversion. The default
+// behavior is to use duplicate drop conversion.
 const (
 	// H264FramerateConversionAlgorithmDuplicateDrop is a H264FramerateConversionAlgorithm enum value
 	H264FramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
@@ -19160,9 +21038,12 @@ const (
 	H264InterlaceModeFollowBottomField = "FOLLOW_BOTTOM_FIELD"
 )
 
-// Using the API, enable ParFollowSource if you want the service to use the
-// pixel aspect ratio from the input. Using the console, do this by choosing
-// Follow source for Pixel aspect ratio.
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To use a different PAR,
+// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+// than Follow source. When you choose SPECIFIED for this setting, you must
+// also specify values for the parNumerator and parDenominator settings.
 const (
 	// H264ParControlInitializeFromSource is a H264ParControl enum value
 	H264ParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
@@ -19171,9 +21052,9 @@ const (
 	H264ParControlSpecified = "SPECIFIED"
 )
 
-// Use Quality tuning level (H264QualityTuningLevel) to specifiy whether to
-// use fast single-pass, high-quality singlepass, or high-quality multipass
-// video encoding.
+// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+// want to trade off encoding speed for output video quality. The default behavior
+// is faster, lower quality, single-pass encoding.
 const (
 	// H264QualityTuningLevelSinglePass is a H264QualityTuningLevel enum value
 	H264QualityTuningLevelSinglePass = "SINGLE_PASS"
@@ -19423,7 +21304,7 @@ const (
 // a frame rate from the dropdown list or choose Custom. The framerates shown
 // in the dropdown list are decimal approximations of fractions. If you choose
 // Custom, specify your frame rate as a fraction. If you are creating your transcoding
-// job sepecification as a JSON file without the console, use FramerateControl
+// job specification as a JSON file without the console, use FramerateControl
 // to specify which value the service uses for the frame rate for this output.
 // Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 // from the input. Choose SPECIFIED if you want the service to use the frame
@@ -19494,9 +21375,12 @@ const (
 	H265InterlaceModeFollowBottomField = "FOLLOW_BOTTOM_FIELD"
 )
 
-// Using the API, enable ParFollowSource if you want the service to use the
-// pixel aspect ratio from the input. Using the console, do this by choosing
-// Follow source for Pixel aspect ratio.
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To use a different PAR,
+// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+// than Follow source. When you choose SPECIFIED for this setting, you must
+// also specify values for the parNumerator and parDenominator settings.
 const (
 	// H265ParControlInitializeFromSource is a H265ParControl enum value
 	H265ParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
@@ -19505,9 +21389,9 @@ const (
 	H265ParControlSpecified = "SPECIFIED"
 )
 
-// Use Quality tuning level (H265QualityTuningLevel) to specifiy whether to
-// use fast single-pass, high-quality singlepass, or high-quality multipass
-// video encoding.
+// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+// want to trade off encoding speed for output video quality. The default behavior
+// is faster, lower quality, single-pass encoding.
 const (
 	// H265QualityTuningLevelSinglePass is a H265QualityTuningLevel enum value
 	H265QualityTuningLevelSinglePass = "SINGLE_PASS"
@@ -19884,8 +21768,8 @@ const (
 
 // Keep this setting enabled to have MediaConvert use the font style and position
 // information from the captions source in the output. This option is available
-// only when your input captions are CFF-TT, IMSC, SMPTE-TT, or TTML. Disable
-// this setting for simplified output captions.
+// only when your input captions are IMSC, SMPTE-TT, or TTML. Disable this setting
+// for simplified output captions.
 const (
 	// ImscStylePassthroughEnabled is a ImscStylePassthrough enum value
 	ImscStylePassthroughEnabled = "ENABLED"
@@ -19895,7 +21779,7 @@ const (
 )
 
 // Enable Deblock (InputDeblockFilter) to produce smoother motion in the output.
-// Default is disabled. Only manaully controllable for MPEG2 and uncompressed
+// Default is disabled. Only manually controllable for MPEG2 and uncompressed
 // video inputs.
 const (
 	// InputDeblockFilterEnabled is a InputDeblockFilter enum value
@@ -20879,6 +22763,16 @@ const (
 	MovReferenceExternal = "EXTERNAL"
 )
 
+// Specify whether the service encodes this MP3 audio output with a constant
+// bitrate (CBR) or a variable bitrate (VBR).
+const (
+	// Mp3RateControlModeCbr is a Mp3RateControlMode enum value
+	Mp3RateControlModeCbr = "CBR"
+
+	// Mp3RateControlModeVbr is a Mp3RateControlMode enum value
+	Mp3RateControlModeVbr = "VBR"
+)
+
 // When enabled, file composition times will start at zero, composition times
 // in the 'ctts' (composition time to sample) box for B-frames will be negative,
 // and a 'cslg' (composition shift least greatest) box will be included per
@@ -21011,7 +22905,7 @@ const (
 // a frame rate from the dropdown list or choose Custom. The framerates shown
 // in the dropdown list are decimal approximations of fractions. If you choose
 // Custom, specify your frame rate as a fraction. If you are creating your transcoding
-// job sepecification as a JSON file without the console, use FramerateControl
+// job specification as a JSON file without the console, use FramerateControl
 // to specify which value the service uses for the frame rate for this output.
 // Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 // from the input. Choose SPECIFIED if you want the service to use the frame
@@ -21024,7 +22918,8 @@ const (
 	Mpeg2FramerateControlSpecified = "SPECIFIED"
 )
 
-// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+// Optional. Specify how the transcoder performs framerate conversion. The default
+// behavior is to use duplicate drop conversion.
 const (
 	// Mpeg2FramerateConversionAlgorithmDuplicateDrop is a Mpeg2FramerateConversionAlgorithm enum value
 	Mpeg2FramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
@@ -21092,9 +22987,12 @@ const (
 	Mpeg2IntraDcPrecisionIntraDcPrecision11 = "INTRA_DC_PRECISION_11"
 )
 
-// Using the API, enable ParFollowSource if you want the service to use the
-// pixel aspect ratio from the input. Using the console, do this by choosing
-// Follow source for Pixel aspect ratio.
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To use a different PAR,
+// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+// than Follow source. When you choose SPECIFIED for this setting, you must
+// also specify values for the parNumerator and parDenominator settings.
 const (
 	// Mpeg2ParControlInitializeFromSource is a Mpeg2ParControl enum value
 	Mpeg2ParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
@@ -21103,8 +23001,9 @@ const (
 	Mpeg2ParControlSpecified = "SPECIFIED"
 )
 
-// Use Quality tuning level (Mpeg2QualityTuningLevel) to specifiy whether to
-// use single-pass or multipass video encoding.
+// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+// want to trade off encoding speed for output video quality. The default behavior
+// is faster, lower quality, single-pass encoding.
 const (
 	// Mpeg2QualityTuningLevelSinglePass is a Mpeg2QualityTuningLevel enum value
 	Mpeg2QualityTuningLevelSinglePass = "SINGLE_PASS"
@@ -21207,6 +23106,38 @@ const (
 	MsSmoothManifestEncodingUtf16 = "UTF16"
 )
 
+// Optional. When you have AFD signaling set up in your output video stream,
+// use this setting to choose whether to also include it in the MXF wrapper.
+// Choose Don't copy (NO_COPY) to exclude AFD signaling from the MXF wrapper.
+// Choose Copy from video stream (COPY_FROM_VIDEO) to copy the AFD values from
+// the video stream for this output to the MXF wrapper. Regardless of which
+// option you choose, the AFD values remain in the video stream. Related settings:
+// To set up your output to include or exclude AFD values, see AfdSignaling,
+// under VideoDescription. On the console, find AFD signaling under the output's
+// video encoding settings.
+const (
+	// MxfAfdSignalingNoCopy is a MxfAfdSignaling enum value
+	MxfAfdSignalingNoCopy = "NO_COPY"
+
+	// MxfAfdSignalingCopyFromVideo is a MxfAfdSignaling enum value
+	MxfAfdSignalingCopyFromVideo = "COPY_FROM_VIDEO"
+)
+
+// Optional. When you set Noise reducer (noiseReducer) to Temporal (TEMPORAL),
+// you can optionally use this setting to apply additional sharpening. The default
+// behavior, Auto (AUTO) allows the transcoder to determine whether to apply
+// filtering, depending on input type and quality.
+const (
+	// NoiseFilterPostTemporalSharpeningDisabled is a NoiseFilterPostTemporalSharpening enum value
+	NoiseFilterPostTemporalSharpeningDisabled = "DISABLED"
+
+	// NoiseFilterPostTemporalSharpeningEnabled is a NoiseFilterPostTemporalSharpening enum value
+	NoiseFilterPostTemporalSharpeningEnabled = "ENABLED"
+
+	// NoiseFilterPostTemporalSharpeningAuto is a NoiseFilterPostTemporalSharpening enum value
+	NoiseFilterPostTemporalSharpeningAuto = "AUTO"
+)
+
 // Use Noise reducer filter (NoiseReducerFilter) to select one of the following
 // spatial image filtering functions. To use this setting, you must also enable
 // Noise reducer (NoiseReducer). * Bilateral preserves edges while reducing
@@ -21240,7 +23171,7 @@ const (
 	NoiseReducerFilterTemporal = "TEMPORAL"
 )
 
-// When you request lists of resources, you can optionally specify whether they
+// Optional. When you request lists of resources, you can specify whether they
 // are sorted in ASCENDING or DESCENDING order. Default varies by resource.
 const (
 	// OrderAscending is a Order enum value
@@ -21338,7 +23269,7 @@ const (
 // a frame rate from the dropdown list or choose Custom. The framerates shown
 // in the dropdown list are decimal approximations of fractions. If you choose
 // Custom, specify your frame rate as a fraction. If you are creating your transcoding
-// job sepecification as a JSON file without the console, use FramerateControl
+// job specification as a JSON file without the console, use FramerateControl
 // to specify which value the service uses for the frame rate for this output.
 // Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
 // from the input. Choose SPECIFIED if you want the service to use the frame
@@ -21351,7 +23282,8 @@ const (
 	ProresFramerateControlSpecified = "SPECIFIED"
 )
 
-// When set to INTERPOLATE, produces smoother motion during frame rate conversion.
+// Optional. Specify how the transcoder performs framerate conversion. The default
+// behavior is to use duplicate drop conversion.
 const (
 	// ProresFramerateConversionAlgorithmDuplicateDrop is a ProresFramerateConversionAlgorithm enum value
 	ProresFramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
@@ -21388,11 +23320,12 @@ const (
 	ProresInterlaceModeFollowBottomField = "FOLLOW_BOTTOM_FIELD"
 )
 
-// Use (ProresParControl) to specify how the service determines the pixel aspect
-// ratio. Set to Follow source (INITIALIZE_FROM_SOURCE) to use the pixel aspect
-// ratio from the input. To specify a different pixel aspect ratio: Using the
-// console, choose it from the dropdown menu. Using the API, set ProresParControl
-// to (SPECIFIED) and provide for (ParNumerator) and (ParDenominator).
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To use a different PAR,
+// choose (SPECIFIED). In the console, SPECIFIED corresponds to any value other
+// than Follow source. When you choose SPECIFIED for this setting, you must
+// also specify values for the parNumerator and parDenominator settings.
 const (
 	// ProresParControlInitializeFromSource is a ProresParControl enum value
 	ProresParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
@@ -21699,7 +23632,7 @@ const (
 )
 
 // Pass through style and position information from a TTML-like input source
-// (TTML, SMPTE-TT, CFF-TT) to the CFF-TT output or TTML output.
+// (TTML, SMPTE-TT) to the TTML output.
 const (
 	// TtmlStylePassthroughEnabled is a TtmlStylePassthrough enum value
 	TtmlStylePassthroughEnabled = "ENABLED"
@@ -21721,6 +23654,9 @@ const (
 	// VideoCodecFrameCapture is a VideoCodec enum value
 	VideoCodecFrameCapture = "FRAME_CAPTURE"
 
+	// VideoCodecAv1 is a VideoCodec enum value
+	VideoCodecAv1 = "AV1"
+
 	// VideoCodecH264 is a VideoCodec enum value
 	VideoCodecH264 = "H_264"
 
@@ -21732,6 +23668,12 @@ const (
 
 	// VideoCodecProres is a VideoCodec enum value
 	VideoCodecProres = "PRORES"
+
+	// VideoCodecVp8 is a VideoCodec enum value
+	VideoCodecVp8 = "VP8"
+
+	// VideoCodecVp9 is a VideoCodec enum value
+	VideoCodecVp9 = "VP9"
 )
 
 // Applies only to H.264, H.265, MPEG2, and ProRes outputs. Only enable Timecode
@@ -21752,6 +23694,132 @@ const (
 
 	// VideoTimecodeInsertionPicTimingSei is a VideoTimecodeInsertion enum value
 	VideoTimecodeInsertionPicTimingSei = "PIC_TIMING_SEI"
+)
+
+// If you are using the console, use the Framerate setting to specify the frame
+// rate for this output. If you want to keep the same frame rate as the input
+// video, choose Follow source. If you want to do frame rate conversion, choose
+// a frame rate from the dropdown list or choose Custom. The framerates shown
+// in the dropdown list are decimal approximations of fractions. If you choose
+// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+// job specification as a JSON file without the console, use FramerateControl
+// to specify which value the service uses for the frame rate for this output.
+// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+// from the input. Choose SPECIFIED if you want the service to use the frame
+// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+const (
+	// Vp8FramerateControlInitializeFromSource is a Vp8FramerateControl enum value
+	Vp8FramerateControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
+
+	// Vp8FramerateControlSpecified is a Vp8FramerateControl enum value
+	Vp8FramerateControlSpecified = "SPECIFIED"
+)
+
+// Optional. Specify how the transcoder performs framerate conversion. The default
+// behavior is to use Drop duplicate (DUPLICATE_DROP) conversion. When you choose
+// Interpolate (INTERPOLATE) instead, the conversion produces smoother motion.
+const (
+	// Vp8FramerateConversionAlgorithmDuplicateDrop is a Vp8FramerateConversionAlgorithm enum value
+	Vp8FramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
+
+	// Vp8FramerateConversionAlgorithmInterpolate is a Vp8FramerateConversionAlgorithm enum value
+	Vp8FramerateConversionAlgorithmInterpolate = "INTERPOLATE"
+)
+
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To specify a different
+// PAR in the console, choose any value other than Follow source. To specify
+// a different PAR by editing the JSON job specification, choose SPECIFIED.
+// When you choose SPECIFIED for this setting, you must also specify values
+// for the parNumerator and parDenominator settings.
+const (
+	// Vp8ParControlInitializeFromSource is a Vp8ParControl enum value
+	Vp8ParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
+
+	// Vp8ParControlSpecified is a Vp8ParControl enum value
+	Vp8ParControlSpecified = "SPECIFIED"
+)
+
+// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+// want to trade off encoding speed for output video quality. The default behavior
+// is faster, lower quality, multi-pass encoding.
+const (
+	// Vp8QualityTuningLevelMultiPass is a Vp8QualityTuningLevel enum value
+	Vp8QualityTuningLevelMultiPass = "MULTI_PASS"
+
+	// Vp8QualityTuningLevelMultiPassHq is a Vp8QualityTuningLevel enum value
+	Vp8QualityTuningLevelMultiPassHq = "MULTI_PASS_HQ"
+)
+
+// With the VP8 codec, you can use only the variable bitrate (VBR) rate control
+// mode.
+const (
+	// Vp8RateControlModeVbr is a Vp8RateControlMode enum value
+	Vp8RateControlModeVbr = "VBR"
+)
+
+// If you are using the console, use the Framerate setting to specify the frame
+// rate for this output. If you want to keep the same frame rate as the input
+// video, choose Follow source. If you want to do frame rate conversion, choose
+// a frame rate from the dropdown list or choose Custom. The framerates shown
+// in the dropdown list are decimal approximations of fractions. If you choose
+// Custom, specify your frame rate as a fraction. If you are creating your transcoding
+// job specification as a JSON file without the console, use FramerateControl
+// to specify which value the service uses for the frame rate for this output.
+// Choose INITIALIZE_FROM_SOURCE if you want the service to use the frame rate
+// from the input. Choose SPECIFIED if you want the service to use the frame
+// rate you specify in the settings FramerateNumerator and FramerateDenominator.
+const (
+	// Vp9FramerateControlInitializeFromSource is a Vp9FramerateControl enum value
+	Vp9FramerateControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
+
+	// Vp9FramerateControlSpecified is a Vp9FramerateControl enum value
+	Vp9FramerateControlSpecified = "SPECIFIED"
+)
+
+// Optional. Specify how the transcoder performs framerate conversion. The default
+// behavior is to use Drop duplicate (DUPLICATE_DROP) conversion. When you choose
+// Interpolate (INTERPOLATE) instead, the conversion produces smoother motion.
+const (
+	// Vp9FramerateConversionAlgorithmDuplicateDrop is a Vp9FramerateConversionAlgorithm enum value
+	Vp9FramerateConversionAlgorithmDuplicateDrop = "DUPLICATE_DROP"
+
+	// Vp9FramerateConversionAlgorithmInterpolate is a Vp9FramerateConversionAlgorithm enum value
+	Vp9FramerateConversionAlgorithmInterpolate = "INTERPOLATE"
+)
+
+// Optional. Specify how the service determines the pixel aspect ratio (PAR)
+// for this output. The default behavior, Follow source (INITIALIZE_FROM_SOURCE),
+// uses the PAR from your input video for your output. To specify a different
+// PAR in the console, choose any value other than Follow source. To specify
+// a different PAR by editing the JSON job specification, choose SPECIFIED.
+// When you choose SPECIFIED for this setting, you must also specify values
+// for the parNumerator and parDenominator settings.
+const (
+	// Vp9ParControlInitializeFromSource is a Vp9ParControl enum value
+	Vp9ParControlInitializeFromSource = "INITIALIZE_FROM_SOURCE"
+
+	// Vp9ParControlSpecified is a Vp9ParControl enum value
+	Vp9ParControlSpecified = "SPECIFIED"
+)
+
+// Optional. Use Quality tuning level (qualityTuningLevel) to choose how you
+// want to trade off encoding speed for output video quality. The default behavior
+// is faster, lower quality, multi-pass encoding.
+const (
+	// Vp9QualityTuningLevelMultiPass is a Vp9QualityTuningLevel enum value
+	Vp9QualityTuningLevelMultiPass = "MULTI_PASS"
+
+	// Vp9QualityTuningLevelMultiPassHq is a Vp9QualityTuningLevel enum value
+	Vp9QualityTuningLevelMultiPassHq = "MULTI_PASS_HQ"
+)
+
+// With the VP9 codec, you can use only the variable bitrate (VBR) rate control
+// mode.
+const (
+	// Vp9RateControlModeVbr is a Vp9RateControlMode enum value
+	Vp9RateControlModeVbr = "VBR"
 )
 
 // The service defaults to using RIFF for WAV outputs. If your output audio

@@ -1284,7 +1284,8 @@ func (c *IAM) CreateOpenIDConnectProviderRequest(input *CreateOpenIDConnectProvi
 //    * A list of client IDs (also known as audiences) that identify the application
 //    or applications that are allowed to authenticate using the OIDC provider
 //
-//    * A list of thumbprints of the server certificate(s) that the IdP uses
+//    * A list of thumbprints of one or more server certificates that the IdP
+//    uses
 //
 // You get all of this information from the OIDC IdP that you want to use to
 // access AWS.
@@ -5301,7 +5302,9 @@ func (c *IAM) GenerateServiceLastAccessedDetailsRequest(input *GenerateServiceLa
 //    * GetServiceLastAccessedDetails – Use this operation for users, groups,
 //    roles, or policies to list every AWS service that the resource could access
 //    using permissions policies. For each service, the response includes information
-//    about the most recent access attempt.
+//    about the most recent access attempt. The JobId returned by GenerateServiceLastAccessedDetail
+//    must be used by the same role within a session, or by the same user when
+//    used to call GetServiceLastAccessedDetail.
 //
 //    * GetServiceLastAccessedDetailsWithEntities – Use this operation for
 //    groups and policies to list information about the associated entities
@@ -5323,8 +5326,8 @@ func (c *IAM) GenerateServiceLastAccessedDetailsRequest(input *GenerateServiceLa
 // see Evaluating Policies (https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policy-eval-basics)
 // in the IAM User Guide.
 //
-// For more information about service last accessed data, see Reducing Policy
-// Scope by Viewing User Activity (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html)
+// For more information about service and action last accessed data, see Reducing
+// Permissions Using Service Last Accessed Data (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html)
 // in the IAM User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
@@ -7406,6 +7409,15 @@ func (c *IAM) GetServiceLastAccessedDetailsRequest(input *GetServiceLastAccessed
 //    to attempt to access the service
 //
 // By default, the list is sorted by service namespace.
+//
+// If you specified ACTION_LEVEL granularity when you generated the report,
+// this operation returns service and action last accessed data. This includes
+// the most recent access attempt for each tracked action within a service.
+// Otherwise, this operation returns only service data.
+//
+// For more information about service and action last accessed data, see Reducing
+// Permissions Using Service Last Accessed Data (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html)
+// in the IAM User Guide.
 //
 // Returns awserr.Error for service API and SDK errors. Use runtime type assertions
 // with awserr.Error's Code and Message methods to get detailed information about
@@ -12921,13 +12933,14 @@ func (c *IAM) SimulateCustomPolicyRequest(input *SimulateCustomPolicyInput) (req
 // The simulation does not perform the API operations; it only checks the authorization
 // to determine if the simulated policies allow or deny the operations.
 //
-// If you want to simulate existing policies attached to an IAM user, group,
-// or role, use SimulatePrincipalPolicy instead.
+// If you want to simulate existing policies that are attached to an IAM user,
+// group, or role, use SimulatePrincipalPolicy instead.
 //
-// Context keys are variables maintained by AWS and its services that provide
-// details about the context of an API query request. You can use the Condition
-// element of an IAM policy to evaluate context keys. To get the list of context
-// keys that the policies require for correct simulation, use GetContextKeysForCustomPolicy.
+// Context keys are variables that are maintained by AWS and its services and
+// which provide details about the context of an API query request. You can
+// use the Condition element of an IAM policy to evaluate context keys. To get
+// the list of context keys that the policies require for correct simulation,
+// use GetContextKeysForCustomPolicy.
 //
 // If the output is long, you can use MaxItems and Marker parameters to paginate
 // the results.
@@ -15505,7 +15518,7 @@ type AccessKey struct {
 	// calls, while Inactive means it is not.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user that the access key is associated with.
 	//
@@ -15647,7 +15660,7 @@ type AccessKeyMetadata struct {
 
 	// The status of the access key. Active means that the key is valid for API
 	// calls; Inactive means it is not.
-	Status *string `type:"string" enum:"statusType"`
+	Status *string `type:"string" enum:"StatusType"`
 
 	// The name of the IAM user that the key is associated with.
 	UserName *string `min:"1" type:"string"`
@@ -16339,7 +16352,7 @@ func (s ChangePasswordOutput) GoString() string {
 // evaluating the Condition elements of the input policies.
 //
 // This data type is used as an input parameter to SimulateCustomPolicy and
-// SimulatePrincipalPolicy .
+// SimulatePrincipalPolicy.
 type ContextEntry struct {
 	_ struct{} `type:"structure"`
 
@@ -19987,7 +20000,7 @@ type EntityInfo struct {
 	// The type of entity (user or role).
 	//
 	// Type is a required field
-	Type *string `type:"string" required:"true" enum:"policyOwnerEntityType"`
+	Type *string `type:"string" required:"true" enum:"PolicyOwnerEntityType"`
 }
 
 // String returns the string representation
@@ -20088,12 +20101,24 @@ type EvaluationResult struct {
 	// EvalDecision is a required field
 	EvalDecision *string `type:"string" required:"true" enum:"PolicyEvaluationDecisionType"`
 
-	// Additional details about the results of the evaluation decision. When there
-	// are both IAM policies and resource policies, this parameter explains how
-	// each set of policies contributes to the final evaluation decision. When simulating
-	// cross-account access to a resource, both the resource-based policy and the
-	// caller's IAM policy must grant access. See How IAM Roles Differ from Resource-based
-	// Policies (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_compare-resource-policies.html)
+	// Additional details about the results of the cross-account evaluation decision.
+	// This parameter is populated for only cross-account simulations. It contains
+	// a brief summary of how each policy type contributes to the final evaluation
+	// decision.
+	//
+	// If the simulation evaluates policies within the same account and includes
+	// a resource ARN, then the parameter is present but the response is empty.
+	// If the simulation evaluates policies within the same account and specifies
+	// all resources (*), then the parameter is not returned.
+	//
+	// When you make a cross-account request, AWS evaluates the request in the trusting
+	// account and the trusted account. The request is allowed only if both evaluations
+	// return true. For more information about how policies are evaluated, see Evaluating
+	// Policies Within a Single Account (https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policy-eval-basics).
+	//
+	// If an AWS Organizations SCP included in the evaluation denies access, the
+	// simulation ends. In this case, policy evaluation does not proceed any further
+	// and this parameter is not returned.
 	EvalDecisionDetails map[string]*string `type:"map"`
 
 	// The ARN of the resource that the indicated API operation was tested on.
@@ -20119,6 +20144,10 @@ type EvaluationResult struct {
 	// affect the results of the simulation. Only applies if the simulated user's
 	// account is part of an organization.
 	OrganizationsDecisionDetail *OrganizationsDecisionDetail `type:"structure"`
+
+	// Contains information about the effect that a permissions boundary has on
+	// a policy simulation when the boundary is applied to an IAM entity.
+	PermissionsBoundaryDecisionDetail *PermissionsBoundaryDecisionDetail `type:"structure"`
 
 	// The individual results of the simulation of the API operation specified in
 	// EvalActionName on each resource.
@@ -20174,6 +20203,12 @@ func (s *EvaluationResult) SetMissingContextValues(v []*string) *EvaluationResul
 // SetOrganizationsDecisionDetail sets the OrganizationsDecisionDetail field's value.
 func (s *EvaluationResult) SetOrganizationsDecisionDetail(v *OrganizationsDecisionDetail) *EvaluationResult {
 	s.OrganizationsDecisionDetail = v
+	return s
+}
+
+// SetPermissionsBoundaryDecisionDetail sets the PermissionsBoundaryDecisionDetail field's value.
+func (s *EvaluationResult) SetPermissionsBoundaryDecisionDetail(v *PermissionsBoundaryDecisionDetail) *EvaluationResult {
+	s.PermissionsBoundaryDecisionDetail = v
 	return s
 }
 
@@ -20320,6 +20355,14 @@ type GenerateServiceLastAccessedDetailsInput struct {
 	//
 	// Arn is a required field
 	Arn *string `min:"20" type:"string" required:"true"`
+
+	// The level of detail that you want to generate. You can specify whether you
+	// want to generate information about the last attempt to access services or
+	// actions. If you specify service-level granularity, this operation generates
+	// only service data. If you specify action-level granularity, it generates
+	// service and action data. If you don't include this optional parameter, the
+	// operation generates service data.
+	Granularity *string `type:"string" enum:"AccessAdvisorUsageGranularityType"`
 }
 
 // String returns the string representation
@@ -20354,11 +20397,19 @@ func (s *GenerateServiceLastAccessedDetailsInput) SetArn(v string) *GenerateServ
 	return s
 }
 
+// SetGranularity sets the Granularity field's value.
+func (s *GenerateServiceLastAccessedDetailsInput) SetGranularity(v string) *GenerateServiceLastAccessedDetailsInput {
+	s.Granularity = &v
+	return s
+}
+
 type GenerateServiceLastAccessedDetailsOutput struct {
 	_ struct{} `type:"structure"`
 
-	// The job ID that you can use in the GetServiceLastAccessedDetails or GetServiceLastAccessedDetailsWithEntities
-	// operations.
+	// The JobId that you can use in the GetServiceLastAccessedDetails or GetServiceLastAccessedDetailsWithEntities
+	// operations. The JobId returned by GenerateServiceLastAccessedDetail must
+	// be used by the same role within a session, or by the same user when used
+	// to call GetServiceLastAccessedDetail.
 	JobId *string `min:"36" type:"string"`
 }
 
@@ -21428,7 +21479,7 @@ type GetOrganizationsAccessReportInput struct {
 	// The key that is used to sort the results. If you choose the namespace key,
 	// the results are returned in alphabetical order. If you choose the time key,
 	// the results are sorted numerically by the date and time.
-	SortKey *string `type:"string" enum:"sortKeyType"`
+	SortKey *string `type:"string" enum:"SortKeyType"`
 }
 
 // String returns the string representation
@@ -21525,7 +21576,7 @@ type GetOrganizationsAccessReportOutput struct {
 	// The status of the job.
 	//
 	// JobStatus is a required field
-	JobStatus *string `type:"string" required:"true" enum:"jobStatusType"`
+	JobStatus *string `type:"string" required:"true" enum:"JobStatusType"`
 
 	// When IsTruncated is true, this element is present and contains the value
 	// to use for the Marker parameter in a subsequent pagination request.
@@ -22048,7 +22099,7 @@ type GetSSHPublicKeyInput struct {
 	// PEM format, use PEM.
 	//
 	// Encoding is a required field
-	Encoding *string `type:"string" required:"true" enum:"encodingType"`
+	Encoding *string `type:"string" required:"true" enum:"EncodingType"`
 
 	// The unique identifier for the SSH public key.
 	//
@@ -22221,7 +22272,9 @@ type GetServiceLastAccessedDetailsInput struct {
 	_ struct{} `type:"structure"`
 
 	// The ID of the request generated by the GenerateServiceLastAccessedDetails
-	// operation.
+	// operation. The JobId returned by GenerateServiceLastAccessedDetail must be
+	// used by the same role within a session, or by the same user when used to
+	// call GetServiceLastAccessedDetail.
 	//
 	// JobId is a required field
 	JobId *string `min:"36" type:"string" required:"true"`
@@ -22326,7 +22379,12 @@ type GetServiceLastAccessedDetailsOutput struct {
 	// The status of the job.
 	//
 	// JobStatus is a required field
-	JobStatus *string `type:"string" required:"true" enum:"jobStatusType"`
+	JobStatus *string `type:"string" required:"true" enum:"JobStatusType"`
+
+	// The type of job. Service jobs return information about when each service
+	// was last accessed. Action jobs also include information about when tracked
+	// actions within the service were last accessed.
+	JobType *string `type:"string" enum:"AccessAdvisorUsageGranularityType"`
 
 	// When IsTruncated is true, this element is present and contains the value
 	// to use for the Marker parameter in a subsequent pagination request.
@@ -22376,6 +22434,12 @@ func (s *GetServiceLastAccessedDetailsOutput) SetJobCreationDate(v time.Time) *G
 // SetJobStatus sets the JobStatus field's value.
 func (s *GetServiceLastAccessedDetailsOutput) SetJobStatus(v string) *GetServiceLastAccessedDetailsOutput {
 	s.JobStatus = &v
+	return s
+}
+
+// SetJobType sets the JobType field's value.
+func (s *GetServiceLastAccessedDetailsOutput) SetJobType(v string) *GetServiceLastAccessedDetailsOutput {
+	s.JobType = &v
 	return s
 }
 
@@ -22533,7 +22597,7 @@ type GetServiceLastAccessedDetailsWithEntitiesOutput struct {
 	// The status of the job.
 	//
 	// JobStatus is a required field
-	JobStatus *string `type:"string" required:"true" enum:"jobStatusType"`
+	JobStatus *string `type:"string" required:"true" enum:"JobStatusType"`
 
 	// When IsTruncated is true, this element is present and contains the value
 	// to use for the Marker parameter in a subsequent pagination request.
@@ -25065,7 +25129,7 @@ type ListPoliciesInput struct {
 	//
 	// This parameter is optional. If it is not included, or if it is set to All,
 	// all policies are returned.
-	Scope *string `type:"string" enum:"policyScopeType"`
+	Scope *string `type:"string" enum:"PolicyScopeType"`
 }
 
 // String returns the string representation
@@ -26596,7 +26660,7 @@ type ListVirtualMFADevicesInput struct {
 	// The status (Unassigned or Assigned) of the devices to list. If you do not
 	// specify an AssignmentStatus, the operation defaults to Any, which lists both
 	// assigned and unassigned virtual MFA devices.,
-	AssignmentStatus *string `type:"string" enum:"assignmentStatusType"`
+	AssignmentStatus *string `type:"string" enum:"AssignmentStatusType"`
 
 	// Use this parameter only when paginating results and only after you receive
 	// a response indicating that the results are truncated. Set it to the value
@@ -27138,6 +27202,38 @@ func (s *PasswordPolicy) SetRequireUppercaseCharacters(v bool) *PasswordPolicy {
 	return s
 }
 
+// Contains information about the effect that a permissions boundary has on
+// a policy simulation when the boundary is applied to an IAM entity.
+type PermissionsBoundaryDecisionDetail struct {
+	_ struct{} `type:"structure"`
+
+	// Specifies whether an action is allowed by a permissions boundary that is
+	// applied to an IAM entity (user or role). A value of true means that the permissions
+	// boundary does not deny the action. This means that the policy includes an
+	// Allow statement that matches the request. In this case, if an identity-based
+	// policy also allows the action, the request is allowed. A value of false means
+	// that either the requested action is not allowed (implicitly denied) or that
+	// the action is explicitly denied by the permissions boundary. In both of these
+	// cases, the action is not allowed, regardless of the identity-based policy.
+	AllowedByPermissionsBoundary *bool `type:"boolean"`
+}
+
+// String returns the string representation
+func (s PermissionsBoundaryDecisionDetail) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s PermissionsBoundaryDecisionDetail) GoString() string {
+	return s.String()
+}
+
+// SetAllowedByPermissionsBoundary sets the AllowedByPermissionsBoundary field's value.
+func (s *PermissionsBoundaryDecisionDetail) SetAllowedByPermissionsBoundary(v bool) *PermissionsBoundaryDecisionDetail {
+	s.AllowedByPermissionsBoundary = &v
+	return s
+}
+
 // Contains information about a managed policy.
 //
 // This data type is used as a response element in the CreatePolicy, GetPolicy,
@@ -27342,7 +27438,7 @@ type PolicyGrantingServiceAccess struct {
 	// This field is null for managed policies. For more information about these
 	// policy types, see Managed Policies and Inline Policies (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html)
 	// in the IAM User Guide.
-	EntityType *string `type:"string" enum:"policyOwnerEntityType"`
+	EntityType *string `type:"string" enum:"PolicyOwnerEntityType"`
 
 	// The Amazon Resource Name (ARN). ARNs are unique identifiers for AWS resources.
 	//
@@ -27361,7 +27457,7 @@ type PolicyGrantingServiceAccess struct {
 	// in the IAM User Guide.
 	//
 	// PolicyType is a required field
-	PolicyType *string `type:"string" required:"true" enum:"policyType"`
+	PolicyType *string `type:"string" required:"true" enum:"PolicyType"`
 }
 
 // String returns the string representation
@@ -28465,11 +28561,10 @@ func (s *ResetServiceSpecificCredentialOutput) SetServiceSpecificCredential(v *S
 type ResourceSpecificResult struct {
 	_ struct{} `type:"structure"`
 
-	// Additional details about the results of the evaluation decision. When there
-	// are both IAM policies and resource policies, this parameter explains how
-	// each set of policies contributes to the final evaluation decision. When simulating
-	// cross-account access to a resource, both the resource-based policy and the
-	// caller's IAM policy must grant access.
+	// Additional details about the results of the evaluation decision on a single
+	// resource. This parameter is returned only for cross-account simulations.
+	// This parameter explains how each policy type contributes to the resource-specific
+	// evaluation decision.
 	EvalDecisionDetails map[string]*string `type:"map"`
 
 	// The result of the simulation of the simulated API operation on the resource
@@ -28499,6 +28594,10 @@ type ResourceSpecificResult struct {
 	// the context keys used by a set of policies, you can call GetContextKeysForCustomPolicy
 	// or GetContextKeysForPrincipalPolicy.
 	MissingContextValues []*string `type:"list"`
+
+	// Contains information about the effect that a permissions boundary has on
+	// a policy simulation when that boundary is applied to an IAM entity.
+	PermissionsBoundaryDecisionDetail *PermissionsBoundaryDecisionDetail `type:"structure"`
 }
 
 // String returns the string representation
@@ -28538,6 +28637,12 @@ func (s *ResourceSpecificResult) SetMatchedStatements(v []*Statement) *ResourceS
 // SetMissingContextValues sets the MissingContextValues field's value.
 func (s *ResourceSpecificResult) SetMissingContextValues(v []*string) *ResourceSpecificResult {
 	s.MissingContextValues = v
+	return s
+}
+
+// SetPermissionsBoundaryDecisionDetail sets the PermissionsBoundaryDecisionDetail field's value.
+func (s *ResourceSpecificResult) SetPermissionsBoundaryDecisionDetail(v *PermissionsBoundaryDecisionDetail) *ResourceSpecificResult {
+	s.PermissionsBoundaryDecisionDetail = v
 	return s
 }
 
@@ -29109,7 +29214,7 @@ type SSHPublicKey struct {
 	// key cannot be used.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The date and time, in ISO 8601 date-time format (http://www.iso.org/iso/iso8601),
 	// when the SSH public key was uploaded.
@@ -29183,7 +29288,7 @@ type SSHPublicKeyMetadata struct {
 	// key cannot be used.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The date and time, in ISO 8601 date-time format (http://www.iso.org/iso/iso8601),
 	// when the SSH public key was uploaded.
@@ -29391,6 +29496,13 @@ type ServiceLastAccessed struct {
 	// the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
 	LastAuthenticatedEntity *string `min:"20" type:"string"`
 
+	// The Region from which the authenticated entity (user or role) last attempted
+	// to access the service. AWS does not report unauthenticated requests.
+	//
+	// This field is null if no IAM entities attempted to access the service within
+	// the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
+	LastAuthenticatedRegion *string `type:"string"`
+
 	// The name of the service in which access was attempted.
 	//
 	// ServiceName is a required field
@@ -29415,6 +29527,16 @@ type ServiceLastAccessed struct {
 	// This field is null if no principals attempted to access the service within
 	// the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
 	TotalAuthenticatedEntities *int64 `type:"integer"`
+
+	// An object that contains details about the most recent attempt to access a
+	// tracked action within the service.
+	//
+	// This field is null if there no tracked actions or if the principal did not
+	// use the tracked actions within the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
+	// This field is also null if the report was generated at the service level
+	// and not the action level. For more information, see the Granularity field
+	// in GenerateServiceLastAccessedDetails.
+	TrackedActionsLastAccessed []*TrackedActionLastAccessed `type:"list"`
 }
 
 // String returns the string representation
@@ -29439,6 +29561,12 @@ func (s *ServiceLastAccessed) SetLastAuthenticatedEntity(v string) *ServiceLastA
 	return s
 }
 
+// SetLastAuthenticatedRegion sets the LastAuthenticatedRegion field's value.
+func (s *ServiceLastAccessed) SetLastAuthenticatedRegion(v string) *ServiceLastAccessed {
+	s.LastAuthenticatedRegion = &v
+	return s
+}
+
 // SetServiceName sets the ServiceName field's value.
 func (s *ServiceLastAccessed) SetServiceName(v string) *ServiceLastAccessed {
 	s.ServiceName = &v
@@ -29454,6 +29582,12 @@ func (s *ServiceLastAccessed) SetServiceNamespace(v string) *ServiceLastAccessed
 // SetTotalAuthenticatedEntities sets the TotalAuthenticatedEntities field's value.
 func (s *ServiceLastAccessed) SetTotalAuthenticatedEntities(v int64) *ServiceLastAccessed {
 	s.TotalAuthenticatedEntities = &v
+	return s
+}
+
+// SetTrackedActionsLastAccessed sets the TrackedActionsLastAccessed field's value.
+func (s *ServiceLastAccessed) SetTrackedActionsLastAccessed(v []*TrackedActionLastAccessed) *ServiceLastAccessed {
+	s.TrackedActionsLastAccessed = v
 	return s
 }
 
@@ -29494,7 +29628,7 @@ type ServiceSpecificCredential struct {
 	// is valid for API calls, while Inactive means it is not.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user associated with the service-specific credential.
 	//
@@ -29583,7 +29717,7 @@ type ServiceSpecificCredentialMetadata struct {
 	// is valid for API calls, while Inactive means it is not.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user associated with the service-specific credential.
 	//
@@ -29728,7 +29862,7 @@ type SetSecurityTokenServicePreferencesInput struct {
 	// in the IAM User Guide.
 	//
 	// GlobalEndpointTokenVersion is a required field
-	GlobalEndpointTokenVersion *string `type:"string" required:"true" enum:"globalEndpointTokenVersion"`
+	GlobalEndpointTokenVersion *string `type:"string" required:"true" enum:"GlobalEndpointTokenVersion"`
 }
 
 // String returns the string representation
@@ -29795,7 +29929,7 @@ type SigningCertificate struct {
 	// for API calls, while Inactive means it is not.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The date when the signing certificate was uploaded.
 	UploadDate *time.Time `type:"timestamp"`
@@ -29887,6 +30021,27 @@ type SimulateCustomPolicyInput struct {
 	// Marker contains a value to include in the subsequent call that tells the
 	// service where to continue from.
 	MaxItems *int64 `min:"1" type:"integer"`
+
+	// The IAM permissions boundary policy to simulate. The permissions boundary
+	// sets the maximum permissions that an IAM entity can have. You can input only
+	// one permissions boundary when you pass a policy to this operation. For more
+	// information about permissions boundaries, see Permissions Boundaries for
+	// IAM Entities (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)
+	// in the IAM User Guide. The policy input is specified as a string that contains
+	// the complete, valid JSON text of a permissions boundary policy.
+	//
+	// The regex pattern (http://wikipedia.org/wiki/regex) used to validate this
+	// parameter is a string of characters consisting of the following:
+	//
+	//    * Any printable ASCII character ranging from the space character (\u0020)
+	//    through the end of the ASCII character range
+	//
+	//    * The printable characters in the Basic Latin and Latin-1 Supplement character
+	//    set (through \u00FF)
+	//
+	//    * The special characters tab (\u0009), line feed (\u000A), and carriage
+	//    return (\u000D)
+	PermissionsBoundaryPolicyInputList []*string `type:"list"`
 
 	// A list of policy documents to include in the simulation. Each document is
 	// specified as a string containing the complete, valid JSON text of an IAM
@@ -30079,6 +30234,12 @@ func (s *SimulateCustomPolicyInput) SetMaxItems(v int64) *SimulateCustomPolicyIn
 	return s
 }
 
+// SetPermissionsBoundaryPolicyInputList sets the PermissionsBoundaryPolicyInputList field's value.
+func (s *SimulateCustomPolicyInput) SetPermissionsBoundaryPolicyInputList(v []*string) *SimulateCustomPolicyInput {
+	s.PermissionsBoundaryPolicyInputList = v
+	return s
+}
+
 // SetPolicyInputList sets the PolicyInputList field's value.
 func (s *SimulateCustomPolicyInput) SetPolicyInputList(v []*string) *SimulateCustomPolicyInput {
 	s.PolicyInputList = v
@@ -30209,6 +30370,30 @@ type SimulatePrincipalPolicyInput struct {
 	// Marker contains a value to include in the subsequent call that tells the
 	// service where to continue from.
 	MaxItems *int64 `min:"1" type:"integer"`
+
+	// The IAM permissions boundary policy to simulate. The permissions boundary
+	// sets the maximum permissions that the entity can have. You can input only
+	// one permissions boundary when you pass a policy to this operation. An IAM
+	// entity can only have one permissions boundary in effect at a time. For example,
+	// if a permissions boundary is attached to an entity and you pass in a different
+	// permissions boundary policy using this parameter, then the new permissions
+	// boundary policy is used for the simulation. For more information about permissions
+	// boundaries, see Permissions Boundaries for IAM Entities (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)
+	// in the IAM User Guide. The policy input is specified as a string containing
+	// the complete, valid JSON text of a permissions boundary policy.
+	//
+	// The regex pattern (http://wikipedia.org/wiki/regex) used to validate this
+	// parameter is a string of characters consisting of the following:
+	//
+	//    * Any printable ASCII character ranging from the space character (\u0020)
+	//    through the end of the ASCII character range
+	//
+	//    * The printable characters in the Basic Latin and Latin-1 Supplement character
+	//    set (through \u00FF)
+	//
+	//    * The special characters tab (\u0009), line feed (\u000A), and carriage
+	//    return (\u000D)
+	PermissionsBoundaryPolicyInputList []*string `type:"list"`
 
 	// An optional list of additional policy documents to include in the simulation.
 	// Each document is specified as a string containing the complete, valid JSON
@@ -30399,6 +30584,12 @@ func (s *SimulatePrincipalPolicyInput) SetMarker(v string) *SimulatePrincipalPol
 // SetMaxItems sets the MaxItems field's value.
 func (s *SimulatePrincipalPolicyInput) SetMaxItems(v int64) *SimulatePrincipalPolicyInput {
 	s.MaxItems = &v
+	return s
+}
+
+// SetPermissionsBoundaryPolicyInputList sets the PermissionsBoundaryPolicyInputList field's value.
+func (s *SimulatePrincipalPolicyInput) SetPermissionsBoundaryPolicyInputList(v []*string) *SimulatePrincipalPolicyInput {
+	s.PermissionsBoundaryPolicyInputList = v
 	return s
 }
 
@@ -30729,6 +30920,75 @@ func (s TagUserOutput) GoString() string {
 	return s.String()
 }
 
+// Contains details about the most recent attempt to access an action within
+// the service.
+//
+// This data type is used as a response element in the GetServiceLastAccessedDetails
+// operation.
+type TrackedActionLastAccessed struct {
+	_ struct{} `type:"structure"`
+
+	// The name of the tracked action to which access was attempted. Tracked actions
+	// are actions that report activity to IAM.
+	ActionName *string `type:"string"`
+
+	// The Amazon Resource Name (ARN). ARNs are unique identifiers for AWS resources.
+	//
+	// For more information about ARNs, go to Amazon Resource Names (ARNs) and AWS
+	// Service Namespaces (https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+	// in the AWS General Reference.
+	LastAccessedEntity *string `min:"20" type:"string"`
+
+	// The Region from which the authenticated entity (user or role) last attempted
+	// to access the tracked action. AWS does not report unauthenticated requests.
+	//
+	// This field is null if no IAM entities attempted to access the service within
+	// the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
+	LastAccessedRegion *string `type:"string"`
+
+	// The date and time, in ISO 8601 date-time format (http://www.iso.org/iso/iso8601),
+	// when an authenticated entity most recently attempted to access the tracked
+	// service. AWS does not report unauthenticated requests.
+	//
+	// This field is null if no IAM entities attempted to access the service within
+	// the reporting period (https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_access-advisor.html#service-last-accessed-reporting-period).
+	LastAccessedTime *time.Time `type:"timestamp"`
+}
+
+// String returns the string representation
+func (s TrackedActionLastAccessed) String() string {
+	return awsutil.Prettify(s)
+}
+
+// GoString returns the string representation
+func (s TrackedActionLastAccessed) GoString() string {
+	return s.String()
+}
+
+// SetActionName sets the ActionName field's value.
+func (s *TrackedActionLastAccessed) SetActionName(v string) *TrackedActionLastAccessed {
+	s.ActionName = &v
+	return s
+}
+
+// SetLastAccessedEntity sets the LastAccessedEntity field's value.
+func (s *TrackedActionLastAccessed) SetLastAccessedEntity(v string) *TrackedActionLastAccessed {
+	s.LastAccessedEntity = &v
+	return s
+}
+
+// SetLastAccessedRegion sets the LastAccessedRegion field's value.
+func (s *TrackedActionLastAccessed) SetLastAccessedRegion(v string) *TrackedActionLastAccessed {
+	s.LastAccessedRegion = &v
+	return s
+}
+
+// SetLastAccessedTime sets the LastAccessedTime field's value.
+func (s *TrackedActionLastAccessed) SetLastAccessedTime(v time.Time) *TrackedActionLastAccessed {
+	s.LastAccessedTime = &v
+	return s
+}
+
 type UntagRoleInput struct {
 	_ struct{} `type:"structure"`
 
@@ -30894,7 +31154,7 @@ type UpdateAccessKeyInput struct {
 	// cannot be used.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the user whose key you want to update.
 	//
@@ -31776,7 +32036,7 @@ type UpdateSSHPublicKeyInput struct {
 	// that the key cannot be used.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user associated with the SSH public key.
 	//
@@ -31967,7 +32227,7 @@ type UpdateServiceSpecificCredentialInput struct {
 	// The status to be assigned to the service-specific credential.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user associated with the service-specific credential.
 	// If you do not specify this value, then the operation assumes the user whose
@@ -32060,7 +32320,7 @@ type UpdateSigningCertificateInput struct {
 	// be used.
 	//
 	// Status is a required field
-	Status *string `type:"string" required:"true" enum:"statusType"`
+	Status *string `type:"string" required:"true" enum:"StatusType"`
 
 	// The name of the IAM user the signing certificate belongs to.
 	//
@@ -32939,6 +33199,25 @@ func (s *VirtualMFADevice) SetUser(v *User) *VirtualMFADevice {
 }
 
 const (
+	// AccessAdvisorUsageGranularityTypeServiceLevel is a AccessAdvisorUsageGranularityType enum value
+	AccessAdvisorUsageGranularityTypeServiceLevel = "SERVICE_LEVEL"
+
+	// AccessAdvisorUsageGranularityTypeActionLevel is a AccessAdvisorUsageGranularityType enum value
+	AccessAdvisorUsageGranularityTypeActionLevel = "ACTION_LEVEL"
+)
+
+const (
+	// AssignmentStatusTypeAssigned is a AssignmentStatusType enum value
+	AssignmentStatusTypeAssigned = "Assigned"
+
+	// AssignmentStatusTypeUnassigned is a AssignmentStatusType enum value
+	AssignmentStatusTypeUnassigned = "Unassigned"
+
+	// AssignmentStatusTypeAny is a AssignmentStatusType enum value
+	AssignmentStatusTypeAny = "Any"
+)
+
+const (
 	// ContextKeyTypeEnumString is a ContextKeyTypeEnum enum value
 	ContextKeyTypeEnumString = "string"
 
@@ -32991,6 +33270,14 @@ const (
 )
 
 const (
+	// EncodingTypeSsh is a EncodingType enum value
+	EncodingTypeSsh = "SSH"
+
+	// EncodingTypePem is a EncodingType enum value
+	EncodingTypePem = "PEM"
+)
+
+const (
 	// EntityTypeUser is a EntityType enum value
 	EntityTypeUser = "User"
 
@@ -33008,6 +33295,25 @@ const (
 )
 
 const (
+	// GlobalEndpointTokenVersionV1token is a GlobalEndpointTokenVersion enum value
+	GlobalEndpointTokenVersionV1token = "v1Token"
+
+	// GlobalEndpointTokenVersionV2token is a GlobalEndpointTokenVersion enum value
+	GlobalEndpointTokenVersionV2token = "v2Token"
+)
+
+const (
+	// JobStatusTypeInProgress is a JobStatusType enum value
+	JobStatusTypeInProgress = "IN_PROGRESS"
+
+	// JobStatusTypeCompleted is a JobStatusType enum value
+	JobStatusTypeCompleted = "COMPLETED"
+
+	// JobStatusTypeFailed is a JobStatusType enum value
+	JobStatusTypeFailed = "FAILED"
+)
+
+const (
 	// PermissionsBoundaryAttachmentTypePermissionsBoundaryPolicy is a PermissionsBoundaryAttachmentType enum value
 	PermissionsBoundaryAttachmentTypePermissionsBoundaryPolicy = "PermissionsBoundaryPolicy"
 )
@@ -33021,6 +33327,28 @@ const (
 
 	// PolicyEvaluationDecisionTypeImplicitDeny is a PolicyEvaluationDecisionType enum value
 	PolicyEvaluationDecisionTypeImplicitDeny = "implicitDeny"
+)
+
+const (
+	// PolicyOwnerEntityTypeUser is a PolicyOwnerEntityType enum value
+	PolicyOwnerEntityTypeUser = "USER"
+
+	// PolicyOwnerEntityTypeRole is a PolicyOwnerEntityType enum value
+	PolicyOwnerEntityTypeRole = "ROLE"
+
+	// PolicyOwnerEntityTypeGroup is a PolicyOwnerEntityType enum value
+	PolicyOwnerEntityTypeGroup = "GROUP"
+)
+
+const (
+	// PolicyScopeTypeAll is a PolicyScopeType enum value
+	PolicyScopeTypeAll = "All"
+
+	// PolicyScopeTypeAws is a PolicyScopeType enum value
+	PolicyScopeTypeAws = "AWS"
+
+	// PolicyScopeTypeLocal is a PolicyScopeType enum value
+	PolicyScopeTypeLocal = "Local"
 )
 
 const (
@@ -33044,6 +33372,14 @@ const (
 
 	// PolicySourceTypeNone is a PolicySourceType enum value
 	PolicySourceTypeNone = "none"
+)
+
+const (
+	// PolicyTypeInline is a PolicyType enum value
+	PolicyTypeInline = "INLINE"
+
+	// PolicyTypeManaged is a PolicyType enum value
+	PolicyTypeManaged = "MANAGED"
 )
 
 // The policy usage type that indicates whether the policy is used as a permissions
@@ -33077,171 +33413,103 @@ const (
 )
 
 const (
-	// AssignmentStatusTypeAssigned is a assignmentStatusType enum value
-	AssignmentStatusTypeAssigned = "Assigned"
-
-	// AssignmentStatusTypeUnassigned is a assignmentStatusType enum value
-	AssignmentStatusTypeUnassigned = "Unassigned"
-
-	// AssignmentStatusTypeAny is a assignmentStatusType enum value
-	AssignmentStatusTypeAny = "Any"
-)
-
-const (
-	// EncodingTypeSsh is a encodingType enum value
-	EncodingTypeSsh = "SSH"
-
-	// EncodingTypePem is a encodingType enum value
-	EncodingTypePem = "PEM"
-)
-
-const (
-	// GlobalEndpointTokenVersionV1token is a globalEndpointTokenVersion enum value
-	GlobalEndpointTokenVersionV1token = "v1Token"
-
-	// GlobalEndpointTokenVersionV2token is a globalEndpointTokenVersion enum value
-	GlobalEndpointTokenVersionV2token = "v2Token"
-)
-
-const (
-	// JobStatusTypeInProgress is a jobStatusType enum value
-	JobStatusTypeInProgress = "IN_PROGRESS"
-
-	// JobStatusTypeCompleted is a jobStatusType enum value
-	JobStatusTypeCompleted = "COMPLETED"
-
-	// JobStatusTypeFailed is a jobStatusType enum value
-	JobStatusTypeFailed = "FAILED"
-)
-
-const (
-	// PolicyOwnerEntityTypeUser is a policyOwnerEntityType enum value
-	PolicyOwnerEntityTypeUser = "USER"
-
-	// PolicyOwnerEntityTypeRole is a policyOwnerEntityType enum value
-	PolicyOwnerEntityTypeRole = "ROLE"
-
-	// PolicyOwnerEntityTypeGroup is a policyOwnerEntityType enum value
-	PolicyOwnerEntityTypeGroup = "GROUP"
-)
-
-const (
-	// PolicyScopeTypeAll is a policyScopeType enum value
-	PolicyScopeTypeAll = "All"
-
-	// PolicyScopeTypeAws is a policyScopeType enum value
-	PolicyScopeTypeAws = "AWS"
-
-	// PolicyScopeTypeLocal is a policyScopeType enum value
-	PolicyScopeTypeLocal = "Local"
-)
-
-const (
-	// PolicyTypeInline is a policyType enum value
-	PolicyTypeInline = "INLINE"
-
-	// PolicyTypeManaged is a policyType enum value
-	PolicyTypeManaged = "MANAGED"
-)
-
-const (
-	// SortKeyTypeServiceNamespaceAscending is a sortKeyType enum value
+	// SortKeyTypeServiceNamespaceAscending is a SortKeyType enum value
 	SortKeyTypeServiceNamespaceAscending = "SERVICE_NAMESPACE_ASCENDING"
 
-	// SortKeyTypeServiceNamespaceDescending is a sortKeyType enum value
+	// SortKeyTypeServiceNamespaceDescending is a SortKeyType enum value
 	SortKeyTypeServiceNamespaceDescending = "SERVICE_NAMESPACE_DESCENDING"
 
-	// SortKeyTypeLastAuthenticatedTimeAscending is a sortKeyType enum value
+	// SortKeyTypeLastAuthenticatedTimeAscending is a SortKeyType enum value
 	SortKeyTypeLastAuthenticatedTimeAscending = "LAST_AUTHENTICATED_TIME_ASCENDING"
 
-	// SortKeyTypeLastAuthenticatedTimeDescending is a sortKeyType enum value
+	// SortKeyTypeLastAuthenticatedTimeDescending is a SortKeyType enum value
 	SortKeyTypeLastAuthenticatedTimeDescending = "LAST_AUTHENTICATED_TIME_DESCENDING"
 )
 
 const (
-	// StatusTypeActive is a statusType enum value
+	// StatusTypeActive is a StatusType enum value
 	StatusTypeActive = "Active"
 
-	// StatusTypeInactive is a statusType enum value
+	// StatusTypeInactive is a StatusType enum value
 	StatusTypeInactive = "Inactive"
 )
 
 const (
-	// SummaryKeyTypeUsers is a summaryKeyType enum value
+	// SummaryKeyTypeUsers is a SummaryKeyType enum value
 	SummaryKeyTypeUsers = "Users"
 
-	// SummaryKeyTypeUsersQuota is a summaryKeyType enum value
+	// SummaryKeyTypeUsersQuota is a SummaryKeyType enum value
 	SummaryKeyTypeUsersQuota = "UsersQuota"
 
-	// SummaryKeyTypeGroups is a summaryKeyType enum value
+	// SummaryKeyTypeGroups is a SummaryKeyType enum value
 	SummaryKeyTypeGroups = "Groups"
 
-	// SummaryKeyTypeGroupsQuota is a summaryKeyType enum value
+	// SummaryKeyTypeGroupsQuota is a SummaryKeyType enum value
 	SummaryKeyTypeGroupsQuota = "GroupsQuota"
 
-	// SummaryKeyTypeServerCertificates is a summaryKeyType enum value
+	// SummaryKeyTypeServerCertificates is a SummaryKeyType enum value
 	SummaryKeyTypeServerCertificates = "ServerCertificates"
 
-	// SummaryKeyTypeServerCertificatesQuota is a summaryKeyType enum value
+	// SummaryKeyTypeServerCertificatesQuota is a SummaryKeyType enum value
 	SummaryKeyTypeServerCertificatesQuota = "ServerCertificatesQuota"
 
-	// SummaryKeyTypeUserPolicySizeQuota is a summaryKeyType enum value
+	// SummaryKeyTypeUserPolicySizeQuota is a SummaryKeyType enum value
 	SummaryKeyTypeUserPolicySizeQuota = "UserPolicySizeQuota"
 
-	// SummaryKeyTypeGroupPolicySizeQuota is a summaryKeyType enum value
+	// SummaryKeyTypeGroupPolicySizeQuota is a SummaryKeyType enum value
 	SummaryKeyTypeGroupPolicySizeQuota = "GroupPolicySizeQuota"
 
-	// SummaryKeyTypeGroupsPerUserQuota is a summaryKeyType enum value
+	// SummaryKeyTypeGroupsPerUserQuota is a SummaryKeyType enum value
 	SummaryKeyTypeGroupsPerUserQuota = "GroupsPerUserQuota"
 
-	// SummaryKeyTypeSigningCertificatesPerUserQuota is a summaryKeyType enum value
+	// SummaryKeyTypeSigningCertificatesPerUserQuota is a SummaryKeyType enum value
 	SummaryKeyTypeSigningCertificatesPerUserQuota = "SigningCertificatesPerUserQuota"
 
-	// SummaryKeyTypeAccessKeysPerUserQuota is a summaryKeyType enum value
+	// SummaryKeyTypeAccessKeysPerUserQuota is a SummaryKeyType enum value
 	SummaryKeyTypeAccessKeysPerUserQuota = "AccessKeysPerUserQuota"
 
-	// SummaryKeyTypeMfadevices is a summaryKeyType enum value
+	// SummaryKeyTypeMfadevices is a SummaryKeyType enum value
 	SummaryKeyTypeMfadevices = "MFADevices"
 
-	// SummaryKeyTypeMfadevicesInUse is a summaryKeyType enum value
+	// SummaryKeyTypeMfadevicesInUse is a SummaryKeyType enum value
 	SummaryKeyTypeMfadevicesInUse = "MFADevicesInUse"
 
-	// SummaryKeyTypeAccountMfaenabled is a summaryKeyType enum value
+	// SummaryKeyTypeAccountMfaenabled is a SummaryKeyType enum value
 	SummaryKeyTypeAccountMfaenabled = "AccountMFAEnabled"
 
-	// SummaryKeyTypeAccountAccessKeysPresent is a summaryKeyType enum value
+	// SummaryKeyTypeAccountAccessKeysPresent is a SummaryKeyType enum value
 	SummaryKeyTypeAccountAccessKeysPresent = "AccountAccessKeysPresent"
 
-	// SummaryKeyTypeAccountSigningCertificatesPresent is a summaryKeyType enum value
+	// SummaryKeyTypeAccountSigningCertificatesPresent is a SummaryKeyType enum value
 	SummaryKeyTypeAccountSigningCertificatesPresent = "AccountSigningCertificatesPresent"
 
-	// SummaryKeyTypeAttachedPoliciesPerGroupQuota is a summaryKeyType enum value
+	// SummaryKeyTypeAttachedPoliciesPerGroupQuota is a SummaryKeyType enum value
 	SummaryKeyTypeAttachedPoliciesPerGroupQuota = "AttachedPoliciesPerGroupQuota"
 
-	// SummaryKeyTypeAttachedPoliciesPerRoleQuota is a summaryKeyType enum value
+	// SummaryKeyTypeAttachedPoliciesPerRoleQuota is a SummaryKeyType enum value
 	SummaryKeyTypeAttachedPoliciesPerRoleQuota = "AttachedPoliciesPerRoleQuota"
 
-	// SummaryKeyTypeAttachedPoliciesPerUserQuota is a summaryKeyType enum value
+	// SummaryKeyTypeAttachedPoliciesPerUserQuota is a SummaryKeyType enum value
 	SummaryKeyTypeAttachedPoliciesPerUserQuota = "AttachedPoliciesPerUserQuota"
 
-	// SummaryKeyTypePolicies is a summaryKeyType enum value
+	// SummaryKeyTypePolicies is a SummaryKeyType enum value
 	SummaryKeyTypePolicies = "Policies"
 
-	// SummaryKeyTypePoliciesQuota is a summaryKeyType enum value
+	// SummaryKeyTypePoliciesQuota is a SummaryKeyType enum value
 	SummaryKeyTypePoliciesQuota = "PoliciesQuota"
 
-	// SummaryKeyTypePolicySizeQuota is a summaryKeyType enum value
+	// SummaryKeyTypePolicySizeQuota is a SummaryKeyType enum value
 	SummaryKeyTypePolicySizeQuota = "PolicySizeQuota"
 
-	// SummaryKeyTypePolicyVersionsInUse is a summaryKeyType enum value
+	// SummaryKeyTypePolicyVersionsInUse is a SummaryKeyType enum value
 	SummaryKeyTypePolicyVersionsInUse = "PolicyVersionsInUse"
 
-	// SummaryKeyTypePolicyVersionsInUseQuota is a summaryKeyType enum value
+	// SummaryKeyTypePolicyVersionsInUseQuota is a SummaryKeyType enum value
 	SummaryKeyTypePolicyVersionsInUseQuota = "PolicyVersionsInUseQuota"
 
-	// SummaryKeyTypeVersionsPerPolicyQuota is a summaryKeyType enum value
+	// SummaryKeyTypeVersionsPerPolicyQuota is a SummaryKeyType enum value
 	SummaryKeyTypeVersionsPerPolicyQuota = "VersionsPerPolicyQuota"
 
-	// SummaryKeyTypeGlobalEndpointTokenVersion is a summaryKeyType enum value
+	// SummaryKeyTypeGlobalEndpointTokenVersion is a SummaryKeyType enum value
 	SummaryKeyTypeGlobalEndpointTokenVersion = "GlobalEndpointTokenVersion"
 )

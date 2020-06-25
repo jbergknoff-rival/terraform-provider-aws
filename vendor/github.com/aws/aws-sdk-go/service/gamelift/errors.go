@@ -2,6 +2,10 @@
 
 package gamelift
 
+import (
+	"github.com/aws/aws-sdk-go/private/protocol"
+)
+
 const (
 
 	// ErrCodeConflictException for service response error code
@@ -78,6 +82,14 @@ const (
 	// should not retry such requests.
 	ErrCodeNotFoundException = "NotFoundException"
 
+	// ErrCodeOutOfCapacityException for service response error code
+	// "OutOfCapacityException".
+	//
+	// The specified game server group has no available game servers to fulfill
+	// a ClaimGameServer request. Clients can retry such requests immediately or
+	// after a waiting period.
+	ErrCodeOutOfCapacityException = "OutOfCapacityException"
+
 	// ErrCodeTaggingFailedException for service response error code
 	// "TaggingFailedException".
 	//
@@ -108,3 +120,21 @@ const (
 	// The requested operation is not supported in the Region specified.
 	ErrCodeUnsupportedRegionException = "UnsupportedRegionException"
 )
+
+var exceptionFromCode = map[string]func(protocol.ResponseMetadata) error{
+	"ConflictException":                    newErrorConflictException,
+	"FleetCapacityExceededException":       newErrorFleetCapacityExceededException,
+	"GameSessionFullException":             newErrorGameSessionFullException,
+	"IdempotentParameterMismatchException": newErrorIdempotentParameterMismatchException,
+	"InternalServiceException":             newErrorInternalServiceException,
+	"InvalidFleetStatusException":          newErrorInvalidFleetStatusException,
+	"InvalidGameSessionStatusException":    newErrorInvalidGameSessionStatusException,
+	"InvalidRequestException":              newErrorInvalidRequestException,
+	"LimitExceededException":               newErrorLimitExceededException,
+	"NotFoundException":                    newErrorNotFoundException,
+	"OutOfCapacityException":               newErrorOutOfCapacityException,
+	"TaggingFailedException":               newErrorTaggingFailedException,
+	"TerminalRoutingStrategyException":     newErrorTerminalRoutingStrategyException,
+	"UnauthorizedException":                newErrorUnauthorizedException,
+	"UnsupportedRegionException":           newErrorUnsupportedRegionException,
+}

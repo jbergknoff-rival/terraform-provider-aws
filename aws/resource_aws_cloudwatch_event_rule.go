@@ -15,6 +15,10 @@ import (
 	"github.com/terraform-providers/terraform-provider-aws/aws/internal/keyvaluetags"
 )
 
+const (
+	cloudWatchEventRuleDeleteRetryTimeout = 5 * time.Minute
+)
+
 func resourceAwsCloudWatchEventRule() *schema.Resource {
 	return &schema.Resource{
 		Create: resourceAwsCloudWatchEventRuleCreate,
@@ -128,6 +132,7 @@ func resourceAwsCloudWatchEventRuleCreate(d *schema.ResourceData, meta interface
 
 func resourceAwsCloudWatchEventRuleRead(d *schema.ResourceData, meta interface{}) error {
 	conn := meta.(*AWSClient).cloudwatcheventsconn
+	ignoreTagsConfig := meta.(*AWSClient).IgnoreTagsConfig
 
 	input := events.DescribeRuleInput{
 		Name: aws.String(d.Id()),
@@ -173,7 +178,7 @@ func resourceAwsCloudWatchEventRuleRead(d *schema.ResourceData, meta interface{}
 		return fmt.Errorf("error listing tags for CloudWatch Event Rule (%s): %s", arn, err)
 	}
 
-	if err := d.Set("tags", tags.IgnoreAws().Map()); err != nil {
+	if err := d.Set("tags", tags.IgnoreAws().IgnoreConfig(ignoreTagsConfig).Map()); err != nil {
 		return fmt.Errorf("error setting tags: %s", err)
 	}
 
@@ -225,14 +230,31 @@ func resourceAwsCloudWatchEventRuleUpdate(d *schema.ResourceData, meta interface
 func resourceAwsCloudWatchEventRuleDelete(d *schema.ResourceData, meta interface{}) error {
 	conn := meta.(*AWSClient).cloudwatcheventsconn
 
-	log.Printf("[INFO] Deleting CloudWatch Event Rule: %s", d.Id())
-	_, err := conn.DeleteRule(&events.DeleteRuleInput{
+	input := &events.DeleteRuleInput{
 		Name: aws.String(d.Id()),
-	})
-	if err != nil {
-		return fmt.Errorf("Error deleting CloudWatch Event Rule: %s", err)
 	}
-	log.Println("[INFO] CloudWatch Event Rule deleted")
+
+	err := resource.Retry(cloudWatchEventRuleDeleteRetryTimeout, func() *resource.RetryError {
+		_, err := conn.DeleteRule(input)
+
+		if isAWSErr(err, "ValidationException", "Rule can't be deleted since it has targets") {
+			return resource.RetryableError(err)
+		}
+
+		if err != nil {
+			return resource.NonRetryableError(err)
+		}
+
+		return nil
+	})
+
+	if isResourceTimeoutError(err) {
+		_, err = conn.DeleteRule(input)
+	}
+
+	if err != nil {
+		return fmt.Errorf("error deleting CloudWatch Event Rule (%s): %s", d.Id(), err)
+	}
 
 	return nil
 }

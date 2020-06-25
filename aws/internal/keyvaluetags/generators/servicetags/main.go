@@ -23,6 +23,7 @@ var sliceServiceNames = []string{
 	"appmesh",
 	"athena",
 	/* "autoscaling", // includes extra PropagateAtLaunch, skip for now */
+	"cloud9",
 	"cloudformation",
 	"cloudfront",
 	"cloudhsmv2",
@@ -55,6 +56,8 @@ var sliceServiceNames = []string{
 	"firehose",
 	"fms",
 	"fsx",
+	"gamelift",
+	"globalaccelerator",
 	"iam",
 	"inspector",
 	"iot",
@@ -68,7 +71,9 @@ var sliceServiceNames = []string{
 	"lightsail",
 	"mediastore",
 	"neptune",
+	"networkmanager",
 	"organizations",
+	"quicksight",
 	"ram",
 	"rds",
 	"redshift",
@@ -79,6 +84,7 @@ var sliceServiceNames = []string{
 	"secretsmanager",
 	"serverlessapplicationrepository",
 	"servicecatalog",
+	"servicediscovery",
 	"sfn",
 	"sns",
 	"ssm",
@@ -102,6 +108,7 @@ var mapServiceNames = []string{
 	"batch",
 	"cloudwatchlogs",
 	"codecommit",
+	"codestarnotifications",
 	"cognitoidentity",
 	"cognitoidentityprovider",
 	"dataexchange",
@@ -112,6 +119,7 @@ var mapServiceNames = []string{
 	"guardduty",
 	"greengrass",
 	"kafka",
+	"kinesisvideo",
 	"imagebuilder",
 	"lambda",
 	"mediaconnect",
@@ -125,6 +133,8 @@ var mapServiceNames = []string{
 	"resourcegroups",
 	"securityhub",
 	"sqs",
+	"synthetics",
+	"worklink",
 }
 
 type TemplateData struct {
@@ -142,10 +152,12 @@ func main() {
 		SliceServiceNames: sliceServiceNames,
 	}
 	templateFuncMap := template.FuncMap{
+		"TagKeyType":        keyvaluetags.ServiceTagKeyType,
 		"TagPackage":        keyvaluetags.ServiceTagPackage,
-		"TagType":           ServiceTagType,
-		"TagTypeKeyField":   ServiceTagTypeKeyField,
-		"TagTypeValueField": ServiceTagTypeValueField,
+		"TagType":           keyvaluetags.ServiceTagType,
+		"TagType2":          keyvaluetags.ServiceTagType2,
+		"TagTypeKeyField":   keyvaluetags.ServiceTagTypeKeyField,
+		"TagTypeValueField": keyvaluetags.ServiceTagTypeValueField,
 		"Title":             strings.Title,
 	}
 
@@ -214,6 +226,23 @@ func {{ . | Title }}KeyValueTags(tags map[string]*string) KeyValueTags {
 // []*SERVICE.Tag handling
 {{- range .SliceServiceNames }}
 
+{{- if . | TagKeyType }}
+// {{ . | Title }}TagKeys returns {{ . }} service tag keys.
+func (tags KeyValueTags) {{ . | Title }}TagKeys() []*{{ . | TagPackage }}.{{ . | TagKeyType }} {
+	result := make([]*{{ . | TagPackage }}.{{ . | TagKeyType }}, 0, len(tags))
+
+	for k := range tags.Map() {
+		tagKey := &{{ . | TagPackage }}.{{ . | TagKeyType }}{
+			{{ . | TagTypeKeyField }}: aws.String(k),
+		}
+
+		result = append(result, tagKey)
+	}
+
+	return result
+}
+{{- end }}
+
 // {{ . | Title }}Tags returns {{ . }} service tags.
 func (tags KeyValueTags) {{ . | Title }}Tags() []*{{ . | TagPackage }}.{{ . | TagType }} {
 	result := make([]*{{ . | TagPackage }}.{{ . | TagType }}, 0, len(tags))
@@ -231,6 +260,31 @@ func (tags KeyValueTags) {{ . | Title }}Tags() []*{{ . | TagPackage }}.{{ . | Ta
 }
 
 // {{ . | Title }}KeyValueTags creates KeyValueTags from {{ . }} service tags.
+{{- if . | TagType2 }}
+// Accepts []*{{ . | TagPackage }}.{{ . | TagType }} and []*{{ . | TagPackage }}.{{ . | TagType2 }}.
+func {{ . | Title }}KeyValueTags(tags interface{}) KeyValueTags {
+	switch tags := tags.(type) {
+	case []*{{ . | TagPackage }}.{{ . | TagType }}:
+		m := make(map[string]*string, len(tags))
+
+		for _, tag := range tags {
+			m[aws.StringValue(tag.{{ . | TagTypeKeyField }})] = tag.{{ . | TagTypeValueField }}
+		}
+
+		return New(m)
+	case []*{{ . | TagPackage }}.{{ . | TagType2 }}:
+		m := make(map[string]*string, len(tags))
+
+		for _, tag := range tags {
+			m[aws.StringValue(tag.{{ . | TagTypeKeyField }})] = tag.{{ . | TagTypeValueField }}
+		}
+
+		return New(m)
+	default:
+		return New(nil)
+	}
+}
+{{- else }}
 func {{ . | Title }}KeyValueTags(tags []*{{ . | TagPackage }}.{{ . | TagType }}) KeyValueTags {
 	m := make(map[string]*string, len(tags))
 
@@ -241,40 +295,5 @@ func {{ . | Title }}KeyValueTags(tags []*{{ . | TagPackage }}.{{ . | TagType }})
 	return New(m)
 }
 {{- end }}
+{{- end }}
 `
-
-// ServiceTagType determines the service tagging tag type.
-func ServiceTagType(serviceName string) string {
-	switch serviceName {
-	case "appmesh":
-		return "TagRef"
-	case "datasync":
-		return "TagListEntry"
-	case "fms":
-		return "ResourceTag"
-	case "swf":
-		return "ResourceTag"
-	default:
-		return "Tag"
-	}
-}
-
-// ServiceTagTypeKeyField determines the service tagging tag type key field.
-func ServiceTagTypeKeyField(serviceName string) string {
-	switch serviceName {
-	case "kms":
-		return "TagKey"
-	default:
-		return "Key"
-	}
-}
-
-// ServiceTagTypeValueField determines the service tagging tag type value field.
-func ServiceTagTypeValueField(serviceName string) string {
-	switch serviceName {
-	case "kms":
-		return "TagValue"
-	default:
-		return "Value"
-	}
-}
